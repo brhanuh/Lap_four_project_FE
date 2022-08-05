@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button, InputText } from '../../components';
 import { useNavigate } from 'react-router-dom';
+import './styles.css'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ const Login = () => {
   };
 
   return (
+    <div className='container'>
     <div>
       <h1 role="h1">Login</h1>
       <form action="" method="POST">
@@ -40,6 +42,7 @@ const Login = () => {
           navigate('/about');
         }}
       />
+    </div>
     </div>
   );
 };
