@@ -1,9 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { Button, InputText } from '../../components';
 
-const Login = () =>{
-    return <>
-         <h1>This is the login page</h1>
-    </>
-}
+const Login = () => {
+  return (
+    <div>
+      <h1>Login</h1>
+      <form action="" method="POST">
+        <InputText
+          type="text"
+          name="Username"
+          value="Enter Username.."
+          id="login-username"
+        />
+        <InputText
+          type="text"
+          name="Password"
+          value="Enter Password.."
+          id="login-password"
+        />
+        <Button type="submit" name="Login" />
+      </form>
+    </div>
+  );
+};
 
 export default Login;
