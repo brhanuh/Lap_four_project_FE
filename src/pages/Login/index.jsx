@@ -29,7 +29,7 @@ const Login = () => {
             value="Enter Password.."
             id="login-password"
           />
-          <Button type="submit" value="Login" onClick={handleSubmit} />
+          <Button type="submit" value="Login" funct={handleSubmit} />
         </form>
         <div>
           <h3>Don't have an account?</h3>
