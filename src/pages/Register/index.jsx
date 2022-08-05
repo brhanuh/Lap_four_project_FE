@@ -4,6 +4,7 @@ import { Button, InputText } from '../../components';
 const Register = () => {
   return (
     <div>
+      <h1>Sign Up</h1>
       <form action="" method="POST">
         <InputText type="text" value="enter name.." name="name: " id="name" />
         <InputText
