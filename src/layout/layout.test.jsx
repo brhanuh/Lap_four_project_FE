@@ -1,10 +1,19 @@
 import React from "react";
 import {screen, render} from "@testing-library/react"
-import Layout from '../Layout'
+import Navbar from '.'
 
 describe('Layout', () =>{
     beforeEach(()=>{
-        render(<Layout />)
+        render(<Navbar />)
+            
+        test('link click', () => {
+         
+            const link = screen.getByTestId("link");
+            fireEvent.click(link);
+         
+          //  expect(screen.getByTestId("link"))
+          });
+         
     })
 
 })
