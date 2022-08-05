@@ -1,5 +1,5 @@
-import React, { useLayoutEffect } from 'react'
-import { Home, Login, Landing, Register } from "./pages"
+import React from 'react'
+import { Home, Login, Landing, Register, Contacts, Hub } from "./pages"
 import { default as Layout } from "./layout"
 import { Routes, Route } from 'react-router-dom'
 
@@ -13,6 +13,8 @@ function App() {
           <Route path="/" element={<Landing />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
+          <Route path="/contacts" element={<Contacts />}></Route>
+           <Route path="/hub" element={<Hub />}></Route>
         </Route>
       </Routes>
     </>
