@@ -2,7 +2,7 @@ import React from 'react'
 
 const Landing = () =>{
     return <>
-         <h1>This is the landing page our app is greattt and this is why you should use it!!!!</h1>
+         <h1 role="h1">This is the landing page!</h1>
     </>
 }
 
