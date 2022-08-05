@@ -2,11 +2,15 @@ import React from 'react'
 import { Home, Login, Landing, Register, Contacts, Hub, About, Statistics, Recommendations } from "./pages"
 import { default as Layout } from "./layout"
 import { Routes, Route } from 'react-router-dom'
+import {useState} from 'react';
 
 import './App.css';
 
 
+
 function App() {
+
+
   return (
     <>
       <Routes>
