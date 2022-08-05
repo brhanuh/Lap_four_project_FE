@@ -15,7 +15,7 @@ const Login = () => {
   return (
     <div className='container'>
     <div>
-      <h1>Login</h1>
+      <h1 role="h1">Login</h1>
       <form action="" method="POST">
         <InputText
           type="text"
@@ -29,7 +29,7 @@ const Login = () => {
           value="Enter Password.."
           id="login-password"
         />
-        <Button type="submit" value="Login" onclick={handleSubmit} />
+        <Button type="submit" value="Login" onClick={handleSubmit} />
       </form>
       <div>
         <h3>Don't have an account?</h3>
@@ -38,7 +38,7 @@ const Login = () => {
       <Button
         type="button"
         value="What This App Is About"
-        onclick={() => {
+        onClick={() => {
           navigate('/about');
         }}
       />

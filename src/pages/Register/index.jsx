@@ -48,7 +48,7 @@ const Register = () => {
           type="submit"
           value="Sign Up"
           id="signUp-btn"
-          onclick={handleSubmit}
+          onClick={handleSubmit}
         />
       </form>
     </div>
