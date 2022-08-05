@@ -25,7 +25,9 @@ const Login = () => {
         <h3>Don't have an account?</h3>
         <NavLink to="/register">Sign Up now</NavLink>
       </div>
+      <NavLink to="/about">
       <Button type="button" value="What This App Is About" />
+      </NavLink>
     </div>
   );
 };
