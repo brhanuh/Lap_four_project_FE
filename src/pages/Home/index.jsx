@@ -28,13 +28,23 @@ const Home = () => {
         Timeline ➡
       </div>
 
-      <div
-        id="hub-stats-btn"
-        onClick={() => {
-          navigate('/hub');
-        }}
-      >
-        HUB / STATS
+      <div>
+        <div
+          id="hub-btn"
+          onClick={() => {
+            navigate('/hub');
+          }}
+        >
+          HUB
+        </div>
+        <div
+          id="stats-btn"
+          onClick={() => {
+            navigate('/statistics');
+          }}
+        >
+          Stats
+        </div>
       </div>
     </>
   );
