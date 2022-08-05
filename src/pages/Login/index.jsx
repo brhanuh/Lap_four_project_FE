@@ -33,11 +33,6 @@ const Login = () => {
         <h3>Don't have an account?</h3>
         <NavLink to="/register">Sign Up now</NavLink>
       </div>
-<<<<<<< HEAD
-      <NavLink to="/about">
-      <Button type="button" value="What This App Is About" />
-      </NavLink>
-=======
       <Button
         type="button"
         value="What This App Is About"
@@ -45,7 +40,6 @@ const Login = () => {
           navigate('/about');
         }}
       />
->>>>>>> c2bce885eae3d1c730047175b931d45c594f5c2f
     </div>
   );
 };
