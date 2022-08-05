@@ -4,6 +4,7 @@ import { default as Layout } from "./layout"
 import { Routes, Route } from 'react-router-dom'
 
 import './App.css';
+import CheckIn from './pages/About';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/hub" element={<Hub />}></Route>
+          <Route path="/check-in" element={<CheckIn />}></Route>
           <Route path="/recommendations" element={<Recommendations />}></Route>
           <Route path="/statistics" element={<Statistics />}></Route>
         </Route>
