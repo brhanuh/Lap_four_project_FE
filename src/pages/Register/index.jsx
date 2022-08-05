@@ -1,7 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, InputText } from '../../components';
 
 const Register = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate('/login');
+  };
+
   return (
     <div>
       <h1>Sign Up</h1>
@@ -36,7 +44,12 @@ const Register = () => {
           name="Confirm Password: "
           id="confirm-password"
         />
-        <Button type="submit" value="Sign Up" id="signUp-btn" />
+        <Button
+          type="submit"
+          value="Sign Up"
+          id="signUp-btn"
+          onclick={handleSubmit}
+        />
       </form>
     </div>
   );
