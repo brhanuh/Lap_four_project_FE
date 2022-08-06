@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Button = ({ type, name, id }) => {
+const Button = ({ type, value, id, funct }) => {
   return (
     <div>
-      <button type={type} id={id}>
-        {name}
+      <button onClick={funct} type={type} id={id}>
+        {value}
       </button>
     </div>
   );

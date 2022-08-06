@@ -1,14 +1,14 @@
 import React from "react";
 import {screen, render} from "@testing-library/react"
-import Hub from '../Hub'
+import Recommendations from '../Recommendations'
 
-describe('hub', () =>{
+describe('Recommendations', () =>{
     beforeEach(()=>{
-        render(<Hub />)
+        render(<Recommendations />)
     })
 
     test('Displays the text', () =>{
         const heading = screen.getByRole('h1');
-        expect(heading.textContent).toBe('This is the hub page');
+        expect(heading.textContent).toBe('This is the Recommendations page');
     })
 })

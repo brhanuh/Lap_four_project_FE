@@ -1,8 +1,11 @@
 import React from 'react'
+import './styles.css'
 
 const Landing = () =>{
     return <>
-         <h1>This is the landing page our app is greattt and this is why you should use it!!!!</h1>
+    <div className='container'>
+         <h1 role="h1">This is the landing page!</h1>
+   </div>
     </>
 }
 

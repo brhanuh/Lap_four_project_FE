@@ -1,36 +1,55 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, InputText } from '../../components';
 
 const Register = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate('/login');
+  };
+
   return (
     <div>
+      <h1>Sign Up</h1>
       <form action="" method="POST">
-        <InputText type="text" value="enter name.." name="name: " id="name" />
+        <InputText
+          type="text"
+          value="Enter username.."
+          name="Username: "
+          id="name"
+        />
         <InputText
           type="email"
-          value="enter email.."
-          name="email: "
+          value="Enter Email.."
+          name="Email: "
           id="email"
         />
         <InputText
           type="email"
-          value="confirm email.."
-          name="confirm email: "
+          value="Confirm Email.."
+          name="Confirm Email: "
           id="confirm-email"
         />
         <InputText
           type="text"
-          value="enter password.."
-          name="password: "
+          value="Enter Password.."
+          name="Password: "
           id="password"
         />
         <InputText
           type="text"
-          value="confirm password.."
-          name="confirm password: "
+          value="Confirm Password.."
+          name="Confirm Password: "
           id="confirm-password"
         />
-        <Button type="submit" name="Register" id="register-btn" />
+        <Button
+          type="submit"
+          value="Sign Up"
+          id="signUp-btn"
+          funct={handleSubmit}
+        />
       </form>
     </div>
   );

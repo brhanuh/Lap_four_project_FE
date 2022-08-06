@@ -1,7 +1,10 @@
-export { default as Home } from "./Home"
-export { default as Landing } from "./Landing"
-export { default as Login } from "./Login"
-export { default as Register } from "./Register"
-export { default as Contacts } from "./Contacts"
-export {default as Hub} from "./Hub"
-export {default as Timeline} from "./Timeline"
+export { default as Home } from "./Home";
+export { default as Landing } from "./Landing";
+export { default as Login } from "./Login";
+export { default as Register } from "./Register";
+export { default as Contacts } from "./Contacts";
+export { default as Hub } from "./Hub";
+export { default as About } from "./About";
+export { default as Statistics } from "./Statistics";
+export { default as Recommendations } from "./Recommendations";
+export { default as Timeline } from "./Timeline";
