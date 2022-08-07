@@ -2,12 +2,9 @@ import React from 'react'
 import { Home, Login, Landing, Register, Contacts, Hub, About, Statistics, Recommendations } from "./pages"
 import { default as Layout } from "./layout"
 import { Routes, Route } from 'react-router-dom'
-<<<<<<< HEAD
 import CheckIn from './pages/CheckIn'
-=======
-import {useState} from 'react';
+import { useState } from 'react';
 
->>>>>>> 24885ce568ca038f3d2a9e127a51f2aa1e06d410
 import './App.css';
 
 

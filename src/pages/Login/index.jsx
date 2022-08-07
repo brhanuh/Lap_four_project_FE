@@ -16,20 +16,20 @@ const Login = () => {
     <div className="container">
       <div>
         <h1 role="h1">Login</h1>
-        <form action="" method="POST">
+        <form onSubmit={handleSubmit} action="" method="POST">
           <InputText
             type="text"
-            name="Username"
-            value="Enter Username.."
+            label="Username"
+            placeholder="Enter Username.."
             id="login-username"
           />
           <InputText
             type="text"
-            name="Password"
-            value="Enter Password.."
+            label="Password"
+            placeholder="Enter Password.."
             id="login-password"
           />
-          <Button type="submit" value="Login" funct={handleSubmit} />
+          <Button type="submit" value="Login" />
         </form>
         <div>
           <h3>Don't have an account?</h3>

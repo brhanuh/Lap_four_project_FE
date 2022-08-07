@@ -1,10 +1,17 @@
 import React from 'react';
 
-const InputText = ({ type, value, name, id }) => {
+const InputText = ({ type, value, name, funct, id, label, placeholder }) => {
   return (
     <div>
-      <label htmlFor="">{name}</label>
-      <input type={type} placeholder={value} name={name} id={id} required />
+      <label htmlFor={id}>{label}</label>
+      <input
+        onChange={funct}
+        type={type}
+        placeholder={placeholder}
+        name={name}
+        id={id}
+        required
+      />
     </div>
   );
 };
