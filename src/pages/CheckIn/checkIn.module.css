@@ -41,10 +41,6 @@ button[type='button'] {
   font-size: 10rem;
 }
 
-.emoji span {
-  margin: 0 4rem;
-}
-
 .gentle-tilt-move-shake:hover {
   animation: tilt-n-move-shaking 0.25s infinite;
 }
@@ -72,3 +68,12 @@ button[type='button'] {
 
 /* .checkInFormHeader {
 } */
+
+@media screen and (min-width: 1200px) {
+  .container {
+    /* width: 100vw; */
+  }
+  .form {
+    /* width: 100%; */
+  }
+}

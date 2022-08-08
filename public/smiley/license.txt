@@ -1,0 +1,11 @@
+Model Information:
+* title:	3moji.org : Smiling With Smiling Eyes
+* source:	https://sketchfab.com/3d-models/3mojiorg-smiling-with-smiling-eyes-163e72116d4046a8bb5122b321785789
+* author:	Jeremy Edelblut (https://sketchfab.com/jeremy.toys)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "3moji.org : Smiling With Smiling Eyes" (https://sketchfab.com/3d-models/3mojiorg-smiling-with-smiling-eyes-163e72116d4046a8bb5122b321785789) by Jeremy Edelblut (https://sketchfab.com/jeremy.toys) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
