@@ -1,20 +1,24 @@
-import React from 'react'
-import { Home, Login, Landing, Register, Contacts, Hub, About, Statistics, Recommendations } from "./pages"
-import { default as Layout } from "./layout"
-import { Routes, Route } from 'react-router-dom'
-import CheckIn from './pages/CheckIn'
-import { useState } from 'react';
-
-import './App.css';
-
-
-
+import React from "react";
 import {
-
-  TimelinePage,
+  Home,
+  Login,
+  Landing,
+  Register,
+  Contacts,
+  Hub,
+  About,
+  Statistics,
+  Recommendations,
+  AddRecommendation,
 } from "./pages";
+import { default as Layout } from "./layout";
+import { Routes, Route } from "react-router-dom";
+import CheckIn from "./pages/CheckIn";
+import { useState } from "react";
 
+import "./App.css";
 
+import { TimelinePage } from "./pages";
 
 function App() {
   return (
@@ -32,6 +36,7 @@ function App() {
           <Route path="/recommendations" element={<Recommendations />}></Route>
           <Route path="/statistics" element={<Statistics />}></Route>
           <Route path="/timeline" element={<TimelinePage />}></Route>
+          <Route path="/recommend" element={<AddRecommendation />}></Route>
         </Route>
       </Routes>
     </>

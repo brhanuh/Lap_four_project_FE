@@ -8,3 +8,4 @@ export { default as About } from "./About";
 export { default as Statistics } from "./Statistics";
 export { default as Recommendations } from "./Recommendations";
 export { default as TimelinePage } from "./TimelinePage";
+export { default as AddRecommendation } from "./AddRecommendation";
