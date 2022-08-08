@@ -22,10 +22,10 @@ function Navbar() {
           <NavLink to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavLink>
-          <MoodBoard/>
           <div className='container'>
           <h1>Mental Health app</h1>
           </div>
+          <MoodBoard/>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' id='link' onClick={showSidebar}>

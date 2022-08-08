@@ -1,7 +1,7 @@
 .moodbar{
     height: 80px;
     display:flex;
-    justify-content: start;
+    margin-right: 0%;
     align-items: center;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .mood-menu{
-    width:40vh;
+    width:60vh;
     height: 40vh;
     display: flex;
     position: fixed;
