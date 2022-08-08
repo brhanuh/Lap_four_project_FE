@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Home, Login, Landing, Register, Contacts, Hub, About, Statistics, Recommendations } from "./pages"
 import { default as Layout } from "./layout"
@@ -8,28 +7,14 @@ import { useState } from 'react';
 
 import './App.css';
 
-=======
-import React from "react";
->>>>>>> 7a9c0c158bc4def1e232044a430a73cc2f652410
+
 
 import {
-  Home,
-  Login,
-  Landing,
-  Register,
-  Contacts,
-  Hub,
-  About,
-  Statistics,
-  Recommendations,
+
   TimelinePage,
 } from "./pages";
-import { default as Layout } from "./layout";
-import { Routes, Route } from "react-router-dom";
-import CheckIn from "./pages/CheckIn";
-import { useState } from "react";
 
-import "./App.css";
+
 
 function App() {
   return (
