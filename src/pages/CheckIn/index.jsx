@@ -187,6 +187,7 @@ const CheckIn = () => {
             <Button value="LOG" type="submit" />
           )}
         </div>
+        {console.log(formData)}
       </form>
     </div>
   );
