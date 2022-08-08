@@ -22,20 +22,13 @@ import "./App.css";
 import { TimelinePage } from "./pages";
 
 function App() {
-  console.log("hello world");
-  const token = localStorage.getItem("token");
-  console.log("token", token);
-  if (!token) {
-    return <Login />;
-  }
-
   return (
     <>
       <Routes>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Landing />}></Route>
-          <Route path="/register" element={<Register />}></Route>
           <Route path="/contacts" element={<Contacts />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
