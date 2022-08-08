@@ -4,7 +4,7 @@ import './styles.css'
 const About = () => {
   return (
     <>
-      <div className="container">
+      <div className="container1">
         <h1 role="h1">This is the about page</h1>
       </div>
     </>
@@ -12,4 +12,3 @@ const About = () => {
 };
 
 export default About;
-

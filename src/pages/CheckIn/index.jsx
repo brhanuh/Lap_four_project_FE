@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, RatingForm } from '../../components';
+import { Button, Emoji, RatingForm } from '../../components';
 import { useNavigate } from 'react-router-dom';
 
 import CheckInQuestions from '../../components/CheckInQuestions';
@@ -23,6 +23,7 @@ const CheckIn = () => {
     diet: '',
     entertainment: '',
     social: '',
+    emoji: 0,
   });
 
   //creating heading for each step within the form
@@ -38,8 +39,52 @@ const CheckIn = () => {
   // function that will render different questions depending on what step of the form
   const rateQuestion = () => {
     return question === 0 ? (
-      <div>
-        <h1>😑😊🤣😎😴😞🙃animated moods will go here</h1>
+      <div className={checkin.emoji}>
+        {/* <h1>😑😊🤣😎😴😞🙃animated moods will go here</h1> */}
+        <div>
+          <Emoji
+            emoji="😡"
+            id="emoji-1"
+            value={1}
+            funct={(e) => {
+              setFormData({ ...formData, emoji: parseInt(e.target.value) });
+            }}
+          />
+
+          <Emoji
+            emoji="😔 "
+            id="emoji-2"
+            value={2}
+            funct={(e) => {
+              setFormData({ ...formData, emoji: parseInt(e.target.value) });
+            }}
+          />
+          <Emoji
+            emoji="😑"
+            id="emoji-3"
+            value={3}
+            funct={(e) => {
+              setFormData({ ...formData, emoji: parseInt(e.target.value) });
+            }}
+          />
+          <Emoji
+            emoji="😊"
+            id="emoji-4"
+            value={4}
+            funct={(e) => {
+              setFormData({ ...formData, emoji: parseInt(e.target.value) });
+            }}
+          />
+          <Emoji
+            emoji="😊"
+            id="emoji-5"
+            value={5}
+            funct={(e) => {
+              setFormData({ ...formData, emoji: parseInt(e.target.value) });
+            }}
+          />
+        </div>
+        <input type="range" min="0" max="5" defaultValue="0" />
       </div>
     ) : question === 1 ? (
       <div>
@@ -187,6 +232,7 @@ const CheckIn = () => {
             <Button value="LOG" type="submit" />
           )}
         </div>
+        {console.log(formData)}
       </form>
     </div>
   );

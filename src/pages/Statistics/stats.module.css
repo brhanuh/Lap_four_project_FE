@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.chart {
+  margin-top: 5rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .chart {
+    margin-top: 5rem;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .chart {
+    margin-top: 5rem;
+    width: 50%;
+  }
+}
