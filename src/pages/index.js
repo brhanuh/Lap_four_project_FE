@@ -9,3 +9,4 @@ export { default as Statistics } from "./Statistics";
 export { default as Recommendations } from "./Recommendations";
 export { default as TimelinePage } from "./TimelinePage";
 export { default as AddRecommendation } from "./AddRecommendation";
+export { default as Logout } from "./Logout";

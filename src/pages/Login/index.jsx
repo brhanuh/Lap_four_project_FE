@@ -23,6 +23,8 @@ const Login = () => {
       })
       .then(function (response) {
         console.log(response);
+        const userToken = response.data.access_token;
+        localStorage.setItem("token", userToken);
       })
       .catch(function (error) {
         console.log(error);
