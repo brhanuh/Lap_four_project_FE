@@ -1,5 +1,5 @@
-import React from 'react';
-import './styles.css';
+import React from 'react'
+import './styles.css'
 
 const About = () => {
   return (
@@ -12,3 +12,4 @@ const About = () => {
 };
 
 export default About;
+

@@ -5,18 +5,15 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './styles.css'
 import '../index.css'
+import MoodMode from '../components/MoodMode';
+
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
-  const [isActive, setIsActive] = useState(false);
-
 
   const showSidebar = () => setSidebar(!sidebar);
 
-  const handleClick = () => {
-    setIsActive(current => !current);
-
-  }
+  
 
   return (
     <>
@@ -24,12 +21,10 @@ function Navbar() {
           <NavLink to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavLink>
-          <div>
-          <button>Calm</button>
-          <button>Happy</button>
-          <button>Mellow</button>
-          <button>Down</button>
+          <div className='container'>
+          <h1>Mental Health app</h1>
           </div>
+          <MoodMode/>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' id='link' onClick={showSidebar}>
@@ -56,3 +51,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
