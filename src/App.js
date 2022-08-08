@@ -1,21 +1,25 @@
-import React from 'react'
-import { Home, Login, Landing, Register, Contacts, Hub, About, Statistics, Recommendations } from "./pages"
-import { default as Layout } from "./layout"
-import { Routes, Route } from 'react-router-dom'
-<<<<<<< HEAD
-import CheckIn from './pages/CheckIn'
-=======
-import {useState} from 'react';
+import React from "react";
 
->>>>>>> 24885ce568ca038f3d2a9e127a51f2aa1e06d410
-import './App.css';
+import {
+  Home,
+  Login,
+  Landing,
+  Register,
+  Contacts,
+  Hub,
+  About,
+  Statistics,
+  Recommendations,
+  TimelinePage,
+} from "./pages";
+import { default as Layout } from "./layout";
+import { Routes, Route } from "react-router-dom";
+import CheckIn from "./pages/CheckIn";
+import { useState } from "react";
 
-
-
+import "./App.css";
 
 function App() {
-
-
   return (
     <>
       <Routes>
@@ -30,6 +34,7 @@ function App() {
           <Route path="/check-in" element={<CheckIn />}></Route>
           <Route path="/recommendations" element={<Recommendations />}></Route>
           <Route path="/statistics" element={<Statistics />}></Route>
+          <Route path="/timeline" element={<TimelinePage />}></Route>
         </Route>
       </Routes>
     </>
