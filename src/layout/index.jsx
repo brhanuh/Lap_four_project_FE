@@ -7,6 +7,7 @@ import './layout.css'
 import '../index.css'
 import MoodMode from '../components/MoodMode';
 import MoodBoard from '../components/MoodBoard';
+import { Login } from "../pages";
 
 
 function Navbar() {
@@ -14,8 +15,10 @@ function Navbar() {
 
   const showSidebar = () => setSidebar(!sidebar);
 
-  
-
+  const token = localStorage.getItem("token");
+  if (!token) {
+    return <Login />;
+  }
   return (
     <>
         <div className='navbar'>
@@ -26,31 +29,30 @@ function Navbar() {
           <div className='container'>
           <h1>Mental Health app</h1>
           </div>
-        </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items' id='link' onClick={showSidebar}>
-            <li className='navbar-toggle'>
-              <NavLink to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose />
-              </NavLink>
-            </li>
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <NavLink to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </NavLink>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-        <Outlet/>
+        <MoodMode />
+      </div>
+      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+        <ul className="nav-menu-items" id="link" onClick={showSidebar}>
+          <li className="navbar-toggle">
+            <NavLink to="#" className="menu-bars">
+              <AiIcons.AiOutlineClose />
+            </NavLink>
+          </li>
+          {SidebarData.map((item, index) => {
+            return (
+              <li key={index} className={item.cName}>
+                <NavLink to={item.path}>
+                  {item.icon}
+                  <span>{item.title}</span>
+                </NavLink>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+      <Outlet />
     </>
   );
 }
 
 export default Navbar;
-
-
