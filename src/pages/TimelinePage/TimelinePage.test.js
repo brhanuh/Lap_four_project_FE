@@ -1,10 +1,10 @@
 import React from "react";
 import { screen, render } from "@testing-library/react";
-import Timeline from ".";
+import TimelinePage from ".";
 
 describe("Timeline Page", () => {
   beforeEach(() => {
-    render(<Timeline />);
+    render(<TimelinePage />);
   });
 
   test("Displays loading page", () => {
@@ -14,7 +14,7 @@ describe("Timeline Page", () => {
 
   describe("Renders timelines when loading is finished", () => {
     beforeEach(() => {
-      render(<Timeline />);
+      render(<TimelinePage />);
     });
     test("displays heading", async () => {
       setTimeout(function () {

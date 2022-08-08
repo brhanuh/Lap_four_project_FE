@@ -7,4 +7,4 @@ export { default as Hub } from "./Hub";
 export { default as About } from "./About";
 export { default as Statistics } from "./Statistics";
 export { default as Recommendations } from "./Recommendations";
-export { default as Timeline } from "./Timeline";
+export { default as TimelinePage } from "./TimelinePage";

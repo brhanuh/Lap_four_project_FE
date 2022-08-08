@@ -10,7 +10,7 @@ import {
   About,
   Statistics,
   Recommendations,
-  Timeline,
+  TimelinePage,
 } from "./pages";
 import { default as Layout } from "./layout";
 import { Routes, Route } from "react-router-dom";
@@ -34,7 +34,7 @@ function App() {
           <Route path="/check-in" element={<CheckIn />}></Route>
           <Route path="/recommendations" element={<Recommendations />}></Route>
           <Route path="/statistics" element={<Statistics />}></Route>
-          <Route path="/timeline" element={<Timeline />}></Route>
+          <Route path="/timeline" element={<TimelinePage />}></Route>
         </Route>
       </Routes>
     </>
