@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button, InputText } from '../../components';
 import { useNavigate } from 'react-router-dom';
-import './styles.css';
+import styles from './styles.module.css';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -13,29 +13,32 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div>
-        <h1 role="h1">Login</h1>
-        <form action="" method="POST">
+        <h1 className={styles.loginh1} role="h1">
+          Login
+        </h1>
+        <form onSubmit={handleSubmit} action="" method="POST">
           <InputText
             type="text"
-            name="Username"
-            value="Enter Username.."
+            label="Username"
+            placeholder="Enter Username.."
             id="login-username"
           />
           <InputText
             type="text"
-            name="Password"
-            value="Enter Password.."
+            label="Password"
+            placeholder="Enter Password.."
             id="login-password"
           />
-          <Button type="submit" value="Login" funct={handleSubmit} />
+          <Button id="login-btn" type="submit" value="Login" />
         </form>
         <div>
           <h3>Don't have an account?</h3>
           <NavLink to="/register">Sign Up now</NavLink>
         </div>
         <Button
+          id="about-btn"
           type="button"
           value="What This App Is About"
           funct={() => {

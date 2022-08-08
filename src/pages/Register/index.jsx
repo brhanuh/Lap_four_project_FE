@@ -7,50 +7,48 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('hs');
     navigate('/login');
   };
 
   return (
-    <div>
-      <h1>Sign Up</h1>
-      <form action="" method="POST">
-        <InputText
-          type="text"
-          value="Enter username.."
-          name="Username: "
-          id="name"
-        />
-        <InputText
-          type="email"
-          value="Enter Email.."
-          name="Email: "
-          id="email"
-        />
-        <InputText
-          type="email"
-          value="Confirm Email.."
-          name="Confirm Email: "
-          id="confirm-email"
-        />
-        <InputText
-          type="text"
-          value="Enter Password.."
-          name="Password: "
-          id="password"
-        />
-        <InputText
-          type="text"
-          value="Confirm Password.."
-          name="Confirm Password: "
-          id="confirm-password"
-        />
-        <Button
-          type="submit"
-          value="Sign Up"
-          id="signUp-btn"
-          funct={handleSubmit}
-        />
-      </form>
+    <div className="container">
+      <div>
+        <h1>Sign Up</h1>
+        <form onSubmit={handleSubmit} action="" method="POST">
+          <InputText
+            type="text"
+            placeholder="Enter username.."
+            label="Username: "
+            id="name"
+          />
+          <InputText
+            type="email"
+            placeholder="Enter Email.."
+            label="Email: "
+            id="email"
+          />
+          <InputText
+            type="email"
+            placeholder="Confirm Email.."
+            label="Confirm Email: "
+            id="confirm-email"
+          />
+          <InputText
+            type="text"
+            placeholder="Enter Password.."
+            label="Password: "
+            id="password"
+          />
+          <InputText
+            type="text"
+            placeholder="Confirm Password.."
+            label="Confirm Password: "
+            id="confirm-password"
+          />
+          <Button type="submit" value="Sign Up" id="signUp-btn" />
+        </form>
+      </div>
     </div>
   );
 };
