@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Emoji, RatingForm } from '../../components';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 import CheckInQuestions from '../../components/CheckInQuestions';
 import checkin from './checkIn.module.css';
 
@@ -23,7 +23,7 @@ const CheckIn = () => {
     diet: '',
     entertainment: '',
     social: '',
-    emoji: 0,
+    mood: 0,
   });
 
   //creating heading for each step within the form
@@ -47,7 +47,14 @@ const CheckIn = () => {
             id="emoji-1"
             value={1}
             funct={(e) => {
-              setFormData({ ...formData, emoji: parseInt(e.target.value) });
+              //           const checked = e.target.checked;
+              // if (checked) {
+              //  }}
+              // } else {
+
+              //  //unchecked
+              // }
+              setFormData({ ...formData, mood: parseInt(e.target.value) });
             }}
           />
 
@@ -56,7 +63,7 @@ const CheckIn = () => {
             id="emoji-2"
             value={2}
             funct={(e) => {
-              setFormData({ ...formData, emoji: parseInt(e.target.value) });
+              setFormData({ ...formData, mood: parseInt(e.target.value) });
             }}
           />
           <Emoji
@@ -64,7 +71,7 @@ const CheckIn = () => {
             id="emoji-3"
             value={3}
             funct={(e) => {
-              setFormData({ ...formData, emoji: parseInt(e.target.value) });
+              setFormData({ ...formData, mood: parseInt(e.target.value) });
             }}
           />
           <Emoji
@@ -72,7 +79,7 @@ const CheckIn = () => {
             id="emoji-4"
             value={4}
             funct={(e) => {
-              setFormData({ ...formData, emoji: parseInt(e.target.value) });
+              setFormData({ ...formData, mood: parseInt(e.target.value) });
             }}
           />
           <Emoji
@@ -80,7 +87,7 @@ const CheckIn = () => {
             id="emoji-5"
             value={5}
             funct={(e) => {
-              setFormData({ ...formData, emoji: parseInt(e.target.value) });
+              setFormData({ ...formData, mood: parseInt(e.target.value) });
             }}
           />
         </div>
@@ -172,8 +179,36 @@ const CheckIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const data = {
+      energy: formData.energy,
+      depression: formData.depression,
+      irritability: formData.irritability,
+      motivation: formData.motivation,
+      stress: formData.stress,
+      appetite: formData.appetite,
+      concentration: formData.concentration,
+      diet: formData.diet,
+      entertainment: formData.entertainment,
+      social: formData.social,
+      mood: formData.emoji,
+    };
+
+    const bodyFormData = new FormData();
+    console.log('bFd', bodyFormData);
+
+    axios
+      .post({
+        method: 'post',
+        url: 'https://fp-mental-health.herokuapp.com/new_entry',
+        data: bodyFormData,
+        headers: { 'Content-Type': 'multipart/form-data' },
+      })
+      .then((response) => {
+        console.log(response.status);
+        console.log(response.data.token);
+      });
     console.log(formData);
-    navigate('/hub');
+    // navigate('/hub');
   };
 
   return (
