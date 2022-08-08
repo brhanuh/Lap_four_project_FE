@@ -28,7 +28,8 @@ useEffect(() => {
 },[]);
 
     return <>
-    <div className='quote'>
+     <h1 data-testid="title">Quote of the day:</h1>
+    <div className='quote' data-testid="quotes">
         {quote}
         {author}
     </div>

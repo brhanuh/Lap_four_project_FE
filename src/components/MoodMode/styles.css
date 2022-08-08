@@ -3,12 +3,41 @@
     
 }
 
-.background-btn{
+.image-1{
   display: flex;
-  flex-direction: row;
-  margin-right: 100px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgb(96, 210, 244);
+  border-width: 1px;
 
 }
+
+.image-2{
+    display: flex;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: yellow;
+    border-width: 1px;
+  
+  }
+
+
+.image-3{
+    display: flex;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: pink;
+    border-width: 1px;
+  
+  }
+
+.image-4{
+    display: flex;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: purple;
+    border-width: 1px;
+  }
 
 .tooltip {
     position: relative;
@@ -31,4 +60,10 @@
 
   .tooltip:hover .tooltiptext {
     visibility: visible;
+  }
+
+  .MoodMode{
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
   }

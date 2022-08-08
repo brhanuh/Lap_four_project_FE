@@ -4,6 +4,7 @@ import Quotes from '../../components/Quotes';
 import './styles.css'
 
 const Hub = () =>{
+ 
     return <>
     <div className='container'>
     <h1 role="h1">This is the hub page</h1>
