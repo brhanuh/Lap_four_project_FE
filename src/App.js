@@ -12,6 +12,7 @@ import {
   Recommendations,
   TimelinePage,
 } from "./pages";
+
 import { default as Layout } from "./layout";
 import { Routes, Route } from "react-router-dom";
 import CheckIn from "./pages/CheckIn";
