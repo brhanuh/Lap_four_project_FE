@@ -1,7 +1,8 @@
 import React from 'react'
+import MoodMode from '../../components/MoodMode';
 import './styles.css'
 
-const CheckIn = () =>{
+const About = () =>{
     return <>
     <div className='container'>
         <h1 role="h1">This is the about page</h1>
@@ -9,4 +10,4 @@ const CheckIn = () =>{
     </>
 }
 
-export default CheckIn;
+export default About;

@@ -74,3 +74,7 @@
     justify-content: start;
     align-items: center;
 }
+
+.container{
+    margin: auto;
+}

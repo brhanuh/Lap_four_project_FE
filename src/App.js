@@ -9,12 +9,12 @@ import CheckIn from './pages/About';
 
 
 
-function App() {
 
+function App() {
 
   return (
     <>
-      <Routes>
+    <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Landing />}></Route>
           <Route path="/login" element={<Login />}></Route>
