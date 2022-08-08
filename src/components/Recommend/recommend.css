@@ -1,0 +1,10 @@
+.recommendContainer {
+  margin-bottom: 10px;
+}
+
+.recommendContent {
+  padding: 10px 20px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}

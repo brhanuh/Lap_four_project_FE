@@ -1,15 +1,21 @@
-import React from 'react'
-import './styles.css'
+import React from "react";
+import { Recommend } from "../../components";
+import "./styles.css";
 
-const Recommendations = () =>{
-    return <>
-    <div className='container'>
-         <h1 role="h1">This is the Recommendations page</h1>
-         
-
-        <span> Where do you want to go?</span>
-        </div>
+const Recommendations = () => {
+  function handleRecommend(e) {
+    e.preventDefault();
+  }
+  return (
+    <>
+      <div className="container">
+        <h1 role="h1">This is the Recommendations page</h1>
+      </div>
+      <button onClick={handleRecommend}>Recommend</button>
+      <Recommend />
+      <Recommend />
     </>
-}
+  );
+};
 
 export default Recommendations;
