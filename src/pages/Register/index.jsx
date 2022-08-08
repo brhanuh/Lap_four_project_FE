@@ -1,21 +1,36 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Button, InputText } from '../../components';
+import React from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { Button, InputText } from "../../components";
 
 const Register = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('hs');
-    navigate('/login');
+    const username = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    axios
+      .post("https://fp-mental-health.herokuapp.com/register", {
+        username: username,
+        email: email,
+        password: password,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    //navigate("/login");
   };
 
   return (
     <div className="container">
       <div>
         <h1>Sign Up</h1>
-        <form onSubmit={handleSubmit} action="" method="POST">
+        <form onSubmit={handleSubmit}>
           <InputText
             type="text"
             placeholder="Enter username.."
