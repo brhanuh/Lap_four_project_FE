@@ -1,9 +1,9 @@
 import React from 'react';
 
-const InputText = ({ type, value, name, funct, id, label, placeholder }) => {
+const InputText = ({ type, name, funct, id, label, placeholder }) => {
   return (
     <div>
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id}>{}</label>
       <input
         onChange={funct}
         type={type}
@@ -11,6 +11,7 @@ const InputText = ({ type, value, name, funct, id, label, placeholder }) => {
         name={name}
         id={id}
         required
+        // style={styles}
       />
     </div>
   );

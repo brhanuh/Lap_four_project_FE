@@ -1,7 +1,13 @@
-body {
- background-image: url(https://egertontm.com/wp-content/uploads/2018/06/blue-gradient-background.png);
+html {
+  /* 62.5% makes 1rem equal to 10px */
+  font-size: 62.5%;
+  margin: 0%;
+  padding: 0%;
 }
 
+body {
+  background-image: url(https://egertontm.com/wp-content/uploads/2018/06/blue-gradient-background.png);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

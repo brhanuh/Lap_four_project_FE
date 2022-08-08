@@ -3,7 +3,7 @@ import { Button, RatingForm } from '../../components';
 import { useNavigate } from 'react-router-dom';
 
 import CheckInQuestions from '../../components/CheckInQuestions';
-import './styles.css';
+import checkin from './checkIn.module.css';
 
 const CheckIn = () => {
   const navigate = useNavigate();
@@ -132,10 +132,15 @@ const CheckIn = () => {
   };
 
   return (
-    <div>
+    <div className={checkin.container}>
       <h1>This is the check in page</h1>
-      <form onSubmit={handleSubmit} action="" method="POST">
-        <div className="progressbar">
+      <form
+        className={checkin.form}
+        onSubmit={handleSubmit}
+        action=""
+        method="POST"
+      >
+        <div className={checkin.progressbar}>
           <div
             style={{
               width:
@@ -153,14 +158,15 @@ const CheckIn = () => {
             }}
           ></div>
         </div>
-        <div className="rate-form-header">
+        <div className={checkin.checkInFormHeader}>
           <h1> generic title - Rate from 1-5</h1>
           <h1>{questionHeadings[question]}</h1>
         </div>
         <div className="rate-form-body">{rateQuestion()}</div>
-        <div>
+        <div className={checkin.nextPrevDiv}>
           {question > 0 && (
             <Button
+              type="button"
               funct={(e) => {
                 e.preventDefault();
                 setQuestion((currentQuestion) => currentQuestion - 1);
@@ -170,6 +176,7 @@ const CheckIn = () => {
           )}
           {question !== questionHeadings.length - 1 ? (
             <Button
+              type="button"
               funct={(e) => {
                 e.preventDefault();
                 setQuestion((currentQuestion) => currentQuestion + 1);
