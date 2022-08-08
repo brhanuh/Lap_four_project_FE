@@ -21,6 +21,9 @@ const Statistics = () => {
         borderWidth: 1,
       },
     ],
+    options: {
+      responsive: true,
+    },
   };
 
   return (
@@ -30,7 +33,7 @@ const Statistics = () => {
           <h1 role="h1">This is the stats page</h1>
         </div>
         <div className={stats.chart}>
-          <Pie data={data} />;
+          <Pie data={data} />
         </div>
       </div>
     </>
