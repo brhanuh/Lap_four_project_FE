@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import '../../index.css'
 import './styles.css'
@@ -55,9 +56,8 @@ const data = [
   }
 ];
 
-
 export default function MoodMode() {
-  const [toggle, setToggle] = useState("1");
+  const [toggle, setToggle] = useState('1');
   return (
     <>
     <span>Mood Board:</span>
@@ -76,13 +76,12 @@ export default function MoodMode() {
                     <style>{`.navbar{background-color: ${color2}`}</style>
                     <style>{`.nav-menu{background-color: ${color3}`}</style>
                     <style>{`.navbar-toggle{background-color: ${color4}`}</style>
-                    <style>{`.mood-menu{background-color: ${color4}`}</style>
+                    <style>{`.mood-menu{background-color: ${color5}`}</style>
                   </>
                 ) : null}
               </div>
               </div>
           </>
-          
         );
       })}
     </div>
