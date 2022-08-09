@@ -46,21 +46,26 @@ const Login = () => {
             label="Username"
             placeholder="Enter Username.."
             id="username"
+            className={styles.inputField}
           />
           <InputText
             type="password"
             label="Password"
             placeholder="Enter Password.."
             id="password"
+            className={styles.inputField}
           />
-          <Button id="login-btn" type="submit" value="Login" />
+          <Button id={styles.loginBtn} type="submit" value="Login" />
         </form>
-        <div>
-          <h3>Don't have an account?</h3>
+
+        <span className={styles.noAccountText}>
+          Don't have an account?
+          <br />
           <NavLink to="/register">Sign Up now</NavLink>
-        </div>
+        </span>
+
         <Button
-          id="about-btn"
+          id={styles.aboutBtn}
           type="button"
           value="What This App Is About"
           funct={() => {

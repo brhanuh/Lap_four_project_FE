@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputText = ({ type, name, funct, id, label, placeholder }) => {
+const InputText = ({ type, name, funct, id, className, placeholder }) => {
   return (
     <div>
       <label htmlFor={id}>{}</label>
@@ -10,6 +10,7 @@ const InputText = ({ type, name, funct, id, label, placeholder }) => {
         placeholder={placeholder}
         name={name}
         id={id}
+        className={className}
         required
         // style={styles}
       />

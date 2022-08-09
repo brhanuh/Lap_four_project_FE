@@ -1,7 +1,9 @@
-import React from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { Button, InputText } from "../../components";
+import React from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { Button, InputText } from '../../components';
+// can call styles whatever you want when importing it
+import styles from './register.module.css';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -12,7 +14,7 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     axios
-      .post("https://fp-mental-health.herokuapp.com/register", {
+      .post('https://fp-mental-health.herokuapp.com/register', {
         username: username,
         email: email,
         password: password,
@@ -27,41 +29,46 @@ const Register = () => {
   };
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div>
-        <h1>Sign Up</h1>
+        <h1 className={styles.header}>Sign Up</h1>
         <form onSubmit={handleSubmit}>
           <InputText
             type="text"
             placeholder="Enter username.."
             label="Username: "
             id="name"
+            className={styles.inputField}
           />
           <InputText
             type="email"
             placeholder="Enter Email.."
             label="Email: "
             id="email"
+            className={styles.inputField}
           />
           <InputText
             type="email"
             placeholder="Confirm Email.."
             label="Confirm Email: "
             id="confirm-email"
+            className={styles.inputField}
           />
           <InputText
             type="text"
             placeholder="Enter Password.."
             label="Password: "
             id="password"
+            className={styles.inputField}
           />
           <InputText
             type="text"
             placeholder="Confirm Password.."
             label="Confirm Password: "
             id="confirm-password"
+            className={styles.inputField}
           />
-          <Button type="submit" value="Sign Up" id="signUp-btn" />
+          <Button type="submit" value="Sign Up" id={styles.signUpBtn} />
         </form>
       </div>
     </div>
