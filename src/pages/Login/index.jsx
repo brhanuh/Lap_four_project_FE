@@ -17,19 +17,21 @@ const Login = () => {
     const testPass = "test";
 
     axios
-      .post("https://fp-mental-health.herokuapp.com/token", {
-        username: testName,
-        password: testPass,
+      .post("https://fp-mental-health.herokuapp.com/login", {
+        username: username,
+        password: password,
       })
       .then(function (response) {
         console.log(response);
         const userToken = response.data.access_token;
         localStorage.setItem("token", userToken);
+        localStorage.setItem("user_id", response.data.user_id);
+        localStorage.setItem("username", response.data.username);
       })
       .catch(function (error) {
         console.log(error);
       });
-    //navigate("/home");
+    navigate("/home");
   };
 
   return (
