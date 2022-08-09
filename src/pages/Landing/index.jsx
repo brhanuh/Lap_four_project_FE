@@ -7,7 +7,7 @@ const Landing = () => {
     <>
     <div className="opacity">
       <div className="container">
-        <h1 role="h1">This is the landing page!</h1>
+        <h1 role="h1">Welcome to Brighter Minds</h1>
         <div className="">
           <ThreeDBrain />
         </div>

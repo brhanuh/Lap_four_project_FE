@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button, InputText } from "../../components";
+import Layout from "../../layout";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -27,6 +28,8 @@ const Register = () => {
   };
 
   return (
+    <>
+    <Layout/>
     <div className="container">
       <div>
         <h1>Sign Up</h1>
@@ -65,6 +68,7 @@ const Register = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

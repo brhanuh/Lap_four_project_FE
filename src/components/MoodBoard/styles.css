@@ -20,6 +20,7 @@
     right: -100%;
     transition: 850ms;
     z-index: 100;
+    background-color: white;
 }
 
 .mood{
@@ -76,3 +77,10 @@
 .container{
     margin: auto;
 }
+
+/* @media only screen and (max-width: 750px) {
+    .mood-menu-items {
+      display:block;
+    }
+  }
+ */

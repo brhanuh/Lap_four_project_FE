@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 .navbar{
     height: 80px;
     display:flex;
@@ -76,3 +79,20 @@
 .container{
     margin: auto;
 }
+
+.main-name{
+    font-family: 'Pacifico', cursive;
+}
+
+@media (max-width: 767px) {
+    .hub-btn{
+     width: 100%;
+    }
+   }
+
+@media (max-width: 767px) {
+.main-name{
+ font-size: 20pt;
+}  
+}
+

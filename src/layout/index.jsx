@@ -8,8 +8,9 @@ import "../index.css";
 import MoodMode from "../components/MoodMode";
 import MoodBoard from "../components/MoodBoard";
 import { Login } from "../pages";
+import HubButton from "../components/HubButton";
 
-function Navbar() {
+function Layout() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -25,10 +26,9 @@ function Navbar() {
             <FaIcons.FaBars onClick={showSidebar} />
           </NavLink>
           <div className='container'>
-          <h1>Brighter Minds</h1>
+          <h1 className="main-name">Brighter Minds</h1>
           </div>
           <MoodBoard/>
-        <MoodMode />
       </div>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" id="link" onClick={showSidebar}>
@@ -50,8 +50,11 @@ function Navbar() {
         </ul>
       </nav>
       <Outlet />
+      <footer>
+      <HubButton/>
+      </footer>
     </>
   );
 }
 
-export default Navbar;
+export default Layout;
