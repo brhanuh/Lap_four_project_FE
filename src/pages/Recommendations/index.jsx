@@ -16,10 +16,10 @@ const Recommendations = () => {
     <>
       <div className="container">
         <h1 role="h1">This is the Recommendations page</h1>
+        <Recommend />
+        <Recommend />
       </div>
       <button onClick={handleRecommend}>Recommend</button>
-      <Recommend />
-      <Recommend />
     </>
   );
 };

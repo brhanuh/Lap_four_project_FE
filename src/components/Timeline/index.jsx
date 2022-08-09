@@ -28,7 +28,7 @@ const Timeline = () => {
                 text={entry.text}
                 cssClass={entry.class}
                 testData={testData}
-                key={index}
+                index={index}
               />
             ))}
           </div>
