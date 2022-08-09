@@ -1,11 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './styles.css'
+import ChartIcon from '../../components/ChartIcon';
+import styles from './home.module.css';
 
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <>
+    <div className="container">
       <div>APP NAME & Logo</div>
       <h1 role="h1">This is the home page</h1>
 
@@ -35,19 +36,21 @@ const Home = () => {
           onClick={() => {
             navigate('/hub');
           }}
+          className={styles.logo}
         >
           HUB
         </div>
         <div
+          // className={styles.logo}
           id="stats-btn"
           onClick={() => {
             navigate('/statistics');
           }}
         >
-          Stats
+          <ChartIcon />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
