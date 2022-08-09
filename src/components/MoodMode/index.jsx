@@ -3,6 +3,7 @@ import '../../index.css'
 import './styles.css'
 import { Helmet } from "react-helmet";
 import '../../layout/layout.css'
+import  '../MoodBoard/styles.css'
 
 
 const data = [
@@ -14,7 +15,8 @@ const data = [
     backgroundImage: "https://i.pinimg.com/originals/32/b8/77/32b877ed4aa7778cc7d43ebb7d95a6f1.png",
     color2: "#add8e6",
     color3: "#add8e6",
-    color4: "#00008B"
+    color4: "#00008B",
+    color5: "00008B",
   },
   {
     id: "2",
@@ -24,7 +26,8 @@ const data = [
     backgroundImage: "https://wallpaperaccess.com/full/1092658.jpg",
     color2: "#FFFFE0",
     color3: "#FFFFE0",
-    color4: "#8B8000"
+    color4: "#8B8000",
+    color5: "#8B8000",
 
   },
   {
@@ -35,7 +38,8 @@ const data = [
     backgroundImage: "https://img.freepik.com/premium-vector/abstract-pastel-colorful-gradient-background_29865-2081.jpg?w=2000",
     color2: "#FADCD2",
     color3: "#FADCD2",
-    color4: "#AA336A"
+    color4: "#AA336A",
+    color5: "#AA336A",
   },
   {
     id: "4",
@@ -46,7 +50,8 @@ const data = [
     backgroundImage: "https://wallpaperaccess.com/full/1092603.jpg",
     color2: "#DBC3C8",
     color3: "#DBC3C8",
-    color4: "#301934"
+    color4: "#301934",
+    color5: "#301934",
   }
 ];
 
@@ -57,7 +62,7 @@ export default function MoodMode() {
     <>
     <span>Mood Board:</span>
     <div className="MoodMode">
-      {data.map(({ title, key, backgroundImage, className, color2, color3, color4}) => {
+      {data.map(({ title, key, backgroundImage, className, color2, color3, color4, color5}) => {
         return (
           <>
             <div className="main">
@@ -71,6 +76,7 @@ export default function MoodMode() {
                     <style>{`.navbar{background-color: ${color2}`}</style>
                     <style>{`.nav-menu{background-color: ${color3}`}</style>
                     <style>{`.navbar-toggle{background-color: ${color4}`}</style>
+                    <style>{`.mood-menu{background-color: ${color4}`}</style>
                   </>
                 ) : null}
               </div>

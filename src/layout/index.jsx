@@ -23,7 +23,7 @@ function Navbar() {
             <FaIcons.FaBars onClick={showSidebar} />
           </NavLink>
           <div className='container'>
-          <h1>Mental Health app</h1>
+          <h1>Brighter Minds</h1>
           </div>
           <MoodBoard/>
         </div>
