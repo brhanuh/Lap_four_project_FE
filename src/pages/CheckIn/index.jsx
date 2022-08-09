@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Emoji, RatingForm } from '../../components';
+import { Button, Emoji, RatingForm, ThreeDSmiley } from '../../components';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import CheckInQuestions from '../../components/CheckInQuestions';
@@ -21,7 +21,7 @@ const CheckIn = () => {
     appetite: 0,
     concentration: 0,
     diet: '',
-    entertainment: '',
+    enter: '',
     social: '',
     mood: 0,
   });
@@ -59,7 +59,7 @@ const CheckIn = () => {
           />
 
           <Emoji
-            emoji="😔 "
+            emoji="😔"
             id="emoji-2"
             value={2}
             funct={(e) => {
@@ -75,7 +75,7 @@ const CheckIn = () => {
             }}
           />
           <Emoji
-            emoji="😊"
+            emoji="🙂"
             id="emoji-4"
             value={4}
             funct={(e) => {
@@ -83,7 +83,8 @@ const CheckIn = () => {
             }}
           />
           <Emoji
-            emoji="😊"
+            emoji={<ThreeDSmiley />}
+            // emoji="😁"
             id="emoji-5"
             value={5}
             funct={(e) => {
@@ -97,13 +98,15 @@ const CheckIn = () => {
       <div>
         <RatingForm
           value={formData.energy}
-          funct={(e) => setFormData({ ...formData, energy: e.target.value })}
+          funct={(e) =>
+            setFormData({ ...formData, energy: parseInt(e.target.value) })
+          }
           label="Energy"
         />
         <RatingForm
           value={formData.depression}
           funct={(e) =>
-            setFormData({ ...formData, depression: e.target.value })
+            setFormData({ ...formData, depression: parseInt(e.target.value) })
           }
           label="Depression"
         />
@@ -111,14 +114,14 @@ const CheckIn = () => {
           label="Irritability"
           value={formData.irritability}
           funct={(e) =>
-            setFormData({ ...formData, irritability: e.target.value })
+            setFormData({ ...formData, irritability: parseInt(e.target.value) })
           }
         />
         <RatingForm
           label="Motivation"
           value={formData.motivation}
           funct={(e) =>
-            setFormData({ ...formData, motivation: e.target.value })
+            setFormData({ ...formData, motivation: parseInt(e.target.value) })
           }
         />
       </div>
@@ -127,18 +130,25 @@ const CheckIn = () => {
         <RatingForm
           label="Stress"
           value={formData.stress}
-          funct={(e) => setFormData({ ...formData, stress: e.target.value })}
+          funct={(e) =>
+            setFormData({ ...formData, stress: parseInt(e.target.value) })
+          }
         />
         <RatingForm
           label="Appetite"
           value={formData.appetite}
-          funct={(e) => setFormData({ ...formData, appetite: e.target.value })}
+          funct={(e) =>
+            setFormData({ ...formData, appetite: parseInt(e.target.value) })
+          }
         />
         <RatingForm
           label="Concentration"
           value={formData.concentration}
           funct={(e) =>
-            setFormData({ ...formData, concentration: e.target.value })
+            setFormData({
+              ...formData,
+              concentration: parseInt(e.target.value),
+            })
           }
         />
       </div>
@@ -159,10 +169,8 @@ const CheckIn = () => {
         rows="5"
         id="entertainment-textarea"
         name="Entertainment"
-        value={formData.entertainment}
-        funct={(e) =>
-          setFormData({ ...formData, entertainment: e.target.value })
-        }
+        value={formData.enter}
+        funct={(e) => setFormData({ ...formData, enter: e.target.value })}
       />
     ) : (
       <CheckInQuestions
@@ -192,17 +200,8 @@ const CheckIn = () => {
       social: formData.social,
       mood: formData.emoji,
     };
-
-    const bodyFormData = new FormData();
-    console.log('bFd', bodyFormData);
-
     axios
-      .post({
-        method: 'post',
-        url: 'https://fp-mental-health.herokuapp.com/new_entry',
-        data: bodyFormData,
-        headers: { 'Content-Type': 'multipart/form-data' },
-      })
+      .post('https://fp-mental-health.herokuapp.com/new_entry', data)
       .then((response) => {
         console.log(response.status);
         console.log(response.data.token);
@@ -217,7 +216,7 @@ const CheckIn = () => {
       <form
         className={checkin.form}
         onSubmit={handleSubmit}
-        action=""
+        action="https://fp-mental-health.herokuapp.com/new_entry"
         method="POST"
       >
         <div className={checkin.progressbar}>
