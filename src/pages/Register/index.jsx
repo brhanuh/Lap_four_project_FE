@@ -29,6 +29,7 @@ const Register = () => {
   };
 
   return (
+    <>
     <div className={styles.container}>
       <div>
         <h1 className={styles.header}>Sign Up</h1>
@@ -72,6 +73,7 @@ const Register = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

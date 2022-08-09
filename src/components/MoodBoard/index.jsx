@@ -31,8 +31,8 @@ function MoodBoard() {
                   <AiIcons.AiOutlineClose />
                 </NavLink>
               </li>
-                  <h1>Mood Board:</h1>
-                  <span>Customise</span>
+                  <h1>Mood Board</h1>
+                  <h3>Customise:</h3>
                   <MoodMode/>
                   <MusicPlayer/>
             </ul>

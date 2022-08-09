@@ -4,6 +4,7 @@ import { Button, InputText } from "../../components";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 import axios from "axios";
+import Layout from '../../layout'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -35,6 +36,8 @@ const Login = () => {
   };
 
   return (
+    <>
+     <Layout/>
     <div className={styles.container}>
       <div>
         <h1 className={styles.loginh1} role="h1">
@@ -75,6 +78,7 @@ const Login = () => {
         />
       </div>
     </div>
+    </>
   );
 };
 
