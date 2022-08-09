@@ -3,7 +3,6 @@ import * as AiIcons from "react-icons/ai";
 import * as RiIcons from "react-icons/ri";
 import * as ImIcons from "react-icons/im";
 import * as FcIcons from "react-icons/fc";
-import * as BiIcons from "react-icons/bi";
 
 export const SidebarData = [
   {
@@ -33,12 +32,18 @@ export const SidebarData = [
   {
     title: "Logout",
     path: "/logout",
-    icon: <RiIcons.RiLoginCircleFill />,
+    icon: <RiIcons.RiLogoutCircleFill />,
     cName: "nav-text",
   },
 ];
 
 export const SidebarDataNotLogged = [
+  {
+    title: "Home",
+    path: "/",
+    icon: <AiIcons.AiFillHome />,
+    cName: "nav-text",
+  },
   {
     title: "Contacts",
     path: "/contacts",
