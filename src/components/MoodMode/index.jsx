@@ -13,7 +13,7 @@ const data = [
     key: "1",
     title: "Calm",
     className: "image-1",
-    backgroundImage: "https://i.pinimg.com/originals/32/b8/77/32b877ed4aa7778cc7d43ebb7d95a6f1.png",
+    backgroundImage: "https://wallpaperaccess.com/full/340554.png",
     color2: "#add8e6",
     color3: "#add8e6",
     color4: "#00008B",
@@ -60,7 +60,7 @@ export default function MoodMode() {
   const [toggle, setToggle] = useState('1');
   return (
     <>
-    <span>Mood Board:</span>
+
     <div className="MoodMode">
       {data.map(({ title, key, backgroundImage, className, color2, color3, color4, color5}) => {
         return (
