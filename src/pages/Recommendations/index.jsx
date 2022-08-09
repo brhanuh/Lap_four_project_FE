@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import { Recommend } from "../../components";
 import "./styles.css";
 
 const Recommendations = () => {
+  let navigate = useNavigate();
+
   function handleRecommend(e) {
     e.preventDefault();
+    navigate("/recommend");
+    console.log("hello world");
   }
   return (
     <>
