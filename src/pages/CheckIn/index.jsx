@@ -92,7 +92,6 @@ const CheckIn = () => {
             }}
           />
         </div>
-        <input type="range" min="0" max="5" defaultValue="0" />
       </div>
     ) : question === 1 ? (
       <div>
