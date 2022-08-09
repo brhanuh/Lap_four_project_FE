@@ -20,13 +20,15 @@ function Navbar() {
   // }
   return (
     <>
-      <div className="navbar">
-        <NavLink to="#" className="menu-bars">
-          <FaIcons.FaBars onClick={showSidebar} />
-        </NavLink>
-        <MoodBoard />
-        <div className="container">
-          <h1>Mental Health app</h1>
+        <div className='navbar'>
+          <NavLink to='#' className='menu-bars'>
+            <FaIcons.FaBars onClick={showSidebar} />
+          </NavLink>
+          <div className='container'>
+          <h1>Brighter Minds</h1>
+          </div>
+          <MoodBoard/>
+
         </div>
         <MoodMode />
       </div>
