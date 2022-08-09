@@ -12,7 +12,7 @@ const Loading = ({ setLoading }) => {
   return (
     <>
       <div className="loadingContainer">
-        <p>Loading your timeline</p>
+        <p></p>
         <PacmanLoader color={"#ffe737"} size={50} />
       </div>
     </>
