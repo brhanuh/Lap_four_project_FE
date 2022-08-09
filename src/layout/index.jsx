@@ -28,8 +28,6 @@ function Navbar() {
           <h1>Brighter Minds</h1>
           </div>
           <MoodBoard/>
-
-        </div>
         <MoodMode />
       </div>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
