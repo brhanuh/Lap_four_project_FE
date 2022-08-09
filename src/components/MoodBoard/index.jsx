@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import * as FaIcons from 'react-icons/fa';
+import * as SiIcons from 'react-icons/si';
 import * as AiIcons from 'react-icons/ai';
 import { NavLink, Outlet } from 'react-router-dom';
 import './styles.css'
@@ -21,7 +21,7 @@ function MoodBoard() {
         <>
           <div className='moodbar'>
             <NavLink to='#' className='mood-bars'>
-              <FaIcons.FaBars onClick={showMoodbar} />
+              <SiIcons.SiMusicbrainz onClick={showMoodbar} />
             </NavLink>
             </div>
           <nav className={moodBar ? 'mood-menu active' : 'mood-menu'}>

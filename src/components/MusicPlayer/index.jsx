@@ -17,7 +17,7 @@ const MusicPlayer = () => {
       }
 
       const renderRows = () => {
-        return <div className='musicplayer'><td className='song-name'>{song.name}</td><td><img className='music-image' src={song.img} /></td><td>{song.releaseDate}</td><td><embed className='music-player' src={song.songURL}  allow="encrypted-media" /></td></div>
+        return <div ><span className='song-name'>{song.name} {song.releaseDate}</span><embed className='music-player' src={song.songURL}  allow="encrypted-media" /></div>
       }
 
     async function getaSong(){
@@ -44,7 +44,6 @@ const MusicPlayer = () => {
   return (
     <>
       <div className="container1">
-        <h1 role="h1">Musicccc playa</h1>
         { renderRows() }
         <button className="music-btn" onClick={getaSong}>Get Songs</button>
       </div>
