@@ -9,4 +9,5 @@ export { default as Emoji } from "./Emoji";
 export { default as ThreeDPlant } from "./ThreeDPlant";
 export { default as ThreeDSmiley } from "./ThreeDSmiley";
 export { default as ThreeDBrain } from "./ThreeDBrain";
+export { default as ChartIcon } from "./ChartIcon";
 export { default as Recommend } from "./Recommend";

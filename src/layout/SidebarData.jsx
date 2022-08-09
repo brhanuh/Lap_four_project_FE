@@ -8,14 +8,8 @@ import * as BiIcons from "react-icons/bi";
 export const SidebarData = [
   {
     title: "Home",
-    path: "/",
+    path: "/home",
     icon: <AiIcons.AiFillHome />,
-    cName: "nav-text",
-  },
-  {
-    title: "Login",
-    path: "/login",
-    icon: <RiIcons.RiLoginCircleFill />,
     cName: "nav-text",
   },
   {
@@ -39,7 +33,28 @@ export const SidebarData = [
   {
     title: "Logout",
     path: "/logout",
-    icon: <BiIcons.BiLogOutCircle />,
+    icon: <RiIcons.RiLoginCircleFill />,
+    cName: "nav-text",
+  },
+];
+
+export const SidebarDataNotLogged = [
+  {
+    title: "Contacts",
+    path: "/contacts",
+    icon: <RiIcons.RiContactsBookFill />,
+    cName: "nav-text",
+  },
+  {
+    title: "About",
+    path: "/about",
+    icon: <FcIcons.FcAbout />,
+    cName: "nav-text",
+  },
+  {
+    title: "Login",
+    path: "/login",
+    icon: <RiIcons.RiLoginCircleFill />,
     cName: "nav-text",
   },
 ];

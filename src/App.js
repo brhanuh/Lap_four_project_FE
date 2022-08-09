@@ -25,8 +25,6 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Landing />}></Route>
           <Route path="/contacts" element={<Contacts />}></Route>
@@ -39,6 +37,8 @@ function App() {
           <Route path="/timeline" element={<TimelinePage />}></Route>
           <Route path="/recommend" element={<AddRecommendation />}></Route>
           <Route path="/logout" element={<Logout />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
         </Route>
       </Routes>
     </>

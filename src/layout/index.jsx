@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { NavLink, Outlet } from "react-router-dom";
-import { SidebarData } from "./SidebarData";
+import { SidebarData, SidebarDataNotLogged } from "./SidebarData";
 import "./layout.css";
 import "../index.css";
 import MoodMode from "../components/MoodMode";
@@ -15,7 +15,7 @@ function Layout() {
 
   const showSidebar = () => setSidebar(!sidebar);
 
-  // const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token");
   // if (!token) {
   //   return <Login />;
   // }
@@ -37,16 +37,27 @@ function Layout() {
               <AiIcons.AiOutlineClose />
             </NavLink>
           </li>
-          {SidebarData.map((item, index) => {
-            return (
-              <li key={index} className={item.cName}>
-                <NavLink to={item.path}>
-                  {item.icon}
-                  <span>{item.title}</span>
-                </NavLink>
-              </li>
-            );
-          })}
+          {token
+            ? SidebarData.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName}>
+                    <NavLink to={item.path}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </NavLink>
+                  </li>
+                );
+              })
+            : SidebarDataNotLogged.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName}>
+                    <NavLink to={item.path}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </NavLink>
+                  </li>
+                );
+              })}
         </ul>
       </nav>
       <Outlet />

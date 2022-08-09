@@ -1,5 +1,10 @@
 import React from 'react';
-import { ThreeDBrain, ThreeDPlant, ThreeDSmiley } from '../../components';
+import {
+  ThreeDBrain,
+  ThreeDChart,
+  ThreeDPlant,
+  ThreeDSmiley,
+} from '../../components';
 import './styles.css';
 
 const Landing = () => {
@@ -10,8 +15,8 @@ const Landing = () => {
         <h1 role="h1">Welcome to Brighter Minds</h1>
         <div className="">
           <ThreeDBrain />
+          </div>
         </div>
-      </div>
       </div>
     </>
   );

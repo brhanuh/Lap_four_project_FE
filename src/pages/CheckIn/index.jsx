@@ -97,14 +97,14 @@ const CheckIn = () => {
     ) : question === 1 ? (
       <div>
         <RatingForm
-          value={formData.energy}
+          // value={formData.energy}
           funct={(e) =>
             setFormData({ ...formData, energy: parseInt(e.target.value) })
           }
           label="Energy"
         />
         <RatingForm
-          value={formData.depression}
+          // value={formData.depression}
           funct={(e) =>
             setFormData({ ...formData, depression: parseInt(e.target.value) })
           }
@@ -112,14 +112,14 @@ const CheckIn = () => {
         />
         <RatingForm
           label="Irritability"
-          value={formData.irritability}
+          // value={formData.irritability}
           funct={(e) =>
             setFormData({ ...formData, irritability: parseInt(e.target.value) })
           }
         />
         <RatingForm
           label="Motivation"
-          value={formData.motivation}
+          // value={formData.motivation}
           funct={(e) =>
             setFormData({ ...formData, motivation: parseInt(e.target.value) })
           }
@@ -129,21 +129,21 @@ const CheckIn = () => {
       <div>
         <RatingForm
           label="Stress"
-          value={formData.stress}
+          // value={formData.stress}
           funct={(e) =>
             setFormData({ ...formData, stress: parseInt(e.target.value) })
           }
         />
         <RatingForm
           label="Appetite"
-          value={formData.appetite}
+          // value={formData.appetite}
           funct={(e) =>
             setFormData({ ...formData, appetite: parseInt(e.target.value) })
           }
         />
         <RatingForm
           label="Concentration"
-          value={formData.concentration}
+          // value={formData.concentration}
           funct={(e) =>
             setFormData({
               ...formData,
@@ -159,8 +159,10 @@ const CheckIn = () => {
         rows="5"
         id="diet-textarea"
         name="Diet"
-        value={formData.diet}
-        funct={(e) => setFormData({ ...formData, diet: e.target.value })}
+        // value={formData.diet}
+        funct={(e) => {
+          setFormData({ ...formData, diet: e.target.value });
+        }}
       />
     ) : question === 4 ? (
       <CheckInQuestions
@@ -169,7 +171,7 @@ const CheckIn = () => {
         rows="5"
         id="entertainment-textarea"
         name="Entertainment"
-        value={formData.enter}
+        // value={formData.enter}
         funct={(e) => setFormData({ ...formData, enter: e.target.value })}
       />
     ) : (
@@ -179,7 +181,7 @@ const CheckIn = () => {
         rows="5"
         id="social-textarea"
         name="Social "
-        value={formData.social}
+        value=""
         funct={(e) => setFormData({ ...formData, social: e.target.value })}
       />
     );
@@ -196,9 +198,9 @@ const CheckIn = () => {
       appetite: formData.appetite,
       concentration: formData.concentration,
       diet: formData.diet,
-      entertainment: formData.entertainment,
+      enter: formData.enter,
       social: formData.social,
-      mood: formData.emoji,
+      mood: formData.mood,
     };
     axios
       .post('https://fp-mental-health.herokuapp.com/new_entry', data)
@@ -206,7 +208,7 @@ const CheckIn = () => {
         console.log(response.status);
         console.log(response.data.token);
       });
-    console.log(formData);
+    console.log('data', data);
     // navigate('/hub');
   };
 
@@ -266,7 +268,7 @@ const CheckIn = () => {
             <Button value="LOG" type="submit" />
           )}
         </div>
-        {console.log(formData)}
+        {/* {console.log(formData)} */}
       </form>
     </div>
   );
