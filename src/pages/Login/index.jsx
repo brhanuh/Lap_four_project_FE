@@ -44,14 +44,14 @@ const Login = () => {
             label="Username"
             placeholder="Enter Username.."
             id="username"
-            className={styles.username}
+            className={styles.inputField}
           />
           <InputText
             type="password"
             label="Password"
             placeholder="Enter Password.."
             id="password"
-            className={styles.password}
+            className={styles.inputField}
           />
           <Button id={styles.loginBtn} type="submit" value="Login" />
         </form>
