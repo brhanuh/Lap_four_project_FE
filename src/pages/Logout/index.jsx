@@ -2,6 +2,8 @@ import React from "react";
 
 const Logout = () => {
   localStorage.removeItem("token");
+  localStorage.removeItem("user_id");
+  localStorage.removeItem("username");
   return (
     <>
       <div className="container">

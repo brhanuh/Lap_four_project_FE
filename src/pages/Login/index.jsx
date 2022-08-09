@@ -1,9 +1,9 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Button, InputText } from '../../components';
-import { useNavigate } from 'react-router-dom';
-import styles from './styles.module.css';
-import axios from 'axios';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Button, InputText } from "../../components";
+import { useNavigate } from "react-router-dom";
+import styles from "./styles.module.css";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -13,23 +13,25 @@ const Login = () => {
     const username = e.target.username.value;
     const password = e.target.password.value;
 
-    const testName = 'test';
-    const testPass = 'test';
+    const testName = "test";
+    const testPass = "test";
 
     axios
-      .post('https://fp-mental-health.herokuapp.com/token', {
-        username: testName,
-        password: testPass,
+      .post("https://fp-mental-health.herokuapp.com/login", {
+        username: username,
+        password: password,
       })
       .then(function (response) {
         console.log(response);
         const userToken = response.data.access_token;
-        localStorage.setItem('token', userToken);
+        localStorage.setItem("token", userToken);
+        localStorage.setItem("user_id", response.data.user_id);
+        localStorage.setItem("username", response.data.username);
       })
       .catch(function (error) {
         console.log(error);
       });
-    //navigate("/home");
+    navigate("/home");
   };
 
   return (
@@ -67,8 +69,8 @@ const Login = () => {
           type="button"
           value="What This App Is About"
           funct={() => {
-            console.log('lol');
-            navigate('/about');
+            console.log("lol");
+            navigate("/about");
           }}
         />
       </div>
