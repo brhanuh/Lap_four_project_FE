@@ -40,14 +40,12 @@ const Home = () => {
         >
           HUB
         </div>
-        <div
-          // className={styles.logo}
-          id="stats-btn"
-          onClick={() => {
-            navigate('/statistics');
-          }}
-        >
-          <ChartIcon />
+        <div className={styles.chartDiv} id="stats-btn">
+          <ChartIcon
+            funct={() => {
+              navigate('/statistics');
+            }}
+          />
         </div>
       </div>
     </div>
