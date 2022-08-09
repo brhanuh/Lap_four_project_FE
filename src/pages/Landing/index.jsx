@@ -12,6 +12,7 @@ const Landing = () => {
           <ThreeDBrain />
         </div>
       </div>
+      </div>
     </>
   );
 };
