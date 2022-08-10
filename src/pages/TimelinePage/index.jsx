@@ -5,13 +5,14 @@ import { Timeline, Loading } from "../../components";
 import "./timeline.css";
 
 const TimelinePage = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState();
   const token = localStorage.getItem("token");
   const [entries, setEntries] = useState([]);
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
   useEffect(() => {
+    setLoading(true);
     async function fetchEntries() {
       const result = await axios.get(
         "https://fp-mental-health.herokuapp.com/entries",
