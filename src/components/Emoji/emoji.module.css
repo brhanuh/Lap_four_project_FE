@@ -1,7 +1,9 @@
 /* styling not completed */
+* {
+  user-select: none;
+}
 
 .emoji {
-  font-size: 7rem;
   cursor: pointer;
   opacity: 0.5;
 }
@@ -13,7 +15,7 @@
 @media screen and (min-width: 750px) {
   .emoji {
     cursor: pointer;
-    transition: font-size 1.5s;
+    /* transition: font-size 1.5s; */
   }
 
   .emoji:hover {
