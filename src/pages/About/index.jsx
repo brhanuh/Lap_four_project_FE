@@ -1,20 +1,19 @@
-import React from 'react';
-import './styles.css';
+import React from "react";
+import "./styles.css";
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const About = () => {
   return (
     <>
-<<<<<<< HEAD
       <div className="container1">
         <h1 className="phoneline" role="h1">
           We are an app that deals with .....
@@ -29,7 +28,7 @@ const About = () => {
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
+            onSlideChange={() => console.log("slide change")}
           >
             <SwiperSlide>
               <img
@@ -57,12 +56,6 @@ const About = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-=======
-      <div className="card1">
-        <h1 className="phoneline" role="h1">We are an app that deals with .....</h1>
-     
-      
->>>>>>> 647d3f050d546ee9aa49da9feb4c3298faa9eef6
       </div>
     </>
   );
