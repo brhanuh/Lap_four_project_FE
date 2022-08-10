@@ -28,12 +28,12 @@ const CheckIn = () => {
 
   //creating heading for each step within the form
   const questionHeadings = [
-    'heading 1 pick a your mood 🙏',
-    'heading 2 Rate your mood 👌',
-    'heading 3 never give up',
-    'heading 4 diet effects your mood',
-    'heading 4 stop coding in the dark , blue light exposure is harmful',
-    'heading 5  too much social media can lead to depression',
+    'heading 1: pick a your mood 🙏',
+    'heading 2: Rate your mood 👌',
+    'heading 3: never give up',
+    'heading 4: diet effects your mood',
+    'heading 4: stop coding in the dark , blue light exposure is harmful',
+    'heading 5:  too much social media can lead to depression',
   ];
 
   // function that will render different questions depending on what step of the form
@@ -41,57 +41,56 @@ const CheckIn = () => {
     return question === 0 ? (
       <div className={checkin.emoji}>
         {/* <h1>😑😊🤣😎😴😞🙃animated moods will go here</h1> */}
-        <div>
-          <Emoji
-            emoji="😡"
-            id="emoji-1"
-            value={1}
-            funct={(e) => {
-              //           const checked = e.target.checked;
-              // if (checked) {
-              //  }}
-              // } else {
 
-              //  //unchecked
-              // }
-              setFormData({ ...formData, mood: parseInt(e.target.value) });
-            }}
-          />
+        <Emoji
+          emoji="😡"
+          id="emoji-1"
+          value={1}
+          funct={(e) => {
+            //           const checked = e.target.checked;
+            // if (checked) {
+            //  }}
+            // } else {
 
-          <Emoji
-            emoji="😔"
-            id="emoji-2"
-            value={2}
-            funct={(e) => {
-              setFormData({ ...formData, mood: parseInt(e.target.value) });
-            }}
-          />
-          <Emoji
-            emoji="😑"
-            id="emoji-3"
-            value={3}
-            funct={(e) => {
-              setFormData({ ...formData, mood: parseInt(e.target.value) });
-            }}
-          />
-          <Emoji
-            emoji="🙂"
-            id="emoji-4"
-            value={4}
-            funct={(e) => {
-              setFormData({ ...formData, mood: parseInt(e.target.value) });
-            }}
-          />
-          <Emoji
-            emoji={<ThreeDSmiley />}
-            // emoji="😁"
-            id="emoji-5"
-            value={5}
-            funct={(e) => {
-              setFormData({ ...formData, mood: parseInt(e.target.value) });
-            }}
-          />
-        </div>
+            //  //unchecked
+            // }
+            setFormData({ ...formData, mood: parseInt(e.target.value) });
+          }}
+        />
+
+        <Emoji
+          emoji="😔"
+          id="emoji-2"
+          value={2}
+          funct={(e) => {
+            setFormData({ ...formData, mood: parseInt(e.target.value) });
+          }}
+        />
+        <Emoji
+          emoji="😑"
+          id="emoji-3"
+          value={3}
+          funct={(e) => {
+            setFormData({ ...formData, mood: parseInt(e.target.value) });
+          }}
+        />
+        <Emoji
+          emoji="🙂"
+          id="emoji-4"
+          value={4}
+          funct={(e) => {
+            setFormData({ ...formData, mood: parseInt(e.target.value) });
+          }}
+        />
+        <Emoji
+          emoji="😊"
+          // emoji="😁"
+          id="emoji-5"
+          value={5}
+          funct={(e) => {
+            setFormData({ ...formData, mood: parseInt(e.target.value) });
+          }}
+        />
       </div>
     ) : question === 1 ? (
       <div>
@@ -154,6 +153,7 @@ const CheckIn = () => {
     ) : question === 3 ? (
       <CheckInQuestions
         question="How Do You Feel ....."
+        className={checkin.textarea}
         cols="90"
         rows="5"
         id="diet-textarea"
@@ -172,9 +172,11 @@ const CheckIn = () => {
         name="Entertainment"
         // value={formData.enter}
         funct={(e) => setFormData({ ...formData, enter: e.target.value })}
+        className={checkin.textarea}
       />
     ) : (
       <CheckInQuestions
+        className={checkin.textarea}
         question="How Do You Feel ....."
         cols="90"
         rows="5"
@@ -213,7 +215,7 @@ const CheckIn = () => {
 
   return (
     <div className={checkin.container}>
-      <h1>This is the check in page</h1>
+      <h2>This is the check in page</h2>
       <form
         className={checkin.form}
         onSubmit={handleSubmit}
@@ -239,13 +241,14 @@ const CheckIn = () => {
           ></div>
         </div>
         <div className={checkin.checkInFormHeader}>
-          <h1> generic title - Rate from 1-5</h1>
+          <h2> generic title - Rate from 1-5</h2>
           <h1>{questionHeadings[question]}</h1>
         </div>
-        <div className="rate-form-body">{rateQuestion()}</div>
+        <div className="">{rateQuestion()}</div>
         <div className={checkin.nextPrevDiv}>
           {question > 0 && (
             <Button
+              className={checkin.questionBtn}
               type="button"
               funct={(e) => {
                 e.preventDefault();
@@ -256,6 +259,7 @@ const CheckIn = () => {
           )}
           {question !== questionHeadings.length - 1 ? (
             <Button
+              className={checkin.questionBtn}
               type="button"
               funct={(e) => {
                 e.preventDefault();
@@ -264,7 +268,7 @@ const CheckIn = () => {
               value="Next"
             />
           ) : (
-            <Button value="LOG" type="submit" />
+            <Button className={checkin.log} value="LOG" type="submit" />
           )}
         </div>
         {/* {console.log(formData)} */}

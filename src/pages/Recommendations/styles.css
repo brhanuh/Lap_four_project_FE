@@ -1,4 +1,8 @@
-.container{
-    display: flex;
-    justify-content: center;
+:root {
+  user-select: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
