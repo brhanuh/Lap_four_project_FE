@@ -1,26 +1,28 @@
-.moodbar {
-  height: 80px;
-  display: flex;
-  margin-right: 0%;
-  align-items: center;
+.moodbar{
+    height: fit-content;
+    display:flex;
+    margin-right: 0%;
+    align-items: center;
 }
 
-.mood-bars {
-  margin-left: 2rem;
-  font-size: 2rem;
-  background: none;
+.mood-bars{
+    
+    font-size: 2rem;
+    background: none;
 }
 
-.mood-menu {
-  width: 60vh;
-  height: 40vh;
-  display: flex;
-  position: fixed;
-  top: 0;
-  right: -200%;
-  transition: 850ms;
-  z-index: 100;
-  background-color: white;
+.mood-menu{
+    width:60vh;
+    height: fit-content;
+    display: flex;
+    position: fixed;
+    top:0; 
+    right: -200%;
+    transition: 850ms;
+    z-index: 100;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 1px 1px #93156d;
 }
 
 .mood {
@@ -83,3 +85,13 @@
     }
   }
  */
+
+ .moodtitle{
+    margin-top: 0;
+ }
+
+ .container4{
+    width: fit-content;
+    height: fit-content;
+   
+ }

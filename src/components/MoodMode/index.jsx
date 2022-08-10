@@ -11,36 +11,36 @@ const data = [
   {
     id: "1",
     key: "1",
-    title: "Calm",
+    title: "Mellow",
     className: "image-1",
-    backgroundImage: "https://wallpaperaccess.com/full/340554.png",
-    color2: "#add8e6",
-    color3: "#add8e6",
-    color4: "#00008B",
-    color5: "00008B",
+    backgroundImage: "https://img.freepik.com/premium-vector/abstract-pastel-colorful-gradient-background_29865-2081.jpg?w=2000",
+    color2: "#FADCD2",
+    color3: "#FADCD2",
+    color4: "#F8ABFF",
+    color5: "#F8ABFF",
   },
   {
     id: "2",
     key: "2",
     title: "Happy",
     className: "image-2",
-    backgroundImage: "https://wallpaperaccess.com/full/1092658.jpg",
+    backgroundImage: "https://img.freepik.com/free-vector/soft-yellow-watercolor-texture-background_1055-10236.jpg?w=2000",
     color2: "#FFFFE0",
     color3: "#FFFFE0",
-    color4: "#8B8000",
-    color5: "#8B8000",
+    color4: "#FEFCD3",
+    color5: "#FEFCD3",
 
   },
   {
     id: "3",
     key: "3",
-    title: "Mellow",
+    title: "Calm",
     className: "image-3",
-    backgroundImage: "https://img.freepik.com/premium-vector/abstract-pastel-colorful-gradient-background_29865-2081.jpg?w=2000",
-    color2: "#FADCD2",
-    color3: "#FADCD2",
-    color4: "#AA336A",
-    color5: "#AA336A",
+    backgroundImage: "https://static.vecteezy.com/system/resources/previews/007/912/969/non_2x/abstract-pastel-colorful-gradient-background-concept-free-vector.jpg",
+    color2: "#add8e6",
+    color3: "#add8e6",
+    color4: "#D6F9E9",
+    color5: "#D6F9E9",
   },
   {
     id: "4",
@@ -77,6 +77,7 @@ export default function MoodMode() {
                     <style>{`.nav-menu{background-color: ${color3}`}</style>
                     <style>{`.navbar-toggle{background-color: ${color4}`}</style>
                     <style>{`.mood-menu{background-color: ${color5}`}</style>
+                    <style>{`.bottom{background-color: ${color2}`}</style>
                   </>
                 ) : null}
               </div>

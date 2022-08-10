@@ -1,4 +1,5 @@
 import React from "react";
+import './styles.css'
 
 const Logout = () => {
   localStorage.removeItem("token");
@@ -6,8 +7,11 @@ const Logout = () => {
   localStorage.removeItem("username");
   return (
     <>
-      <div className="container">
-        <h1 role="h1">This is the logout page</h1>
+    <div className="goodbye-div">
+    <h1 className="goodbye" role="h1">Come back again soon!</h1>
+    </div>
+      <div className="container3">
+        <img className="logoutani" src={require('./Logout.gif')} alt="loading..." />
       </div>
     </>
   );

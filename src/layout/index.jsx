@@ -22,21 +22,21 @@ function Layout() {
   return (
     <>
         <div className='navbar'>
-          <NavLink to='#' className='menu-bars'>
+          {/* <NavLink to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
-          </NavLink>
+          </NavLink> */}
           <div className='container'>
           <h1 className="main-name">Brighter Minds</h1>
           </div>
           <MoodBoard/>
       </div>
-      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+      {/* <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" id="link" onClick={showSidebar}>
           <li className="navbar-toggle">
             <NavLink to="#" className="menu-bars">
               <AiIcons.AiOutlineClose />
-            </NavLink>
-          </li>
+            </NavLink> */}
+        {/*   </li>
           {token
             ? SidebarData.map((item, index) => {
                 return (
@@ -59,10 +59,33 @@ function Layout() {
                 );
               })}
         </ul>
-      </nav>
+      </nav> */}
       <Outlet />
-      <footer>
-      <HubButton/>
+      <footer> 
+        <nav className="bottom">
+        {token
+            ? SidebarData.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName}>
+                    <NavLink className="navlinkz" to={item.path}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </NavLink>
+                  </li>
+                );
+              })
+            : SidebarDataNotLogged.map((item, index) => {
+                return (
+                  <li key={index} className={item.cName}>
+                    <NavLink className="navlinkz" to={item.path}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </NavLink>
+                  </li>
+                );
+              })}
+        </nav>
+    {/*   <HubButton/> */}
       </footer>
     </>
   );

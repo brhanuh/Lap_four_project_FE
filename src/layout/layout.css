@@ -5,36 +5,36 @@
     height: 80px;
     display:flex;
     justify-content: start;
-    align-items: center;
+    align-items: center; 
 }
-
-.menu-bars{
+/* 
+/* .menu-bars{
     margin-left: 2rem;
     font-size: 2rem;
     background: none;
 }
-
-.nav-menu{
+ */
+/* .nav-menu{
     width:250px;
     height: 100vh;
     display: flex;
     position: fixed;
     top:0; 
-    left: -100%;
-    transition: 850ms;
+   /*  left: -100%;
+    transition: 850ms; 
     z-index: 100;
-}
+} */
 
 .mood{
     display: flex;
 }
 
-.nav-menu.active{
+/* .nav-menu.active{
  left: 0;
  transition: 250ms;
-}
+} */
 
-.nav-test{
+/* .nav-test{
     display:flex;
     justify-content: start;
     align-items: center;
@@ -42,8 +42,8 @@
     list-style: none;
     height: 60px;
 }
-
-.nav-text a{
+ */
+/* .nav-text a{
     text-decoration: none;
     color: black;
     font-size: 18px;
@@ -57,24 +57,24 @@
     border-radius: 4px;
     font-weight: 700;
 
-}
+} */
 
-.nav-test a:hover{
+/* .nav-test a:hover{
     background-color: rgb(255, 255, 255);
-}
+} */
 
 .nav-menu-items {
     width: 100%;
     list-style-type: none;
 }
 
-.navbar-toggle{
+/* .navbar-toggle{
     width: 100%;
     height: 80px;
     display:flex;
     justify-content: start;
     align-items: center;
-}
+} */
 
 .container{
     margin: auto;
@@ -82,11 +82,12 @@
 
 .main-name{
     font-family: 'Pacifico', cursive;
-}
+} 
 
 @media (max-width: 767px) {
     .hub-btn{
      width: 100%;
+     position: fixed;
     }
    }
 
@@ -96,3 +97,43 @@
 }  
 }
 
+
+
+.bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 3px rbga(0, 0 , 0 , 0.2);
+    display: flex;
+    overflow-x: auto;
+    list-style-type: none;
+}
+
+.bottom-text{
+    text-decoration: none;
+}
+
+.navlinkz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 13pt;
+    text-decoration: none;
+    padding-top: 7px;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.navlinkz:hover{
+   
+}
+
+.navlinkz--active{
+    
+}

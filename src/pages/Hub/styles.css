@@ -16,4 +16,17 @@
     justify-content: center;
     text-decoration: none;
     font-size: 20pt;
+    
 }
+
+.phoneAni{
+    margin-top: 5px;
+    width: 150px;
+    height: 200px;
+}
+
+.phone{
+    display: flex;
+    justify-content: center;
+}
+

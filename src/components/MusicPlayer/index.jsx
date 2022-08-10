@@ -17,7 +17,7 @@ const MusicPlayer = () => {
       }
 
       const renderRows = () => {
-        return <div ><span className='song-name'>{song.name} {song.releaseDate}</span><embed className='music-player' src={song.songURL}  allow="encrypted-media" /></div>
+        return <div className='playerz' ><span className='song-name'>{song.name} {song.releaseDate}</span><embed className='music-player' src={song.songURL}  allow="encrypted-media" /></div>
       }
 
     async function getaSong(){
