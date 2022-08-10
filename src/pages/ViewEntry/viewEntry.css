@@ -1,0 +1,21 @@
+.viewEntryBody {
+  padding: 1rem;
+}
+
+.contents {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* .recommendContainer {
+  margin-bottom: 10px;
+}
+
+.recommendContent {
+  padding: 10px 20px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+} */

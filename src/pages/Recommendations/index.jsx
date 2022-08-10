@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import { Recommend } from "../../components";
 import "./recommendations.css";
 
 const Recommendations = () => {
+  let navigate = useNavigate();
+
   function handleRecommend(e) {
     e.preventDefault();
+    navigate("/recommend");
+    console.log("hello world");
   }
   return (
     <>
@@ -14,9 +20,7 @@ const Recommendations = () => {
       <Recommend />
       <Recommend />
       <button className="recbtn" onClick={handleRecommend}>Recommend</button>
-    <footer className="addRec">
-      <input className="Recinput" type="text" placeholder="Add a Recommendation"></input>
-    </footer>
+ 
     </>
   );
 };

@@ -11,6 +11,7 @@ import {
   Recommendations,
   AddRecommendation,
   Logout,
+  ViewEntry,
 } from "./pages";
 import { default as Layout } from "./layout";
 import { Routes, Route } from "react-router-dom";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/recommendations" element={<Recommendations />}></Route>
           <Route path="/statistics" element={<Statistics />}></Route>
           <Route path="/timeline" element={<TimelinePage />}></Route>
+          <Route path="/timeline/entry" element={<ViewEntry />}></Route>
           <Route path="/recommend" element={<AddRecommendation />}></Route>
           <Route path="/logout" element={<Logout />}></Route>
           <Route path="/login" element={<Login />}></Route>
