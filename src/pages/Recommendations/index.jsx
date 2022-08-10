@@ -127,6 +127,7 @@ const Recommendations = () => {
               <Recommend
                 comment={item.text}
                 user={item.posted_user}
+                source={item.source}
                 date={item.date_created}
                 title={item.type}
               />
