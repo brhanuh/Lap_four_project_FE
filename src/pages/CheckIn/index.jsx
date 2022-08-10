@@ -231,8 +231,10 @@ const CheckIn = () => {
   };
 
   return (
+  
     <div className={checkin.container}>
-      <h2>This is the check in page</h2>
+       <h2 className={checkin.h2c}>This is the check in page</h2>
+      <div className={checkin.card2}>
       <form
         className={checkin.form}
         onSubmit={handleSubmit}
@@ -290,6 +292,7 @@ const CheckIn = () => {
         </div>
         {/* {console.log(formData)} */}
       </form>
+    </div>
     </div>
   );
 };

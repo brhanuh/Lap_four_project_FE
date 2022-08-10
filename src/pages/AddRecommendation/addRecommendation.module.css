@@ -51,7 +51,7 @@ input[type="text"] {
   border-radius: 3rem;
 }
 
-button {
+.button1 {
   margin-left: 1rem;
   margin-top: 2rem;
   /* padding: 1rem; */
@@ -70,4 +70,8 @@ button {
   margin-right: 8%;
   background-color:  rgb(255,255,255,0.3);
   border-radius: 10px; /* 5px rounded corners */
+}
+
+.recsom{
+  border: none;
 }
