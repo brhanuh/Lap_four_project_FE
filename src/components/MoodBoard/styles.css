@@ -21,7 +21,6 @@
     transition: 850ms;
     z-index: 100;
     background-color: white;
-    border-radius: 10%;
     box-shadow: 1px 1px #93156d;
 }
 
@@ -89,6 +88,6 @@
  */
 
  .moodtitle{
-    margin-top: 0;
+    font-size: 18pt;
  }
 

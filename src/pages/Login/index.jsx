@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Button, InputText } from "../../components";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 import axios from "axios";
 
-const Login = () => {
+const Login = ({ setUpdateNav }) => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -31,51 +31,54 @@ const Login = () => {
       .catch(function (error) {
         console.log(error);
       });
-    navigate("/home");
+    setTimeout(() => {
+      navigate("/");
+      setUpdateNav((prev) => prev + 1);
+    }, 1000);
   };
 
   return (
     <>
-    <div className={styles.container}>
-      <div>
-        <h1 className={styles.loginh1} role="h1">
-          Login
-        </h1>
-        <form onSubmit={handleSubmit} action="" method="POST">
-          <InputText
-            type="text"
-            label="Username"
-            placeholder="Enter Username.."
-            id="username"
-            className={styles.inputField}
-          />
-          <InputText
-            type="password"
-            label="Password"
-            placeholder="Enter Password.."
-            id="password"
-            className={styles.inputField}
-          />
-          <Button id={styles.loginBtn} type="submit" value="Login" />
-        </form>
+      <div className={styles.container}>
+        <div>
+          <h1 className={styles.loginh1} role="h1">
+            Login
+          </h1>
+          <form onSubmit={handleSubmit} action="" method="POST">
+            <InputText
+              type="text"
+              label="Username"
+              placeholder="Enter Username.."
+              id="username"
+              className={styles.inputField}
+            />
+            <InputText
+              type="password"
+              label="Password"
+              placeholder="Enter Password.."
+              id="password"
+              className={styles.inputField}
+            />
+            <Button id={styles.loginBtn} type="submit" value="Login" />
+          </form>
 
-        <span className={styles.noAccountText}>
-          Don't have an account?
-          <br />
-          <NavLink to="/register">Sign Up now</NavLink>
-        </span>
+          <span className={styles.noAccountText}>
+            Don't have an account?
+            <br />
+            <NavLink to="/register">Sign Up now</NavLink>
+          </span>
 
-        <Button
-          id={styles.aboutBtn}
-          type="button"
-          value="What This App Is About"
-          funct={() => {
-            console.log("lol");
-            navigate("/about");
-          }}
-        />
+          <Button
+            id={styles.aboutBtn}
+            type="button"
+            value="What This App Is About"
+            funct={() => {
+              console.log("lol");
+              navigate("/about");
+            }}
+          />
+        </div>
       </div>
-    </div>
     </>
   );
 };

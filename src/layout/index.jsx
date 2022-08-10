@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { NavLink, Outlet } from "react-router-dom";
@@ -9,25 +9,41 @@ import MoodMode from "../components/MoodMode";
 import MoodBoard from "../components/MoodBoard";
 import { Login } from "../pages";
 import HubButton from "../components/HubButton";
-function Layout() {
-  const [sidebar, setSidebar] = useState(false);
-
+function Layout({ updateNav }) {
+  const [sidebar, setSidebar] = useState(1);
+  const [bottomNav, setBottomNav] = useState(SidebarData);
   const showSidebar = () => setSidebar(!sidebar);
 
   const token = localStorage.getItem("token");
+  useEffect(() => {
+    console.log("Bottom Nav", bottomNav);
+    if (token) {
+      console.log("yes token");
+      setBottomNav(SidebarData);
+    } else {
+      console.log("no token");
+      setBottomNav(SidebarDataNotLogged);
+    }
+  }, [updateNav]);
+
   // if (!token) {
   //   return <Login />;
   // }
+  function handleNav(e) {
+    e.preventDefault();
+    console.log("hahah");
+    setSidebar((prev) => prev + 1);
+  }
   return (
     <>
-        <div className='navbar'>
-          {/* <NavLink to='#' className='menu-bars'>
+      <div className="navbar">
+        {/* <NavLink to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavLink> */}
-          <div className='container'>
+        <div className="container">
           <h1 className="main-name">Brighter Minds</h1>
-          </div>
-          <MoodBoard/>
+        </div>
+        <MoodBoard />
       </div>
       {/* <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" id="link" onClick={showSidebar}>
@@ -35,7 +51,7 @@ function Layout() {
             <NavLink to="#" className="menu-bars">
               <AiIcons.AiOutlineClose />
             </NavLink> */}
-        {/*   </li>
+      {/*   </li>
           {token
             ? SidebarData.map((item, index) => {
                 return (
@@ -60,12 +76,12 @@ function Layout() {
         </ul>
       </nav> */}
       <Outlet />
-      <footer> 
+      <footer>
         <nav className="bottom">
-        {token
-            ? SidebarData.map((item, index) => {
+          {token
+            ? bottomNav.map((item, index) => {
                 return (
-                  <li key={index} className={item.cName}>
+                  <li key={index} className={item.cName} onClick={handleNav}>
                     <NavLink className="navlinkz" to={item.path}>
                       {item.icon}
                       <span>{item.title}</span>
@@ -73,9 +89,9 @@ function Layout() {
                   </li>
                 );
               })
-            : SidebarDataNotLogged.map((item, index) => {
+            : bottomNav.map((item, index) => {
                 return (
-                  <li key={index} className={item.cName}>
+                  <li key={index} className={item.cName} onClick={handleNav}>
                     <NavLink className="navlinkz" to={item.path}>
                       {item.icon}
                       <span>{item.title}</span>
@@ -84,7 +100,7 @@ function Layout() {
                 );
               })}
         </nav>
-    {/*   <HubButton/> */}
+        {/*   <HubButton/> */}
       </footer>
     </>
   );

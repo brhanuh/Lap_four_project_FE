@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { Recommend } from '../../components';
 import './styles.css';
 import './recommendations.css';
 import axios from 'axios';
+=======
+import React, { useRef, useState, useEffect } from "react";
+import { Recommend } from "../../components";
+import "./styles.css";
+import "./recommendations.css";
+import axios from "axios";
+>>>>>>> 647d3f050d546ee9aa49da9feb4c3298faa9eef6
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Recommendations = () => {
   const css = { border: 'solid 0.3rem purple', borderRadius: '9px' };
@@ -92,40 +100,45 @@ const Recommendations = () => {
 
   function handleRecommend(e) {
     e.preventDefault();
-    navigate('/recommend');
-    console.log('hello world');
+    navigate("/recommend");
+    console.log("hello world");
   }
   return (
     <>
-      <div className="container">
-        <h1 className="Rec" role="h1">
-          Recommendations
-        </h1>
-      </div>
-      <button onClick={handleRecommend}>Recommend</button>
+      <div className="card1">
+        <div className="container">
+          <h1 className="Rec" role="h1">
+            Recommendations
+          </h1>
+        </div>
+        <button className="recc" onClick={handleRecommend}>
+          Recommend
+        </button>
 
-      <ul className="">
-        {list &&
-          list.map((item, index) => (
-            <div
-              className="dragDiv"
-              draggable
-              key={index}
-              onDragStart={() => handleDragStart(index)}
-              onDragEnter={(e) => handleDragEnter(e, index)}
-              onDragLeave={(e) => handleDragLeave(e)}
-              onDrop={(e) => handleDrop(e)}
-              onDragOver={(e) => e.preventDefault()}
-            >
-              <Recommend
-                comment={item.text}
-                user={item.posted_user}
-                date={item.date_created}
-                title={item.type}
-              />
-            </div>
-          ))}
-      </ul>
+        <ul className="">
+          {list &&
+            list.map((item, index) => (
+              <div
+                className="dragDiv"
+                draggable
+                key={index}
+                onDragStart={() => handleDragStart(index)}
+                onDragEnter={(e) => handleDragEnter(e, index)}
+                onDragLeave={(e) => handleDragLeave(e)}
+                onDrop={(e) => handleDrop(e)}
+                onDragOver={(e) => e.preventDefault()}
+              >
+                <Recommend
+                  comment={item.text}
+                  user={item.posted_user}
+                  source={item.source}
+                  date={item.date_created}
+                  title={item.type}
+                />
+              </div>
+            ))}
+        </ul>
+      </div>
     </>
   );
 };
