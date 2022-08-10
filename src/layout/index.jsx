@@ -36,7 +36,7 @@ function Layout({ updateNav }) {
   }
   return (
     <>
-      <div className="navba r">
+      <div className="navbar">
         {/* <NavLink to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavLink> */}

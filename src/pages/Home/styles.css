@@ -4,10 +4,10 @@
   .animationzza{
     height: 530px;
     position: relative;
-    z-index: 1;
+   
   }
 
-  .timeline, #timeline-btn{
+  .timeline1, #timeline-btn{
     position:absolute;
     top:0;
     left:0;

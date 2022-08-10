@@ -22,7 +22,7 @@
 }
 
 .typewriter {
-    width: fit-content;
+    width: 300px;;
     height: max-content;
     border-radius: 10%;
     min-height: 10vh;
@@ -30,7 +30,7 @@
     place-content: center;
     text-align: center;
     background: var(--bg-color);
-    --bg-color: hsl(49 37% 94%);
+    --bg-color: hsl(49 37% 94% );
     --typewriterSpeed: 2s;
     --typewriterCharacters: 24;
   }
@@ -41,6 +41,7 @@
     position: relative;
     width: max-content;
     text-align: center;
+    
   }
   
   .animatedTitle::before,

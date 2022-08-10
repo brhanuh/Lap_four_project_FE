@@ -1,15 +1,8 @@
-<<<<<<< Updated upstream
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Recommend } from "../../components";
-import "./styles.css";
-import "./recommendations.css";
-=======
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect} from 'react';
 import { Recommend } from '../../components';
 import './styles.css';
 import './recommendations.css';
->>>>>>> Stashed changes
+import axios from 'axios';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -104,12 +97,13 @@ const Recommendations = () => {
   }
   return (
     <>
+    <div className='card1'>
       <div className="container">
         <h1 className="Rec" role="h1">
           Recommendations
         </h1>
       </div>
-      <button onClick={handleRecommend}>Recommend</button>
+      <button className="recc" onClick={handleRecommend}>Recommend</button>
 
       <ul className="">
         {list &&
@@ -134,6 +128,8 @@ const Recommendations = () => {
             </div>
           ))}
       </ul>
+      </div>
+
     </>
   );
 };

@@ -48,6 +48,7 @@ const Statistics = () => {
 
   return (
     <>
+    <div className='card1'>
       <div className={stats.container}>
         <div className={stats.header}>
           <h1 role="h1">This is the stats page</h1>
@@ -55,6 +56,7 @@ const Statistics = () => {
         <div className={stats.chart}>
           <Pie data={data} />
         </div>
+      </div>
       </div>
     </>
   );
