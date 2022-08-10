@@ -1,6 +1,9 @@
+
 import React, { useRef, useState } from 'react';
 import { Recommend } from '../../components';
 import './styles.css';
+
+import { useNavigate } from "react-router-dom";
 
 const Recommendations = () => {
   const css = { border: 'solid 0.3rem purple', borderRadius: '9px' };
@@ -65,15 +68,27 @@ const Recommendations = () => {
     e.target.style.opacity = 1;
   };
 
+
+
+
+const Recommendations = () => {
+  let navigate = useNavigate();
+
+
   function handleRecommend(e) {
     e.preventDefault();
+    navigate("/recommend");
+    console.log("hello world");
   }
   return (
     <>
       <div className="container">
         <h1 role="h1">This is the Recommendations page</h1>
+        <Recommend />
+        <Recommend />
       </div>
       <button onClick={handleRecommend}>Recommend</button>
+
 
       <ul className="">
         {list &&
@@ -97,6 +112,8 @@ const Recommendations = () => {
             </div>
           ))}
       </ul>
+
+
     </>
   );
 };
