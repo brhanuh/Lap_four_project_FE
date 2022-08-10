@@ -1,49 +1,68 @@
-
-import React, { useRef, useState } from 'react';
-import { Recommend } from '../../components';
-import './styles.css';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Recommend } from "../../components";
+import "./styles.css";
 import "./recommendations.css";
 
 import { useNavigate } from "react-router-dom";
 
 const Recommendations = () => {
-  const css = { border: 'solid 0.3rem purple', borderRadius: '9px' };
+  const css = { border: "solid 0.3rem purple", borderRadius: "9px" };
   const [dragItem, setDragItem] = useState();
-  const [style, setStyle] = useState('');
+  const [style, setStyle] = useState("");
+  const token = localStorage.getItem("token");
+  const config = {
+    headers: { Authorization: `Bearer ${token}` },
+  };
 
   // dummy data that we will replace with database data
-  const [list, setList] = useState([
-    {
-      title: 'fruits',
-      date: '16/05/2022',
-      comment: 'i love travelling and fruits',
-      user: 'Aaron',
-    },
-    {
-      title: 'Fitness',
-      date: '16/05/2022',
-      comment: 'i enjoy going gym!',
-      user: 'Ayoub',
-    },
-    {
-      title: 'Literature',
-      date: '16/05/2022',
-      comment: 'i love writting & poetry',
-      user: 'Aleks',
-    },
-    {
-      title: 'nature',
-      date: '16/05/2022',
-      comment: 'i  love mountain climbing',
-      user: 'Hanibal',
-    },
-    {
-      title: 'the unknown',
-      date: '16/05/2022',
-      comment: 'i love the mystery of being hidden',
-      user: 'Dakz',
-    },
-  ]);
+  const [list, setList] = useState();
+
+  //Data
+  // {
+  //   title: "fruits",
+  //   date: "16/05/2022",
+  //   comment: "i love travelling and fruits",
+  //   user: "Aaron",
+  // },
+  // {
+  //   title: "Fitness",
+  //   date: "16/05/2022",
+  //   comment: "i enjoy going gym!",
+  //   user: "Ayoub",
+  // },
+  // {
+  //   title: "Literature",
+  //   date: "16/05/2022",
+  //   comment: "i love writting & poetry",
+  //   user: "Aleks",
+  // },
+  // {
+  //   title: "nature",
+  //   date: "16/05/2022",
+  //   comment: "i  love mountain climbing",
+  //   user: "Hanibal",
+  // },
+  // {
+  //   title: "the unknown",
+  //   date: "16/05/2022",
+  //   comment: "i love the mystery of being hidden",
+  //   user: "Dakz",
+  // },
+
+  //Fetch recommendations
+  useEffect(() => {
+    async function fetchRecommendation() {
+      const result = await axios.get(
+        "https://fp-mental-health.herokuapp.com/recommendations/",
+        config
+      );
+      console.log("result", result.data);
+      setList(result.data);
+    }
+    fetchRecommendation();
+  }, []);
+
   const handleDragStart = (index) => {
     setDragItem(index);
   };
@@ -71,7 +90,6 @@ const Recommendations = () => {
 
   let navigate = useNavigate();
 
-
   function handleRecommend(e) {
     e.preventDefault();
     navigate("/recommend");
@@ -80,10 +98,11 @@ const Recommendations = () => {
   return (
     <>
       <div className="container">
-        <h1 className="Rec" role="h1">Recommendations</h1>
+        <h1 className="Rec" role="h1">
+          Recommendations
+        </h1>
       </div>
       <button onClick={handleRecommend}>Recommend</button>
-
 
       <ul className="">
         {list &&
@@ -99,16 +118,14 @@ const Recommendations = () => {
               onDragOver={(e) => e.preventDefault()}
             >
               <Recommend
-                comment={item.comment}
-                user={item.user}
-                date={item.date}
-                title={item.title}
+                comment={item.text}
+                user={item.posted_user}
+                date={item.date_created}
+                title={item.type}
               />
             </div>
           ))}
       </ul>
-
-
     </>
   );
 };

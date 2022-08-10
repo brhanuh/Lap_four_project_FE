@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./viewEntry.css";
 const ViewEntry = ({ data }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   //console.log("location", location.state.entry.user);
+  function handleBack() {
+    navigate(-1);
+  }
   return (
     <>
+      <button onClick={handleBack}>Back</button>
       <div className="viewEntryBody">
         <div className="contents">
           <h2>Entry details</h2>

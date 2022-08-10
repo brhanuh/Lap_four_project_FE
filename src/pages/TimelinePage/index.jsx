@@ -6,8 +6,8 @@ import "./timeline.css";
 
 const TimelinePage = () => {
   const [loading, setLoading] = useState(true);
-  const token = localStorage.getItem("token");
   const [entries, setEntries] = useState([]);
+  const token = localStorage.getItem("token");
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
@@ -34,7 +34,6 @@ const TimelinePage = () => {
   return (
     <>
       {loading ? (
-        
         <Loading setLoading={setLoading} />
       ) : (
         <>
