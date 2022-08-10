@@ -20,7 +20,7 @@
 }
 .mainDiv {
   position: relative;
-  top: 17rem;
+  top: 12rem; 
   text-align: center;
 }
 /* 
@@ -37,3 +37,62 @@
   .brainDiv {
   }
 } */
+
+.landing1{
+  padding-bottom: 90px;
+  font-size: 12pt;
+}
+
+.sun {
+  padding-top: 50px;
+	width: 200px;
+	height: 200px;
+	background-color: #ba72e1;
+	border-radius: 50%;
+	box-shadow:
+		0 0 0 20px #8410c780,
+		0 0 0 40px #ca13da40,
+		0 0 0 60px #2d043d20,
+		0 0 0 80px #FFDE0010,
+		0 0 0 100px #FFDE0000,
+		0 0 40px 100px #FFDE0010;
+	animation:
+		sunrise 2s infinite linear forwards,
+		rays 2s 2s infinite linear;
+}
+
+@keyframes sunrise {
+	0% {
+		box-shadow: none;
+	}
+}
+
+@keyframes rays {
+	0% {
+		box-shadow: 
+		0 0 0 0 #95198980,
+		0 0 0 20px #FFDE0080,
+		0 0 0 40px #FFDE0040,
+		0 0 0 60px #FFDE0020,
+		0 0 0 80px #FFDE0010,
+		0 0 40px 100px #FFDE0010;
+	}
+	100% {
+		box-shadow: 
+		0 0 0 20px #f972b180,
+		0 0 0 40px #eeaf2840,
+		0 0 0 60px #FFDE0020,
+		0 0 0 80px #FFDE0010,
+		0 0 0 100px #FFDE0000,
+		0 0 40px 100px #FFDE0010;
+	}
+}
+
+.sub{
+  border: none;
+}
+
+.brainz{
+
+}
+

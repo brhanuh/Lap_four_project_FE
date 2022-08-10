@@ -12,8 +12,8 @@ const Loading = ({ setLoading }) => {
   return (
     <>
       <div className="loadingContainer">
-        <p></p>
-        <PacmanLoader color={"#ffe737"} size={20} />
+        <p>Take a deep breath...</p>
+        {/* <PacmanLoader color={"#ffe737"} size={20} /> */}
       </div>
     </>
   );

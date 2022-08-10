@@ -14,7 +14,6 @@ import 'swiper/css/scrollbar';
 const About = () => {
   return (
     <>
-<<<<<<< HEAD
       <div className="container1">
         <h1 className="phoneline" role="h1">
           We are an app that deals with .....
@@ -57,12 +56,6 @@ const About = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-=======
-      <div className="card1">
-        <h1 className="phoneline" role="h1">We are an app that deals with .....</h1>
-     
-      
->>>>>>> 647d3f050d546ee9aa49da9feb4c3298faa9eef6
       </div>
     </>
   );

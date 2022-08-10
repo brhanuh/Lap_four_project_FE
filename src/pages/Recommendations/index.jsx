@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef, useState } from 'react';
-import { Recommend } from '../../components';
-import './styles.css';
-import './recommendations.css';
-import axios from 'axios';
-=======
 import React, { useRef, useState, useEffect } from "react";
 import { Recommend } from "../../components";
 import "./styles.css";
 import "./recommendations.css";
 import axios from "axios";
->>>>>>> 647d3f050d546ee9aa49da9feb4c3298faa9eef6
 
 import { useNavigate } from "react-router-dom";
 
