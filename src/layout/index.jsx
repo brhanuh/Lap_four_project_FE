@@ -16,12 +16,9 @@ function Layout({ updateNav }) {
 
   const token = localStorage.getItem("token");
   useEffect(() => {
-    console.log("Bottom Nav", bottomNav);
     if (token) {
-      console.log("yes token");
       setBottomNav(SidebarData);
     } else {
-      console.log("no token");
       setBottomNav(SidebarDataNotLogged);
     }
   }, [updateNav]);
@@ -31,7 +28,6 @@ function Layout({ updateNav }) {
   // }
   function handleNav(e) {
     e.preventDefault();
-    console.log("hahah");
     setSidebar((prev) => prev + 1);
   }
   return (

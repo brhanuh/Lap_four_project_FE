@@ -93,7 +93,6 @@ const Recommendations = () => {
   function handleRecommend(e) {
     e.preventDefault();
     navigate("/recommend");
-    console.log("hello world");
   }
   return (
     <>
