@@ -108,6 +108,7 @@
     display: flex;
     overflow-x: auto;
     list-style-type: none;
+    gap: 1rem;
 }
 
 .bottom-text{
@@ -128,6 +129,7 @@
     padding-top: 7px;
     -webkit-tap-highlight-color: transparent;
     transition: background-color 0.1s ease-in-out;
+    margin-left: 5px;
 }
 
 .navlinkz:hover{

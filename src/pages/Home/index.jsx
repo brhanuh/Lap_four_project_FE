@@ -13,7 +13,6 @@ const Home = () => {
 
   return (
     <>
-    <div className='videoani'>
       <video className='animationzza' loop autoPlay muted controls={false}>
        <source src={require('./Feed2.mp4')} type="video/mp4" />
         </video>
@@ -26,7 +25,7 @@ const Home = () => {
         Capture your whole day ➡
       </div>
 
-      <div className='timeline'
+      <div className='timeline1'
         id="timeline-btn"
         onClick={() => {
           navigate('/timeline');
@@ -34,7 +33,6 @@ const Home = () => {
       >
         Timeline ➡
       </div> 
-      </div>
     </>
   );
 };
