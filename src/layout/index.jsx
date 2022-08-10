@@ -9,7 +9,6 @@ import MoodMode from "../components/MoodMode";
 import MoodBoard from "../components/MoodBoard";
 import { Login } from "../pages";
 import HubButton from "../components/HubButton";
-
 function Layout() {
   const [sidebar, setSidebar] = useState(false);
 

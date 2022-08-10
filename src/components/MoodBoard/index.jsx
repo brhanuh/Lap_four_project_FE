@@ -25,6 +25,7 @@ function MoodBoard() {
               <SiIcons.SiMusicbrainz onClick={showMoodbar} />
             </NavLink>
             </div>
+            <div className='container4'>
           <nav className={moodBar ? 'mood-menu active' : 'mood-menu'}>
             <ul className='mood-menu-items' id='link' onClick={showMoodbar}>
               <li className='moodbar-toggle'>
@@ -35,12 +36,11 @@ function MoodBoard() {
                   <h1 className='moodtitle'>Mood Board</h1>
                   <h3>Customise:</h3>
                   <MoodMode/>
-                  <div className='container4'>
                   <MusicPlayer/>
                   <Quotes/>
-                  </div>
             </ul>
           </nav>
+          </div> 
       </>
     );
 } 

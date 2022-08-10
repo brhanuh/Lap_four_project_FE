@@ -69,10 +69,6 @@ const Recommendations = () => {
     e.target.style.opacity = 1;
   };
 
-
-
-
-const Recommendations = () => {
   let navigate = useNavigate();
 
 
@@ -115,7 +111,6 @@ const Recommendations = () => {
 
     </>
   );
-}
 };
 
 export default Recommendations;
