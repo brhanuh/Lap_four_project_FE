@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, CSSProperties } from "react";
+import PacmanLoader from "react-spinners/PacmanLoader";
+import "./loading.css";
 const Loading = ({ setLoading }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -9,7 +11,10 @@ const Loading = ({ setLoading }) => {
 
   return (
     <>
-      <h1>Loading</h1>
+      <div className="loadingContainer">
+        <p></p>
+        <PacmanLoader color={"#ffe737"} size={50} />
+      </div>
     </>
   );
 };
