@@ -23,10 +23,11 @@ import "./App.css";
 import { TimelinePage } from "./pages";
 
 function App() {
+  const [updateNav, setUpdateNav] = useState(1);
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout updateNav={updateNav} />}>
           <Route path="/" element={<Landing />}></Route>
           <Route path="/contacts" element={<Contacts />}></Route>
           <Route path="/home" element={<Home />}></Route>
@@ -38,8 +39,14 @@ function App() {
           <Route path="/timeline" element={<TimelinePage />}></Route>
           <Route path="/timeline/entry" element={<ViewEntry />}></Route>
           <Route path="/recommend" element={<AddRecommendation />}></Route>
-          <Route path="/logout" element={<Logout />}></Route>
-          <Route path="/login" element={<Login />}></Route>
+          <Route
+            path="/logout"
+            element={<Logout setUpdateNav={setUpdateNav} />}
+          ></Route>
+          <Route
+            path="/login"
+            element={<Login setUpdateNav={setUpdateNav} />}
+          ></Route>
           <Route path="/register" element={<Register />}></Route>
         </Route>
       </Routes>
