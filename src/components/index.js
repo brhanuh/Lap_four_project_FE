@@ -6,8 +6,8 @@ export { default as Entry } from "./Entry";
 export { default as Loading } from "./Loading";
 export { default as Timeline } from "./Timeline";
 export { default as Emoji } from "./Emoji";
-export { default as ThreeDPlant } from "./ThreeDPlant";
 export { default as ThreeDSmiley } from "./ThreeDSmiley";
 export { default as ThreeDBrain } from "./ThreeDBrain";
 export { default as ChartIcon } from "./ChartIcon";
 export { default as Recommend } from "./Recommend";
+

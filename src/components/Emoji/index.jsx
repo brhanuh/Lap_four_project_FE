@@ -3,7 +3,7 @@ import emojicss from './emoji.module.css';
 
 const Emoji = ({ funct, id, emoji, value }) => {
   return (
-    <span>
+    <div>
       <label className={emojicss.emoji} htmlFor={id}>
         {emoji}
       </label>
@@ -15,7 +15,7 @@ const Emoji = ({ funct, id, emoji, value }) => {
         name=""
         id={id}
       />
-    </span>
+    </div>
   );
 };
 

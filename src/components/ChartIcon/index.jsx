@@ -2,9 +2,9 @@ import React, { useRef } from 'react';
 import styles from './chart.module.css';
 import 'charts.css';
 
-const ChartIcon = () => {
+const ChartIcon = ({ funct }) => {
   return (
-    <div>
+    <div onClick={funct} className={styles.container}>
       <table
         id={styles.animationsExample1}
         className="charts-css column hide-data show-labels show-primary-axis data-spacing-6"

@@ -1,5 +1,7 @@
 .recommendContainer {
   margin-bottom: 10px;
+  cursor: pointer;
+  /* width: 15rem; */
 }
 
 .recommendContent {
@@ -7,4 +9,12 @@
   background-color: white;
   position: relative;
   border-radius: 6px;
+}
+
+.recommendContent:hover {
+  background-color: rgb(130, 130, 130);
+  opacity: 1.2;
+}
+
+@media screen and (min-width: 0) {
 }
