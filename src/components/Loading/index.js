@@ -1,4 +1,4 @@
-import React, { useEffect, CSSProperties } from "react";
+import React, { useEffect } from "react";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import "./loading.css";
 const Loading = ({ setLoading }) => {
