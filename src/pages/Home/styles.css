@@ -1,21 +1,18 @@
-.videoani { position:relative}
 
-.videoani video {
-    position: relative;
-    z-index: 1;
-}
+
   
   .animationzza{
     height: 530px;
-    
+    position: relative;
+    z-index: 1;
   }
 
-  .timeline{
+  .timeline, #timeline-btn{
     position:absolute;
     top:0;
     left:0;
     z-index:1;
-    margin-top: 105%;
+    margin-top: 120%;
     margin-left: 15%;
 
   }
@@ -25,6 +22,6 @@
     top:0;
     left:0;
     z-index:1;
-    margin-top: 70%;
+    margin-top: 90%;
     margin-left: 5%;
   }

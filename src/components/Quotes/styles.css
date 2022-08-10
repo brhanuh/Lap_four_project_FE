@@ -22,7 +22,7 @@
 }
 
 .typewriter {
-    width: max-content;
+    width: fit-content;
     height: max-content;
     border-radius: 10%;
     min-height: 10vh;
