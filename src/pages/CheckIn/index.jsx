@@ -203,13 +203,30 @@ const CheckIn = () => {
       social: formData.social,
       mood: formData.mood,
     };
+    // const token = localStorage.getItem('token');
+    //   axios
+    //     .post('https://fp-mental-health.herokuapp.com/new_entry', data)
+    //     .then((response) => {
+    //       console.log(response.status);
+    //       // console.log(response.data.token);
+    //     });
+    //   console.log('data', data);
+    //   // console.log('data', token);
+    //   // navigate('/hub');
+    // };
+    const token = localStorage.getItem('token');
     axios
-      .post('https://fp-mental-health.herokuapp.com/new_entry', data)
+      .post('https://fp-mental-health.herokuapp.com/new_entry', data, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((response) => {
         console.log(response.status);
         console.log(response.data.token);
       });
     console.log('data', data);
+    console.log('data', token);
     // navigate('/hub');
   };
 
