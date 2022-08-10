@@ -6,6 +6,7 @@
     display:flex;
     justify-content: start;
     align-items: center; 
+    margin-bottom: 10px;
 }
 /* 
 /* .menu-bars{
@@ -109,6 +110,7 @@
     overflow-x: auto;
     list-style-type: none;
     gap: 1rem;
+    z-index: 1;
 }
 
 .bottom-text{

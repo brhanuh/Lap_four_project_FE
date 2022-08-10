@@ -16,12 +16,12 @@ const AddRecommendation = () => {
         <div className="addContainer">
           <form>
             <label for="type">Type e.g. music, book</label>
-            <input type="text" id="type" name="type"></input>
+            <input type="text" id="type" name="type" className="recsom"></input>
             <label for="source">Source e.g. url, title</label>
-            <input type="text" id="source" name="source"></input>
+            <input type="text" id="source" name="source" className="recsom"></input>
             <textarea id="comment"></textarea>
-            <input type="submit"></input>
-            <button id="exit" onClick={handleExit}>
+            <input type="submit" className="recsom"></input>
+            <button className="button1" id="exit" onClick={handleExit}>
               Exit
             </button>
           </form>

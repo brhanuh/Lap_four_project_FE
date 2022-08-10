@@ -38,7 +38,9 @@ const TimelinePage = () => {
         <Loading setLoading={setLoading} />
       ) : (
         <>
+        <div className="card1">
           <Timeline data={entries} />
+          </div>
         </>
       )}
     </>

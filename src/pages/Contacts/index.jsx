@@ -3,7 +3,7 @@ import './styles.css'
 
 const Contacts = () =>{
     return <>
-    <div className='container'>
+    <div className='card1'>
         <h1>Phone lines</h1>
          <p>Samaritans. To talk about anything that is upsetting you, you can contact Samaritans 24 hours a day, 365 days a year. You can call 116 123 (free from any phone), email jo@samaritans.org or visit some branches in person. You can also call the Samaritans Welsh Language Line on 0808 164 0123 (7pm–11pm every day).
 SANEline.<br/>If you're experiencing a mental health problem or supporting someone else, you can call SANEline on 0300 304 7000 (4.30pm–10.30pm every day).<br/>

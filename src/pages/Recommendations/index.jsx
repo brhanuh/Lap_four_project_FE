@@ -79,10 +79,11 @@ const Recommendations = () => {
   }
   return (
     <>
+    <div className='card1'>
       <div className="container">
         <h1 className="Rec" role="h1">Recommendations</h1>
       </div>
-      <button onClick={handleRecommend}>Recommend</button>
+      <button className="recc" onClick={handleRecommend}>Recommend</button>
 
 
       <ul className="">
@@ -107,7 +108,7 @@ const Recommendations = () => {
             </div>
           ))}
       </ul>
-
+      </div>
 
     </>
   );

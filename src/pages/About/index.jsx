@@ -4,8 +4,10 @@ import './styles.css'
 const About = () => {
   return (
     <>
-      <div className="container1">
+      <div className="card1">
         <h1 className="phoneline" role="h1">We are an app that deals with .....</h1>
+     
+      
       </div>
     </>
   );

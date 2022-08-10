@@ -7,11 +7,13 @@ const Logout = () => {
   localStorage.removeItem("username");
   return (
     <>
+    <div className="card1">
     <div className="goodbye-div">
     <h1 className="goodbye" role="h1">Come back again soon!</h1>
     </div>
       <div className="container3">
         <img className="logoutani" src={require('./Logout.gif')} alt="loading..." />
+      </div>
       </div>
     </>
   );
