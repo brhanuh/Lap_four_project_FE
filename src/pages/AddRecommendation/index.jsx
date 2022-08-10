@@ -10,8 +10,9 @@ const AddRecommendation = () => {
   }
   return (
     <>
-      <div className="mainContainer">
+      <div className="card1">
         <h1>Recommend Something</h1>
+        <h2>What helps you feel better?</h2>
         <div className="addContainer">
           <form>
             <label for="type">Type e.g. music, book</label>

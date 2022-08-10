@@ -6,13 +6,13 @@
 
 .recommendContent {
   padding: 10px 20px;
-  background-color: white;
   position: relative;
   border-radius: 6px;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: rgba(253, 232, 232, 0.5);
   transition: 0.3s;
   border-radius: 5px;
   margin-bottom: 10px;

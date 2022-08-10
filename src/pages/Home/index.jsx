@@ -25,7 +25,7 @@ const Home = () => {
         Capture your whole day ➡
       </div>
 
-      <div className='timeline'
+      <div className='timeline1'
         id="timeline-btn"
         onClick={() => {
           navigate('/timeline');
