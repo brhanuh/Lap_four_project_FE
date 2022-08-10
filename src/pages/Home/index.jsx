@@ -2,56 +2,45 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ChartIcon from '../../components/ChartIcon';
 import styles from './home.module.css';
+import './styles.css'
+
 
 const Home = () => {
+
   const navigate = useNavigate();
+
+
+
   return (
-    <div className="container">
-      <div>APP NAME & Logo</div>
-      <h1 role="h1">This is the home page</h1>
-
-      <h1>My Check In: </h1>
-
-      <div
+    <>
+    <div className='videoani'>
+      <video className='animationzza' loop autoPlay muted controls={false}>
+       <source src={require('./Feed2.mp4')} type="video/mp4" />
+        </video>
+      <div className='capture'
         id="capture-day-btn"
         onClick={() => {
           navigate('/check-in');
         }}
       >
-        Capture your day ➡
+        Capture your whole day ➡
       </div>
 
-      <div
+      <div className='timeline'
         id="timeline-btn"
         onClick={() => {
           navigate('/timeline');
         }}
       >
         Timeline ➡
+      </div> 
       </div>
-
-      <div>
-        <div
-          id="hub-btn"
-          onClick={() => {
-            navigate('/hub');
-          }}
-          className={styles.logo}
-        >
-          HUB
-        </div>
-        <div
-          // className={styles.logo}
-          id="stats-btn"
-          onClick={() => {
-            navigate('/statistics');
-          }}
-        >
-          <ChartIcon />
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
+
 export default Home;
+
+
+    

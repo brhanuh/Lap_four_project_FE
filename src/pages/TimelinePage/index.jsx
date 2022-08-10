@@ -8,6 +8,7 @@ const TimelinePage = () => {
   return (
     <>
       {loading ? (
+        
         <Loading setLoading={setLoading} />
       ) : (
         <>

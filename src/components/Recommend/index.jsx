@@ -3,7 +3,7 @@ import "./recommend.css";
 const Recommend = () => {
   return (
     <>
-      <div className="recommendContainer">
+      <div className="card">
         <div className="recommendContent">
           <h2>Title</h2>
           <h5>Date</h5>

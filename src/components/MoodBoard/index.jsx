@@ -5,6 +5,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import './styles.css'
 import MoodMode from '../MoodMode';
 import MusicPlayer from '../MusicPlayer';
+import Quotes from '../Quotes';
 
 
 
@@ -31,10 +32,13 @@ function MoodBoard() {
                   <AiIcons.AiOutlineClose />
                 </NavLink>
               </li>
-                  <h1>Mood Board</h1>
+                  <h1 className='moodtitle'>Mood Board</h1>
                   <h3>Customise:</h3>
                   <MoodMode/>
+                  <div className='container4'>
                   <MusicPlayer/>
+                  <Quotes/>
+                  </div>
             </ul>
           </nav>
       </>

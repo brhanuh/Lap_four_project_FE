@@ -1,6 +1,6 @@
 import React from "react";
 import { Recommend } from "../../components";
-import "./styles.css";
+import "./recommendations.css";
 
 const Recommendations = () => {
   function handleRecommend(e) {
@@ -9,11 +9,14 @@ const Recommendations = () => {
   return (
     <>
       <div className="container">
-        <h1 role="h1">This is the Recommendations page</h1>
+        <h1 className="Rec" role="h1">Recommendations</h1>
       </div>
-      <button onClick={handleRecommend}>Recommend</button>
       <Recommend />
       <Recommend />
+      <button className="recbtn" onClick={handleRecommend}>Recommend</button>
+    <footer className="addRec">
+      <input className="Recinput" type="text" placeholder="Add a Recommendation"></input>
+    </footer>
     </>
   );
 };
