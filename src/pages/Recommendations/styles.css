@@ -1,0 +1,8 @@
+:root {
+  user-select: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}

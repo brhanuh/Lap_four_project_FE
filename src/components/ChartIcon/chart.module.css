@@ -1,0 +1,26 @@
+#animationsExample1 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#animationsExample1 td {
+  animation: jumping-bars 2s linear infinite;
+  animation-delay: 0;
+}
+#animationsExample1 tr:nth-of-type(even) td {
+  animation-delay: 200ms;
+}
+.container {
+  width: 20rem;
+}
+@keyframes jumping-bars {
+  0% {
+    transform: translateY(0px);
+  }
+  2% {
+    transform: translateY(-5rem);
+  }
+  4% {
+    transform: translateY(0px);
+  }
+}

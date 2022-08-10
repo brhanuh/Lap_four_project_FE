@@ -1,0 +1,25 @@
+/* styling not completed */
+* {
+  user-select: none;
+}
+
+.emoji {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.emoji:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 750px) {
+  .emoji {
+    cursor: pointer;
+    /* transition: font-size 1.5s; */
+  }
+
+  .emoji:hover {
+    /* font-size: 20rem; */
+    opacity: 1;
+  }
+}

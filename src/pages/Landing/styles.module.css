@@ -1,0 +1,39 @@
+/*
+.opacity{
+  background-color: white;
+  opacity: 0.4;
+ margin-top: 10px;
+ border-radius: 40;
+}
+*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brainDiv {
+  /* top: 7rem;
+  left: 2.5rem; */
+
+  position: absolute;
+}
+.mainDiv {
+  position: relative;
+  top: 17rem;
+  text-align: center;
+}
+/* 
+
+@media screen and (min-width: 750px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    background: red;
+  }
+
+  .mainDiv {
+  }
+  .brainDiv {
+  }
+} */

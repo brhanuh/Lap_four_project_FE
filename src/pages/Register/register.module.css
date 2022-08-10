@@ -1,0 +1,71 @@
+/* at the moment 1rem equals to 10px */
+/* playing around with styles */
+
+/********* mobile 1st **************/
+.container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  min-width: max-content;
+}
+.header {
+  font-size: 3rem;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+.inputField {
+  margin-top: 2rem;
+  /* padding: 1rem; */
+  font-size: 1.6rem;
+  height: 4rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 3rem;
+}
+input:focus {
+  background-color: rgb(136, 151, 247);
+}
+
+#signUpBtn {
+  margin: 4rem 0;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  width: 50%;
+  height: 100%;
+  border-radius: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  /* testing media works */
+  /* .container {
+      margin-bottom: 2rem;
+    } */
+  #signUpBtn {
+    margin: 3rem 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 50%;
+    height: 100%;
+    border-radius: 3rem;
+  }
+
+  .header {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .inputField {
+    margin-top: 2rem;
+    /* padding: 1rem; */
+    font-size: 2.5rem;
+    height: 4rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 3rem;
+  }
+}

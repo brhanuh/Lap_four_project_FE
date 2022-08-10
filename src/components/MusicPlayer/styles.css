@@ -1,0 +1,27 @@
+.music-btn{
+    height: 30px;
+    width: 40px;
+    font-size: 8pt;
+    position: relative;
+    border: none;
+}
+
+.music-image{
+    width: 75px;
+    height: 75px;
+}
+
+.song-name{
+    font-size: 10pt;
+    display: flex;
+}
+
+.music-player{
+width: fit-content;
+height: fit-content;
+}
+
+.container1{
+    width:60vh;
+    height: 40vh;
+}
