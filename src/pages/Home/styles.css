@@ -1,0 +1,30 @@
+.videoani { position:relative}
+
+.videoani video {
+    position: relative;
+    z-index: 1;
+}
+  
+  .animationzza{
+    height: 530px;
+    
+  }
+
+  .timeline{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    margin-top: 105%;
+    margin-left: 15%;
+
+  }
+
+  .capture{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    margin-top: 70%;
+    margin-left: 5%;
+  }

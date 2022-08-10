@@ -1,17 +1,14 @@
-import React from "react";
-import "./recommend.css";
-const Recommend = () => {
+import React from 'react';
+import './recommend.css';
+const Recommend = ({ style, title, date, comment, user }) => {
   return (
     <>
-      <div className="recommendContainer">
+      <div className="card">
         <div className="recommendContent">
-          <h2>Title</h2>
-          <h5>Date</h5>
-          <p>
-            commentsd sdsadadsa asdsadsadsa dasdsadsadsa dsds ads dsd sd s ds ds
-            dsasdasdsa ad asdsad sa
-          </p>
-          <h5>User</h5>
+          <h2>{title}</h2>
+          <h5>{date}</h5>
+          <p>{comment}</p>
+          <h5>{user}</h5>
         </div>
       </div>
     </>

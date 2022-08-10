@@ -1,5 +1,11 @@
 .container1{
     display: flex;
     justify-content: center;
+    height: fit-content;
+    width: fit-content;
 }
 
+.phoneline{
+    font-size: 12pt;
+    text-align: center;
+}
