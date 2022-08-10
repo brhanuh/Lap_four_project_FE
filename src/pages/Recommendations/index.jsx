@@ -1,10 +1,17 @@
+<<<<<<< Updated upstream
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Recommend } from "../../components";
 import "./styles.css";
 import "./recommendations.css";
+=======
+import React, { useRef, useState } from 'react';
+import { Recommend } from '../../components';
+import './styles.css';
+import './recommendations.css';
+>>>>>>> Stashed changes
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Recommendations = () => {
   const css = { border: "solid 0.3rem purple", borderRadius: "9px" };
@@ -92,8 +99,8 @@ const Recommendations = () => {
 
   function handleRecommend(e) {
     e.preventDefault();
-    navigate("/recommend");
-    console.log("hello world");
+    navigate('/recommend');
+    console.log('hello world');
   }
   return (
     <>
