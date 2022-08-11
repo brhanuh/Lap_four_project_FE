@@ -9,10 +9,24 @@
   font-size: 12pt;
   text-align: center;
 }
+.aboutCard {
+  box-shadow: 3px 8px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-left: 3%;
+  margin-bottom: 3%;
+  margin-right: 3%;
+  padding-top: 15px;
+  background-color: rgb(255, 255, 255, 0.3);
+  border-radius: 10px; /* 5px rounded corners */
+  height: 28rem;
+  box-sizing: border-box;
+}
+/* .swiperDiv {
+  height: 40rem;
+} */
 
 .swiper {
   width: 73%;
-  height: 100%;
 }
 
 .swiper-slide {
@@ -37,7 +51,7 @@
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin-bottom: 10px;
+  height: 25rem;
+  /* object-fit: cover; */
+  margin-bottom: 2rem;
 }
