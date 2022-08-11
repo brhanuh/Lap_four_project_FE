@@ -13,7 +13,7 @@ export function AppProvider({ children }) {
 
 
     return (
-        <AppContext.Provider value={{ userFeelObj, setUserFeelObj, userValueData, feelingValue, setFeelingValue, brainColor, setBrainColor, feeling, setFeeling, textAreaValue, setTextValue, class1, setClass }}>
+        <AppContext.Provider value={{ userFeelObj, setUserFeelObj, feelingValue, setFeelingValue, brainColor, setBrainColor, feeling, setFeeling, textAreaValue, setTextValue, class1, setClass }}>
             {children}
         </AppContext.Provider>
     )
