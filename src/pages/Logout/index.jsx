@@ -10,7 +10,6 @@ const Logout = ({ setUpdateNav }) => {
   }, []);
   return (
     <>
-    <div className="card1">
     <div className="goodbye-div">
     <h1 className="goodbye" role="h1">Come back again soon!</h1>
     </div>
@@ -20,7 +19,6 @@ const Logout = ({ setUpdateNav }) => {
           src={require("./Logout.gif")}
           alt="loading..."
         />
-      </div>
       </div>
     </>
   );

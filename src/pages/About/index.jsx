@@ -32,7 +32,7 @@ const About = () => {
       <div>
         <h3>{stepHeadings[step]}</h3>
       </div>
-      <div className="container1 aboutCard">
+      <div className="container1">
         {/* <h1 className="phoneline" role="h1"></h1> */}
 
         <div className="">{showSteps()}</div>

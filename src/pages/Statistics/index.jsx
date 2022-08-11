@@ -6,6 +6,7 @@ import axios from 'axios';
 import { SelectInputs } from '../../components';
 import AppContext from '../../HelperContext/Context';
 
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Statistics = () => {
@@ -55,7 +56,6 @@ const Statistics = () => {
 
   return (
     <>
-      <div className={stats.card1}>
         <div className={stats.container}>
           <div className={stats.header}>
             <h2>Header</h2>
@@ -66,7 +66,6 @@ const Statistics = () => {
             <Pie data={data} />
           </div>
         </div>
-      </div>
     </>
   );
 };
