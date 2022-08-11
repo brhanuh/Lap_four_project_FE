@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { subclip } from 'three/src/animation/AnimationUtils';
 import { Button, ThreeDBrain } from '../../components';
 import styles from './styles.module.css';
+import AppContext from '../../HelperContext/Context';
+import './landing.css'
 
 const Landing = () => {
   const navigate = useNavigate();
+
+  const {class1} = useContext(AppContext);
+
   return (
     <>
       <div className={styles.container}>
@@ -14,7 +19,7 @@ const Landing = () => {
           Your new mental health journey
         </h1>
 
-        <div className={styles.sun}>
+        <div className={class1}>
           <div className={styles.brainDiv}>
             <ThreeDBrain />
             <div>
@@ -33,6 +38,7 @@ const Landing = () => {
                   type="button"
                   value="What we do"
                 />
+                {console.log(class1)}
               </div>
             </div>
 
