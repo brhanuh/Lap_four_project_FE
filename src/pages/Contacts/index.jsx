@@ -5,8 +5,8 @@ const Contacts = () =>{
     return <>
     <div className='card1'>
         <h1>Phone lines</h1>
-         <p>Samaritans. To talk about anything that is upsetting you, you can contact Samaritans 24 hours a day, 365 days a year. You can call 116 123 (free from any phone), email jo@samaritans.org or visit some branches in person. You can also call the Samaritans Welsh Language Line on 0808 164 0123 (7pm–11pm every day).
-SANEline.<br/>If you're experiencing a mental health problem or supporting someone else, you can call SANEline on 0300 304 7000 (4.30pm–10.30pm every day).<br/>
+         <h3>Samaritans</h3><p><br></br> To talk about anything that is upsetting you, you can contact Samaritans 24 hours a day, 365 days a year. You can call 116 123 (free from any phone), email jo@samaritans.org or visit some branches in person. You can also call the Samaritans Welsh Language Line on 0808 164 0123 (7pm–11pm every day).
+<br></br>SANEline.<br/>If you're experiencing a mental health problem or supporting someone else, you can call SANEline on 0300 304 7000 (4.30pm–10.30pm every day).<br/>
 National Suicide Prevention Helpline UK. Offers a supportive listening service to anyone with thoughts of suicide. You can call the National Suicide Prevention Helpline UK on 0800 689 5652 (open 24/7).<br/>
 Campaign Against Living Miserably (CALM). You can call the CALM on 0800 58 58 58 (5pm–midnight every day) if you are struggling and need to talk. Or if you prefer not to speak on the phone, you could try the CALM webchat service.<br/>
 Shout. If you would prefer not to talk but want some mental health support, you could text SHOUT to 85258. Shout offers a confidential 24/7 text service providing support if you are in crisis and need immediate help.

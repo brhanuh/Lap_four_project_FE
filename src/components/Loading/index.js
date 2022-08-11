@@ -12,8 +12,11 @@ const Loading = ({ setLoading }) => {
   return (
     <>
       <div className="loadingContainer">
-        <p>Take a deep breath...</p>
+        <p className="load">Take a deep breath...</p>
+        <div>
+        <img className="loadingimg" src={require('./loadingg.gif')} alt="loading..." />
         {/* <PacmanLoader color={"#ffe737"} size={20} /> */}
+        </div>
       </div>
     </>
   );

@@ -15,9 +15,6 @@ const Landing = () => {
           <ThreeDBrain />
         </div> */}
         <div className={styles.sun}>
-          <div className={styles.img}>
-        <img className={styles.brainz} src={require('./mainPageBrain-unscreen.gif')} alt="loading..." />
-        </div>
         <div className={styles.mainDiv}>
           {/* <Button type="button" value="test: about" /> */}
           <h4>An app to promote healthy lifestyle choices</h4>
