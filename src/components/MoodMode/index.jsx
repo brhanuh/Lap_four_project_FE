@@ -21,9 +21,7 @@ const data = [
     color5: '#F8ABFF',
     tabletop: '#F8ABFF',
     textcolor: 'rgb(161, 105, 159)',
-    //test brain colorPinkYellow
-    brain: 'ColorPinkYellow',
-    // brain: 'mellowBrain',
+    brain: 'mellowBrain',
   },
   {
     id: '2',
@@ -39,7 +37,7 @@ const data = [
     color5: '#FEFCD3',
     tabletop: 'rgb(195, 216, 250)',
     textcolor: 'rgb(14, 53, 117)',
-    brain: 'happyBrain',
+    brain: 'calmBrain',
   },
   {
     id: '3',
