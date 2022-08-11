@@ -91,6 +91,7 @@ export default function MoodMode() {
                       color3,
                       color4,
                       color5,
+                      textcolor,
                       brain,
                     }) => {
                       return (
@@ -115,6 +116,8 @@ export default function MoodMode() {
                                   <style>{`.navbar-toggle{background-color: ${color4}`}</style>
                                   <style>{`.mood-menu{background-image: url(${backgroundImage});}`}</style>
                                   <style>{`.bottom{background-color: ${color2}`}</style>
+                                  <style>{`.main-name{color: ${textcolor}`}</style>
+
                                 </>
                               ) : null}
                             </div>
