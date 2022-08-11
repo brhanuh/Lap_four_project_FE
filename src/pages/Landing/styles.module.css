@@ -152,5 +152,19 @@
 
 .yolo {
   position: absolute;
+  text-align: center;
   top: 30rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 55px;
+  
+}
+
+.reg, .aboutt{
+  border: none;
+  font-size: 14pt;
+}
+
+.reg{
+  margin-bottom: 10px;
 }

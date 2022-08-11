@@ -4,7 +4,7 @@
 .navbar{
     height: 80px;
     display:flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center; 
     margin-bottom: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
@@ -79,11 +79,13 @@
 } */
 
 .container{
-    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .main-name{
     font-family: 'Pacifico', cursive;
+   
 } 
 
 @media (max-width: 767px) {

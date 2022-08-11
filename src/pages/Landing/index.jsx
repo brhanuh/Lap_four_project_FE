@@ -19,19 +19,19 @@ const Landing = () => {
             <ThreeDBrain />
             <div>
               <div className={styles.yolo}>
-                <Button
+              <Button className={styles.reg}
                   funct={() => {
-                    navigate('/timeline');
+                    navigate('/register');
                   }}
                   type="button"
-                  value="TimeLine"
+                  value="Start your journey now"
                 />
-                <Button
+                <Button className={styles.aboutt}
                   funct={() => {
-                    navigate('/check-in');
+                    navigate('/about');
                   }}
                   type="button"
-                  value="Check In"
+                  value="What we do"
                 />
               </div>
             </div>
