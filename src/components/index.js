@@ -11,5 +11,5 @@ export { default as ThreeDBrain } from "./ThreeDBrain";
 export { default as ChartIcon } from "./ChartIcon";
 export { default as Recommend } from "./Recommend";
 export { default as SelectInputs } from "./SelectInputs";
-export { default as SwiperJs } from "./SwiperJs";
+
 

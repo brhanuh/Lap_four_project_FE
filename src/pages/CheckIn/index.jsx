@@ -8,7 +8,7 @@ import AppContext from '../../HelperContext/Context';
 
 const CheckIn = () => {
   const navigate = useNavigate();
-  const { setTextValue, textAreaValue } = useContext(AppContext);
+  // const { setTextValue, textAreaValue } = useContext(AppContext);
 
   // setting questions for multistep form
   const [question, setQuestion] = useState(0);
@@ -31,7 +31,7 @@ const CheckIn = () => {
   //creating heading for each step within the form
   const questionHeadings = [
     'heading 1: pick  your mood 🙏',
-    'heading 2: Rate your mood 👌',
+    'Rate your mood',
     'heading 3: never give up',
     'heading 4: diet effects your mood',
     'heading 4: stop coding in the dark ',
@@ -156,9 +156,10 @@ const CheckIn = () => {
         rows="5"
         id="diet-textarea"
         name="Diet"
-        value={textAreaValue}
         funct={(e) => {
+          // setTextValue(e.target.value);
           setFormData({ ...formData, diet: e.target.value });
+          // setTextValue('');
         }}
       />
     ) : question === 4 ? (
@@ -168,7 +169,6 @@ const CheckIn = () => {
         rows="5"
         id="entertainment-textarea"
         name="Entertainment"
-        value={textAreaValue}
         funct={(e) => setFormData({ ...formData, enter: e.target.value })}
         className={checkin.textarea}
       />
@@ -216,8 +216,11 @@ const CheckIn = () => {
   };
 
   return (
+    // <h2 >Header</h2>
     <div className={checkin.container}>
-      <h2 className={checkin.h2c}>Header</h2>
+      <div className={checkin.checkInFormHeader}>
+        <h3 className={checkin.h2c}>{questionHeadings[question]}</h3>
+      </div>
       <div className={checkin.card2}>
         <form
           className={checkin.form}
@@ -243,9 +246,6 @@ const CheckIn = () => {
               }}
             ></div>
           </div>
-          <div className={checkin.checkInFormHeader}>
-            <h3>{questionHeadings[question]}</h3>
-          </div>
           <div className="">{rateQuestion()}</div>
           <div className={checkin.nextPrevDiv}>
             {question > 0 && (
@@ -265,7 +265,6 @@ const CheckIn = () => {
                 type="button"
                 funct={(e) => {
                   e.preventDefault();
-                  setTextValue('');
                   setQuestion((currentQuestion) => currentQuestion + 1);
                 }}
                 value="Next"
