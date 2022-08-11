@@ -30,49 +30,49 @@ const Register = () => {
 
   return (
     <>
-    <div className={styles.container}>
-      <div>
-        <h1 className={styles.header}>Sign Up</h1>
-        <form onSubmit={handleSubmit}>
-          <InputText
-            type="text"
-            placeholder="Enter username.."
-            label="Username: "
-            id="name"
-            className={styles.inputField}
-          />
-          <InputText
-            type="email"
-            placeholder="Enter Email.."
-            label="Email: "
-            id="email"
-            className={styles.inputField}
-          />
-          <InputText
-            type="email"
-            placeholder="Confirm Email.."
-            label="Confirm Email: "
-            id="confirm-email"
-            className={styles.inputField}
-          />
-          <InputText
-            type="text"
-            placeholder="Enter Password.."
-            label="Password: "
-            id="password"
-            className={styles.inputField}
-          />
-          <InputText
-            type="text"
-            placeholder="Confirm Password.."
-            label="Confirm Password: "
-            id="confirm-password"
-            className={styles.inputField}
-          />
-          <Button type="submit" value="Sign Up" id={styles.signUpBtn} />
-        </form>
+      <div className={styles.container}>
+        <div>
+          <h1 className={styles.header}>Sign Up</h1>
+          <form onSubmit={handleSubmit}>
+            <InputText
+              type="text"
+              placeholder="Enter username.."
+              label="Username: "
+              id="name"
+              className={styles.inputField}
+            />
+            <InputText
+              type="email"
+              placeholder="Enter Email.."
+              label="Email: "
+              id="email"
+              className={styles.inputField}
+            />
+            <InputText
+              type="email"
+              placeholder="Confirm Email.."
+              label="Confirm Email: "
+              id="confirm-email"
+              className={styles.inputField}
+            />
+            <InputText
+              type="password"
+              placeholder="Enter Password.."
+              label="Password: "
+              id="password"
+              className={styles.inputField}
+            />
+            <InputText
+              type="password"
+              placeholder="Confirm Password.."
+              label="Confirm Password: "
+              id="confirm-password"
+              className={styles.inputField}
+            />
+            <Button type="submit" value="Sign Up" id={styles.signUpBtn} />
+          </form>
+        </div>
       </div>
-    </div>
     </>
   );
 };

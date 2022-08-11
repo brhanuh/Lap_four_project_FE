@@ -34,11 +34,13 @@ function MoodBoard() {
                 </NavLink>
               </li>
               <div className='card1'>
-                  <h1 className='moodtitle'>Mood Board</h1>
-                  <h3>Customise:</h3>
+              <h1 className='moodtitle'>Mood Board</h1>
+                <div className='moodcont'>
+                  <h3 className='custom'>Customise:</h3>
                   <MoodMode/>
-                  <h3>Music Player</h3>
-                  <MusicPlayer/>
+                  {/* <h3>Music Player</h3> */}
+                  {/* <MusicPlayer/> */}
+                  </div>
                   <Quotes/>
                   </div>
             </ul>

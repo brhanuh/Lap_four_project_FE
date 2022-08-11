@@ -12,6 +12,7 @@
 }
 .container {
   width: 20rem;
+  cursor: pointer;
 }
 @keyframes jumping-bars {
   0% {
