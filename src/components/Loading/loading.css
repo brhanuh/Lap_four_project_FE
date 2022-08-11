@@ -1,4 +1,15 @@
 .loadingContainer {
   top: 30%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.load{
+  font-size: 20pt;
+  padding-top: 80px;
+}
+
+.loadingimg{
+  padding-top: 40px;
 }
