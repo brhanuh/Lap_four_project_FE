@@ -33,7 +33,7 @@ function App() {
           <Route path="/" element={<Layout updateNav={updateNav} />}>
             <Route path="/" element={<Landing />}></Route>
             <Route path="/contacts" element={<Contacts />}></Route>
-            <Route path="/home" element={<Home />}></Route>
+            <Route path="/home" element={<Landing />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/hub" element={<Hub />}></Route>
             <Route path="/check-in" element={<CheckIn />}></Route>

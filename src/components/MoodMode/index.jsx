@@ -41,7 +41,7 @@ const data = [
     title: 'Calm',
     className: 'image-3',
     backgroundImage:
-      'https://static.vecteezy.com/system/resources/previews/007/912/969/non_2x/abstract-pastel-colorful-gradient-background-concept-free-vector.jpg',
+      'https://i.pinimg.com/736x/a4/b6/17/a4b617ec11ee6c855efbe849c77e3728.jpg',
     color2: '#add8e6',
     color3: '#add8e6',
     color4: '#D6F9E9',
