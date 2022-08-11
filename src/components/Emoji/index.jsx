@@ -14,6 +14,7 @@ const Emoji = ({ funct, id, emoji, value }) => {
         value={value}
         name=""
         id={id}
+        required
       />
     </div>
   );
