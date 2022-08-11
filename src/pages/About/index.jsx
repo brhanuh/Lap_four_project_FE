@@ -20,6 +20,48 @@ const About = () => {
       <div>
         <h3>{stepHeadings[step]}</h3>
       </div>
+<<<<<<< HEAD
+=======
+      <div className="container1">
+        {/* <h1 className="phoneline" role="h1"></h1> */}
+
+        <div className="">{showSteps()}</div>
+        <div
+        //  className={.nextPrevDiv}
+        >
+          {step > 0 && (
+            <Button
+              // className={}
+              type="button"
+              funct={(e) => {
+                e.preventDefault();
+                setStep((step) => step - 1);
+              }}
+              value="Previous"
+            />
+          )}
+        </div>
+        {step !== stepHeadings.length - 1 ? (
+          <Button
+            // className={}
+            type="button"
+            funct={(e) => {
+              e.preventDefault();
+
+              setStep((step) => step + 1);
+            }}
+            value="Next"
+          />
+        ) : (
+          <Button
+            funct={(e) => {}}
+            //  className={.log}
+            value="Sign Up"
+            type="button"
+          />
+        )}
+      </div>
+>>>>>>> 55a4b7b1e55fc771d4bec45264506273c3370472
     </>
   );
 };

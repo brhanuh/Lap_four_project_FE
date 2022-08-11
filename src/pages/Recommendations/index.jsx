@@ -96,7 +96,6 @@ const Recommendations = () => {
   }
   return (
     <>
-      <div className="card1">
         <div className="container">
           <h1 className="Rec" role="h1">
             Recommendations
@@ -129,7 +128,6 @@ const Recommendations = () => {
               </div>
             ))}
         </ul>
-      </div>
     </>
   );
 };

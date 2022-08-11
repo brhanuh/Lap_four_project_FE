@@ -8,6 +8,7 @@ export function AppProvider({ children }) {
     const [textAreaValue, setTextValue] = useState('');
 
 
+
     return (
         <AppContext.Provider value={{ brainColor, setBrainColor, feeling, setFeeling, textAreaValue, setTextValue }}>
             {children}
