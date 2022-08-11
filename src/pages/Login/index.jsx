@@ -41,6 +41,9 @@ const Login = ({ setUpdateNav }) => {
     <>
       <div className={styles.container}>
         <div>
+        <h1 className={styles.welc} role="h1">
+            Welcome Back
+          </h1>
           <h1 className={styles.loginh1} role="h1">
             Login
           </h1>
@@ -48,14 +51,14 @@ const Login = ({ setUpdateNav }) => {
             <InputText
               type="text"
               label="Username"
-              placeholder="Enter Username.."
+              placeholder="Username.."
               id="username"
               className={styles.inputField}
             />
             <InputText
               type="password"
               label="Password"
-              placeholder="Enter Password.."
+              placeholder="Password.."
               id="password"
               className={styles.inputField}
             />

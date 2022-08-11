@@ -1,4 +1,4 @@
-.container {
+ /* .container {
   display: flex;
   justify-content: center;
 }
@@ -22,18 +22,18 @@ body {
   height: 100%;
   background-color: lightgray;
   position: relative;
-}
+} 
 
 .logo {
   margin-top: 3rem;
   width: var(--logo-size);
   height: var(--logo-size);
-  /* border-radius: 100%;
-  background-color: salmon; */
+  border-radius: 100%;
+  background-color: salmon; 
 
-  /* position: absolute;
+  position: absolute;
   top: var(--offset);
-  left: calc(50% - var(--logo-size) / 2); */
+  left: calc(50% - var(--logo-size) / 2);
 
   animation-name: bounce;
   animation-duration: 0.5s;
@@ -61,4 +61,4 @@ body {
   to {
     transform: translateY(var(--drop-height)) scale(1, 0.7);
   }
-}
+}  */

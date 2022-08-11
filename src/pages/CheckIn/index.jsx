@@ -30,12 +30,12 @@ const CheckIn = () => {
 
   //creating heading for each step within the form
   const questionHeadings = [
-    'heading 1: pick  your mood 🙏',
+    'Which best describes your mood?',
     'Rate your mood',
-    'heading 3: never give up',
-    'heading 4: diet effects your mood',
-    'heading 4: stop coding in the dark ',
-    'heading 5:  too much social media can lead to depression',
+    '',
+    'Lifestyle',
+    'Lifestyle',
+    'Lifestyle',
   ];
 
   // function that will render different questions depending on what step of the form
@@ -150,7 +150,7 @@ const CheckIn = () => {
       </div>
     ) : question === 3 ? (
       <CheckInQuestions
-        question="How Do You Feel ....."
+        question="What diet choices have you made"
         className={checkin.textarea}
         cols="90"
         rows="5"
@@ -164,7 +164,7 @@ const CheckIn = () => {
       />
     ) : question === 4 ? (
       <CheckInQuestions
-        question="How Do You Feel ....."
+        question="What do you do in your spare time"
         cols="90"
         rows="5"
         id="entertainment-textarea"
@@ -175,7 +175,7 @@ const CheckIn = () => {
     ) : (
       <CheckInQuestions
         className={checkin.textarea}
-        question="How Do You Feel ....."
+        question="How are you socialising"
         cols="90"
         rows="5"
         id="social-textarea"
@@ -270,7 +270,7 @@ const CheckIn = () => {
                 value="Next"
               />
             ) : (
-              <Button className={checkin.log} value="LOG" type="submit" />
+              <Button className={checkin.log} value="Save" type="submit" />
             )}
           </div>
           {/* {console.log(formData)} */}
