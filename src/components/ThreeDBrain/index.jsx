@@ -17,7 +17,7 @@ const ThreeDBrain = () => {
     });
     const { nodes, materials } = useGLTF(`${brainColor}/scene.gltf`);
     return (
-      <group ref={brain} {...props} dispose={null} scale={2}>
+      <group ref={brain} {...props} dispose={null} scale={1.7}>
         <group rotation={[-Math.PI / 2, 0, 0]}>
           <group rotation={[Math.PI / 2, 7.8, 0]}>
             <mesh

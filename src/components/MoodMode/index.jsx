@@ -57,8 +57,8 @@ const data = [
     backgroundImage: 'https://wallpaperaccess.com/full/1092603.jpg',
     color2: '#DBC3C8',
     color3: '#DBC3C8',
-    color4: '#301934',
-    color5: '#301934',
+    color4: '#CBC3E3',
+    color5: '#CBC3E3',
     // text brain multi color Brain toogles are working
     brain: 'brain multi color',
     // brain: 'brain multi color',
@@ -103,7 +103,7 @@ export default function MoodMode() {
                         <style>{`.navbar{background-color: ${color2}`}</style>
                         <style>{`.nav-menu{background-color: ${color3}`}</style>
                         <style>{`.navbar-toggle{background-color: ${color4}`}</style>
-                        <style>{`.mood-menu{background-color: ${color5}`}</style>
+                        <style>{`.mood-menu{background-image: url(${backgroundImage});}`}</style>
                         <style>{`.bottom{background-color: ${color2}`}</style>
                       </>
                     ) : null}
