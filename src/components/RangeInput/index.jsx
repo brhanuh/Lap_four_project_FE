@@ -14,7 +14,6 @@ const RangeInput = ({ label, funct }) => {
           defaultValue="0"
           min="0"
           max="5"
-          oninput="rangeValue.innerText = this.value"
         />
       </div>
     </div>
