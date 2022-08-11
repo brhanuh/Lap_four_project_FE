@@ -12,8 +12,6 @@ const Landing = () => {
           Your new mental health journey
         </h1>
 
-        {/*  <div className={styles.brainDiv}>
-        </div> */}
         <div className={styles.sun}>
           <div className={styles.brainDiv}>
             <ThreeDBrain />

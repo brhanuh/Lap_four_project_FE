@@ -46,12 +46,11 @@
   display: flex;
   position: relative;
   padding-top: 50px;
-<<<<<<< HEAD
   width: 200px;
   height: 200px;
-  background-color: #ba72e1;
+  background-color: #ffde00;
   border-radius: 50%;
-  box-shadow: 0 0 0 20px #8410c780, 0 0 0 40px #ca13da40, 0 0 0 60px #2d043d20,
+  box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
     0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
   animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
 }
@@ -64,58 +63,14 @@
 
 @keyframes rays {
   0% {
-    box-shadow: 0 0 0 0 #95198980, 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040,
+    box-shadow: 0 0 0 0 #ffde0080, 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040,
       0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 40px 100px #ffde0010;
   }
   100% {
-    box-shadow: 0 0 0 20px #f972b180, 0 0 0 40px #eeaf2840, 0 0 0 60px #ffde0020,
+    box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
       0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
   }
 }
-=======
-    width: 200px;
-    height: 200px;
-    background-color: #FFDE00;
-    border-radius: 50%;
-    box-shadow:
-      0 0 0 20px #FFDE0080,
-      0 0 0 40px #FFDE0040,
-      0 0 0 60px #FFDE0020,
-      0 0 0 80px #FFDE0010,
-      0 0 0 100px #FFDE0000,
-      0 0 40px 100px #FFDE0010;
-    animation:
-      sunrise 2s infinite linear forwards,
-      rays 2s 2s infinite linear;
-  }
-  
-  @keyframes sunrise {
-    0% {
-      box-shadow: none;
-    }
-  }
-  
-  @keyframes rays {
-    0% {
-      box-shadow: 
-      0 0 0 0 #FFDE0080,
-      0 0 0 20px #FFDE0080,
-      0 0 0 40px #FFDE0040,
-      0 0 0 60px #FFDE0020,
-      0 0 0 80px #FFDE0010,
-      0 0 40px 100px #FFDE0010;
-    }
-    100% {
-      box-shadow: 
-      0 0 0 20px #FFDE0080,
-      0 0 0 40px #FFDE0040,
-      0 0 0 60px #FFDE0020,
-      0 0 0 80px #FFDE0010,
-      0 0 0 100px #FFDE0000,
-      0 0 40px 100px #FFDE0010;
-    }
-  }
->>>>>>> d1325f0bc8d55f33b25c7859ec16d842db794b8f
 
 .sub {
   border: none;
