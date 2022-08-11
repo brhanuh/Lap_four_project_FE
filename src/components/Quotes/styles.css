@@ -24,7 +24,7 @@
 .typewriter {
     width: 300px;;
     height: max-content;
-    border-radius: 10%;
+    border-radius: 5%;
     min-height: 10vh;
     display: grid;
     place-content: center;
@@ -38,8 +38,6 @@
   .animatedTitle {
     font-size: clamp(1rem, 3vw + 1rem, 4rem);
     position: relative;
-    position: relative;
-    width: max-content;
     text-align: center;
     
   }
