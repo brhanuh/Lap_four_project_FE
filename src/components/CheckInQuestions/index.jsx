@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import AppContext from '../../HelperContext/Context';
+// import AppContext from '../../HelperContext/Context';
 
 const CheckInQuestions = ({
   className,
@@ -9,8 +9,8 @@ const CheckInQuestions = ({
   name,
   question,
   funct,
-  value,
 }) => {
+  // const [textAreaValue, setTextValue] = useContext(AppContext);
   return (
     <div>
       <h1 htmlFor={id} id={name + 1}>
@@ -24,7 +24,7 @@ const CheckInQuestions = ({
         id={id}
         cols={cols}
         rows={rows}
-        value={value}
+        //
       ></textarea>
     </div>
   );

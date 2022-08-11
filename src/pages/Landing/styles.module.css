@@ -46,21 +46,14 @@
   display: flex;
   position: relative;
   padding-top: 50px;
-    width: 200px;
-    height: 200px;
-    background-color: #deb7edbe;
-    border-radius: 50%;
-      box-shadow:
-      0 0 0 20px #deb7edbe,
-      0 0 0 40px #d381d840,
-      0 0 0 60px #e547eb20,
-      0 0 0 80px #FFDE0010,
-      0 0 0 100px #FFDE0000,
-      0 0 40px 100px #FFDE0010; 
-    animation:
-      sunrise 2s infinite linear forwards,
-      rays 2s 2s infinite linear; 
-  }
+  width: 200px;
+  height: 200px;
+  background-color: #deb7edbe;
+  border-radius: 50%;
+  box-shadow: 0 0 0 20px #deb7edbe, 0 0 0 40px #d381d840, 0 0 0 60px #e547eb20,
+    0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
+  animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
+}
 /*   
   .sun-2 {
     display: flex;
@@ -121,8 +114,8 @@
             sunrise 2s infinite linear forwards,
             rays 2s 2s infinite linear; 
         } */
-  
-  /*
+
+/*
   @keyframes sunrise {
     0% {
       box-shadow: none;
@@ -155,4 +148,9 @@
 }
 
 .brainz {
+}
+
+.yolo {
+  position: absolute;
+  top: 30rem;
 }
