@@ -36,9 +36,9 @@ function Layout({ updateNav }) {
         {/* <NavLink to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavLink> */}
-        <div className="container">
+       
           <h1 className="main-name">Brighter Minds</h1>
-        </div>
+
         <MoodBoard />
       </div>
       {/* <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
