@@ -73,6 +73,7 @@ function Layout({ updateNav }) {
       </nav> */}
       <Outlet />
       <footer>
+        <div className="bottomNav">
         <nav className="bottom">
           {token
             ? bottomNav.map((item, index) => {
@@ -96,6 +97,7 @@ function Layout({ updateNav }) {
                 );
               })}
         </nav>
+        </div>
         {/*   <HubButton/> */}
       </footer>
     </>
