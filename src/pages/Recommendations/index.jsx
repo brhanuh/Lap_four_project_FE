@@ -7,10 +7,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Recommendations = () => {
-  const css = { border: 'solid 0.3rem purple', borderRadius: '9px' };
+  const css = { border: "solid 0.3rem purple", borderRadius: "9px" };
   const [dragItem, setDragItem] = useState();
-  const [style, setStyle] = useState('');
-  const token = localStorage.getItem('token');
+  const [style, setStyle] = useState("");
+  const token = localStorage.getItem("token");
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
@@ -54,10 +54,10 @@ const Recommendations = () => {
   useEffect(() => {
     async function fetchRecommendation() {
       const result = await axios.get(
-        'https://fp-mental-health.herokuapp.com/recommendations/',
+        "https://fp-mental-health.herokuapp.com/recommendations/",
         config
       );
-      console.log('result', result.data);
+      console.log("result", result.data);
       setList(result.data);
     }
     fetchRecommendation();
@@ -93,7 +93,6 @@ const Recommendations = () => {
   function handleRecommend(e) {
     e.preventDefault();
     navigate("/recommend");
-    console.log("hello world");
   }
   return (
     <>

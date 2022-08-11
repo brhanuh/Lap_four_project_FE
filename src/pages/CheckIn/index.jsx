@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
-import { Button, Emoji, RatingForm, ThreeDSmiley } from '../../components';
+import React, { useContext, useState } from 'react';
+import { Button, Emoji, RangeInput } from '../../components';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import CheckInQuestions from '../../components/CheckInQuestions';
 import checkin from './checkIn.module.css';
+import AppContext from '../../HelperContext/Context';
 
 const CheckIn = () => {
   const navigate = useNavigate();
+  const { setTextValue, textAreaValue } = useContext(AppContext);
 
   // setting questions for multistep form
   const [question, setQuestion] = useState(0);
@@ -28,11 +30,11 @@ const CheckIn = () => {
 
   //creating heading for each step within the form
   const questionHeadings = [
-    'heading 1: pick a your mood 🙏',
+    'heading 1: pick  your mood 🙏',
     'heading 2: Rate your mood 👌',
     'heading 3: never give up',
     'heading 4: diet effects your mood',
-    'heading 4: stop coding in the dark , blue light exposure is harmful',
+    'heading 4: stop coding in the dark ',
     'heading 5:  too much social media can lead to depression',
   ];
 
@@ -40,20 +42,17 @@ const CheckIn = () => {
   const rateQuestion = () => {
     return question === 0 ? (
       <div className={checkin.emoji}>
-        {/* <h1>😑😊🤣😎😴😞🙃animated moods will go here</h1> */}
-
         <Emoji
           emoji="😡"
           id="emoji-1"
           value={1}
           funct={(e) => {
-            //           const checked = e.target.checked;
-            // if (checked) {
-            //  }}
-            // } else {
-
-            //  //unchecked
-            // }
+            const checked = e.target.checked;
+            if (checked) {
+              e.target.style.opacity = 1;
+            } else {
+              //unchecked
+            }
             setFormData({ ...formData, mood: parseInt(e.target.value) });
           }}
         />
@@ -94,28 +93,27 @@ const CheckIn = () => {
       </div>
     ) : question === 1 ? (
       <div>
-        <RatingForm
-          // value={formData.energy}
+        <RangeInput
           funct={(e) =>
             setFormData({ ...formData, energy: parseInt(e.target.value) })
           }
           label="Energy"
         />
-        <RatingForm
+        <RangeInput
           // value={formData.depression}
           funct={(e) =>
             setFormData({ ...formData, depression: parseInt(e.target.value) })
           }
           label="Depression"
         />
-        <RatingForm
+        <RangeInput
           label="Irritability"
           // value={formData.irritability}
           funct={(e) =>
             setFormData({ ...formData, irritability: parseInt(e.target.value) })
           }
         />
-        <RatingForm
+        <RangeInput
           label="Motivation"
           // value={formData.motivation}
           funct={(e) =>
@@ -125,21 +123,21 @@ const CheckIn = () => {
       </div>
     ) : question === 2 ? (
       <div>
-        <RatingForm
+        <RangeInput
           label="Stress"
           // value={formData.stress}
           funct={(e) =>
             setFormData({ ...formData, stress: parseInt(e.target.value) })
           }
         />
-        <RatingForm
+        <RangeInput
           label="Appetite"
           // value={formData.appetite}
           funct={(e) =>
             setFormData({ ...formData, appetite: parseInt(e.target.value) })
           }
         />
-        <RatingForm
+        <RangeInput
           label="Concentration"
           // value={formData.concentration}
           funct={(e) =>
@@ -158,7 +156,7 @@ const CheckIn = () => {
         rows="5"
         id="diet-textarea"
         name="Diet"
-        // value={formData.diet}
+        value={textAreaValue}
         funct={(e) => {
           setFormData({ ...formData, diet: e.target.value });
         }}
@@ -170,7 +168,7 @@ const CheckIn = () => {
         rows="5"
         id="entertainment-textarea"
         name="Entertainment"
-        // value={formData.enter}
+        value={textAreaValue}
         funct={(e) => setFormData({ ...formData, enter: e.target.value })}
         className={checkin.textarea}
       />
@@ -182,7 +180,6 @@ const CheckIn = () => {
         rows="5"
         id="social-textarea"
         name="Social "
-        value=""
         funct={(e) => setFormData({ ...formData, social: e.target.value })}
       />
     );
@@ -203,17 +200,7 @@ const CheckIn = () => {
       social: formData.social,
       mood: formData.mood,
     };
-    // const token = localStorage.getItem('token');
-    //   axios
-    //     .post('https://fp-mental-health.herokuapp.com/new_entry', data)
-    //     .then((response) => {
-    //       console.log(response.status);
-    //       // console.log(response.data.token);
-    //     });
-    //   console.log('data', data);
-    //   // console.log('data', token);
-    //   // navigate('/hub');
-    // };
+
     const token = localStorage.getItem('token');
     axios
       .post('https://fp-mental-health.herokuapp.com/new_entry', data, {
@@ -225,74 +212,71 @@ const CheckIn = () => {
         console.log(response.status);
         console.log(response.data.token);
       });
-    console.log('data', data);
-    console.log('data', token);
-    // navigate('/hub');
+    navigate('/hub');
   };
 
   return (
-  
     <div className={checkin.container}>
-       <h2 className={checkin.h2c}>This is the check in page</h2>
+      <h2 className={checkin.h2c}>Header</h2>
       <div className={checkin.card2}>
-      <form
-        className={checkin.form}
-        onSubmit={handleSubmit}
-        action="https://fp-mental-health.herokuapp.com/new_entry"
-        method="POST"
-      >
-        <div className={checkin.progressbar}>
-          <div
-            style={{
-              width:
-                question === 0
-                  ? '16.6%'
-                  : question === 1
-                  ? '33.2%'
-                  : question === 2
-                  ? '49.8%'
-                  : question === 3
-                  ? '66.4%'
-                  : question === 4
-                  ? '83%'
-                  : '100%',
-            }}
-          ></div>
-        </div>
-        <div className={checkin.checkInFormHeader}>
-          <h2> generic title - Rate from 1-5</h2>
-          <h1>{questionHeadings[question]}</h1>
-        </div>
-        <div className="">{rateQuestion()}</div>
-        <div className={checkin.nextPrevDiv}>
-          {question > 0 && (
-            <Button
-              className={checkin.questionBtn}
-              type="button"
-              funct={(e) => {
-                e.preventDefault();
-                setQuestion((currentQuestion) => currentQuestion - 1);
+        <form
+          className={checkin.form}
+          onSubmit={handleSubmit}
+          action=""
+          method="POST"
+        >
+          <div className={checkin.progressbar}>
+            <div
+              style={{
+                width:
+                  question === 0
+                    ? '16.6%'
+                    : question === 1
+                    ? '33.2%'
+                    : question === 2
+                    ? '49.8%'
+                    : question === 3
+                    ? '66.4%'
+                    : question === 4
+                    ? '83%'
+                    : '100%',
               }}
-              value="Previous"
-            />
-          )}
-          {question !== questionHeadings.length - 1 ? (
-            <Button
-              className={checkin.questionBtn}
-              type="button"
-              funct={(e) => {
-                e.preventDefault();
-                setQuestion((currentQuestion) => currentQuestion + 1);
-              }}
-              value="Next"
-            />
-          ) : (
-            <Button className={checkin.log} value="LOG" type="submit" />
-          )}
-        </div>
-        {/* {console.log(formData)} */}
-      </form>
-    </div>
+            ></div>
+          </div>
+          <div className={checkin.checkInFormHeader}>
+            <h3>{questionHeadings[question]}</h3>
+          </div>
+          <div className="">{rateQuestion()}</div>
+          <div className={checkin.nextPrevDiv}>
+            {question > 0 && (
+              <Button
+                className={checkin.questionBtn}
+                type="button"
+                funct={(e) => {
+                  e.preventDefault();
+                  setQuestion((currentQuestion) => currentQuestion - 1);
+                }}
+                value="Previous"
+              />
+            )}
+            {question !== questionHeadings.length - 1 ? (
+              <Button
+                className={checkin.questionBtn}
+                type="button"
+                funct={(e) => {
+                  e.preventDefault();
+                  setTextValue('');
+                  setQuestion((currentQuestion) => currentQuestion + 1);
+                }}
+                value="Next"
+              />
+            ) : (
+              <Button className={checkin.log} value="LOG" type="submit" />
+            )}
+          </div>
+          {/* {console.log(formData)} */}
+        </form>
+      </div>
     </div>
   );
 };

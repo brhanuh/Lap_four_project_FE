@@ -13,10 +13,9 @@
 }
 
 .brainDiv {
-  /* top: 7rem;
-  left: 2.5rem; */
-
-  position: absolute;
+  top: 0.4rem;
+  left: 2.5rem; 
+  position: relative;
 }
 .mainDiv {
   position: relative;
@@ -44,6 +43,8 @@
 }
 
 .sun {
+  display: flex;
+  position: absolute;
   padding-top: 50px;
 	width: 200px;
 	height: 200px;

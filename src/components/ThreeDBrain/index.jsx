@@ -1,47 +1,54 @@
-import React from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { useContext, useRef, useState } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import Button from '../Button';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Suspense } from 'react';
 import styles from './brain.module.css';
+import AppContext from '../../HelperContext/Context';
 
 // 3d model
-function Model(props) {
-  const { nodes, materials } = useGLTF('/brain multi color/scene.gltf');
-  return (
-    <group {...props} dispose={null} scale={2}>
-      <group rotation={[-Math.PI / 2, 0, 0]}>
-        <group rotation={[Math.PI / 1.8, 7.8, 0]}>
-          <mesh
-            geometry={nodes.Brain_Part_01_Colour_Brain_Texture_0.geometry}
-            material={materials.Colour_Brain_Texture}
-          />
-          <mesh
-            geometry={nodes.Brain_Part_02_Colour_Brain_Texture_0.geometry}
-            material={materials.Colour_Brain_Texture}
-          />
-          <mesh
-            geometry={nodes.Brain_Part_03_Colour_Brain_Texture_0.geometry}
-            material={materials.Colour_Brain_Texture}
-          />
-          <mesh
-            geometry={nodes.Brain_Part_04_Colour_Brain_Texture_0.geometry}
-            material={materials.Colour_Brain_Texture}
-          />
-          <mesh
-            geometry={nodes.Brain_Part_05_Colour_Brain_Texture_0.geometry}
-            material={materials.Colour_Brain_Texture}
-          />
-          <mesh
-            geometry={nodes.Brain_Part_06_Colour_Brain_Texture_0.geometry}
-            material={materials.Colour_Brain_Texture}
-          />
-        </group>
-      </group>
-    </group>
-  );
-}
 
 const ThreeDBrain = () => {
+  const { brainColor } = useContext(AppContext);
+  function Model(props) {
+    const brain = useRef();
+    useFrame(({ clock }) => {
+      brain.current.rotation.y = clock.getElapsedTime();
+    });
+    const { nodes, materials } = useGLTF(`${brainColor}/scene.gltf`);
+    return (
+      <group ref={brain} {...props} dispose={null} scale={2}>
+        <group rotation={[-Math.PI / 2, 0, 0]}>
+          <group rotation={[Math.PI / 2, 7.8, 0]}>
+            <mesh
+              geometry={nodes.Brain_Part_01_Colour_Brain_Texture_0.geometry}
+              material={materials.Colour_Brain_Texture}
+            />
+            <mesh
+              geometry={nodes.Brain_Part_02_Colour_Brain_Texture_0.geometry}
+              material={materials.Colour_Brain_Texture}
+            />
+            <mesh
+              geometry={nodes.Brain_Part_03_Colour_Brain_Texture_0.geometry}
+              material={materials.Colour_Brain_Texture}
+            />
+            <mesh
+              geometry={nodes.Brain_Part_04_Colour_Brain_Texture_0.geometry}
+              material={materials.Colour_Brain_Texture}
+            />
+            <mesh
+              geometry={nodes.Brain_Part_05_Colour_Brain_Texture_0.geometry}
+              material={materials.Colour_Brain_Texture}
+            />
+            <mesh
+              geometry={nodes.Brain_Part_06_Colour_Brain_Texture_0.geometry}
+              material={materials.Colour_Brain_Texture}
+            />
+          </group>
+        </group>
+      </group>
+    );
+  }
   return (
     <div>
       <Canvas

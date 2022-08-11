@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../../HelperContext/Context';
 
 const CheckInQuestions = ({
   className,
@@ -8,6 +9,7 @@ const CheckInQuestions = ({
   name,
   question,
   funct,
+  value,
 }) => {
   return (
     <div>
@@ -22,6 +24,7 @@ const CheckInQuestions = ({
         id={id}
         cols={cols}
         rows={rows}
+        value={value}
       ></textarea>
     </div>
   );
