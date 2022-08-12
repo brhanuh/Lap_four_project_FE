@@ -11,7 +11,7 @@
   animation-delay: 200ms;
 }
 .container {
-  width: 20rem;
+  /* width: 20rem; */
   cursor: pointer;
 }
 @keyframes jumping-bars {

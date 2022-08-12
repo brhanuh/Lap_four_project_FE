@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import emojicss from './emoji.module.css';
+import AppContext from '../../HelperContext/Context';
 
-const Emoji = ({ funct, id, emoji, value }) => {
+const Emoji = ({ ref, funct, id, emoji, value, onFocus }) => {
+  const { emojiRef, setFormData, formData, show, setShow } =
+    useContext(AppContext);
+
   return (
     <div>
-      <label className={emojicss.emoji} htmlFor={id}>
+      <label onInput={onFocus} className={emojicss.emoji} htmlFor={id}>
         {emoji}
       </label>
       <input
-        hidden
-        onChange={funct}
-        type="checkbox"
+        className={emojicss.emojiInput}
+        onChange={(e) => {
+          if (e.target) {
+            e.target.labels[0].style.opacity = 1;
+          } else {
+            e.target.labels[0].style.opacity = '';
+          }
+          setFormData({ ...formData, mood: parseInt(e.target.value) });
+        }}
+        type="radio"
         value={value}
-        name=""
+        name="emoji"
         id={id}
+        hidden
         required
       />
     </div>

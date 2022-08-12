@@ -18,6 +18,7 @@ const CheckInQuestions = ({
       </h1>
       <p>{question} ?</p>
       <textarea
+        placeholder="type here ..."
         className={className}
         onChange={funct}
         name={name}
