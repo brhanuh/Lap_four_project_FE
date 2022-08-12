@@ -108,7 +108,7 @@
   list-style-type: none;
   z-index: 1;
   min-width: 375px;
-  gap: 5%;
+  gap: 10%;
 }
 
 .bottomNav {
