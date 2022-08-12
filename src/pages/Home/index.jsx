@@ -1,55 +1,54 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ChartIcon from '../../components/ChartIcon';
-import './styles.css'
+import { subclip } from 'three/src/animation/AnimationUtils';
 import { Button, ThreeDBrain } from '../../components';
-import styles from '../Landing/styles.module.css';
+import home from './home.module.css';
+import AppContext from '../../HelperContext/Context';
 
 
 const Home = () => {
-
   const navigate = useNavigate();
 
-
+  const {class1} = useContext(AppContext);
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={home.container}>
         {/* possibly typewritten h1 */}
-        <h1 className={styles.landing1} role="h1">
-          Your mental health buddy
+        <h1 className={home.landing1} role="h1">
+          Your new mental health journey
         </h1>
 
-        <div className={styles.sun}>
-          <div className={styles.brainDiv}>
+        <div className={class1}>
+          <div className={home.brainDiv}>
             <ThreeDBrain />
             <div>
-              <div className={styles.yolo}>
-              <Button className={styles.reg}
+              <div className={home.yolo}>
+              <Button className={home.reg}
                   funct={() => {
-                    navigate('/check-in');
+                    navigate('/register');
                   }}
                   type="button"
-                  value="I'm feeling..."
+                  value="I'm feeling.."
                 />
-                <Button className={styles.aboutt}
+                <Button className={home.aboutt}
                   funct={() => {
                     navigate('/about');
                   }}
                   type="button"
-                  value="My timeline"
+                  value="My Timeline"
                 />
+                {console.log(class1)}
               </div>
             </div>
 
-            <div className={styles.mainDiv}></div>
+            <div className={home.mainDiv}></div>
           </div>
         </div>
       </div>
     </>
   );
 };
-
 
 export default Home;
 
@@ -75,3 +74,23 @@ export default Home;
 >
  Timeline ➡
 </div>  */}
+
+
+
+
+
+{/* <Button className={styles.reg}
+                  funct={() => {
+                    navigate('/check-in');
+                  }}
+                  type="button"
+                  value="I'm feeling..."
+                />
+                <Button className={styles.aboutt}
+                  funct={() => {
+                    navigate('/about');
+                  }}
+                  type="button"
+                  value="My timeline"
+                />
+              </div> */}
