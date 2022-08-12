@@ -52,7 +52,7 @@ const data = [
     color5: 'rgb(245, 219, 135)',
     tabletop: 'rgb(252, 250, 210)',
     textcolor: 'rgb(92, 56, 22)',
-    brain: 'calmBrain',
+    brain: 'happyBrain',
   },
   {
     id: '4',
