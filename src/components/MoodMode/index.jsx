@@ -21,9 +21,7 @@ const data = [
     color5: '#F8ABFF',
     tabletop: '#F8ABFF',
     textcolor: 'rgb(161, 105, 159)',
-    //test brain colorPinkYellow
-    brain: 'ColorPinkYellow',
-    // brain: 'mellowBrain',
+    brain: 'mellowBrain',
   },
   {
     id: '2',
@@ -39,7 +37,7 @@ const data = [
     color5: '#FEFCD3',
     tabletop: 'rgb(195, 216, 250)',
     textcolor: 'rgb(14, 53, 117)',
-    brain: 'happyBrain',
+    brain: 'calmBrain',
   },
   {
     id: '3',
@@ -54,7 +52,7 @@ const data = [
     color5: 'rgb(245, 219, 135)',
     tabletop: 'rgb(252, 250, 210)',
     textcolor: 'rgb(92, 56, 22)',
-    brain: 'calmBrain',
+    brain: 'happyBrain',
   },
   {
     id: '4',
@@ -71,7 +69,7 @@ const data = [
     tabletop: '#CBC3E3',
     textcolor: 'rgb(59, 17, 105)',
     // text brain multi color Brain toogles are working
-    brain: 'brain multi color',
+    brain: 'downBrain',
     // brain: 'brain multi color',
   },
 ];

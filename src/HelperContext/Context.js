@@ -29,7 +29,11 @@ export function AppProvider({ children }) {
 
 
     return (
+<<<<<<< HEAD
         <AppContext.Provider value={{ emojiRef, formData, setFormData, show, setShow, userFeelObj, setUserFeelObj, feelingValue, setFeelingValue, brainColor, setBrainColor, feeling, setFeeling, textAreaValue, setTextValue, class1, setClass }}>
+=======
+        <AppContext.Provider value={{ userFeelObj, setUserFeelObj, feelingValue, setFeelingValue, brainColor, setBrainColor, feeling, setFeeling, textAreaValue, setTextValue, class1, setClass }}>
+>>>>>>> 1b676077364a061d1a86bf6bd71f8213922ab702
             {children}
         </AppContext.Provider>
     )
