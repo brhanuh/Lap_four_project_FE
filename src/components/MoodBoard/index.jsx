@@ -38,8 +38,8 @@ function MoodBoard() {
                 <div className='moodcont'>
                   <h3 className='custom'>Customise:</h3>
                   <MoodMode/>
-                  {/* <h3>Music Player</h3> */}
-                  {/* <MusicPlayer/> */}
+                  {/* <h3>Music Player</h3>
+                 <MusicPlayer/>  */}
                   </div>
                   <Quotes/>
                   </div>
