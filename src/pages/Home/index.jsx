@@ -33,7 +33,7 @@ const Home = () => {
                 />
                 <Button className={home.aboutt}
                   funct={() => {
-                    navigate('/about');
+                    navigate('/timeline');
                   }}
                   type="button"
                   value="My Timeline"
