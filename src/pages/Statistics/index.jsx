@@ -6,33 +6,62 @@ import axios from 'axios';
 import { SelectInputs } from '../../components';
 import AppContext from '../../HelperContext/Context';
 
-
 ChartJS.register(ArcElement, Tooltip, Legend);
-
 const Statistics = () => {
   const [allData, setAllData] = useState(70);
   const [userData, setUserData] = useState(30);
-  const { feeling } = useContext(AppContext);
+
+  let {
+    userFeelObj,
+    setUserFeelObj,
+    userValueData,
+    feeling,
+    feelingValue,
+    setFeelingValue,
+  } = useContext(AppContext);
   useEffect(() => {
     const token = localStorage.getItem('token');
+    const username = localStorage.getItem('username');
 
     axios
-      .get(`https://fp-mental-health.herokuapp.com/stats/${feeling}/5`, {
+      .get(`https://fp-mental-health.herokuapp.com/recent/${username}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
       .then((response) => {
-        console.log('resp.data.total', response.data.total);
+        // console.log('resp.data', response.data);
+
+        // userValueData = response.data;
+
+        setUserFeelObj(response.data);
+        // setFeelingValue(response.data);
+
+        // console.log('UFO user', userFeelObj);
+        // console.log('UFO FV', feelingValue);
+      });
+
+    axios
+      .get(
+        `https://fp-mental-health.herokuapp.com/stats/${feeling}/${feelingValue}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      .then((response) => {
+        // console.log('resp.data.total', response.data.total);
         // console.log('resp', response);
         setAllData(response.data.total);
         setUserData(100 - allData);
-        console.log(userData, allData, 'chartData');
+        // console.log(userData, allData, 'chartData');
       });
-    // console.log('data', data);
+    // console.log('feeling', feeling);
+    // console.log('feeling value', feelingValue);
     // console.log('data.token', token);
+    // console.log('after switch', feeling);
   }, [allData, feeling]);
-
   const data = {
     labels: ['% of people feeling like you', 'others'],
     datasets: [
@@ -52,20 +81,20 @@ const Statistics = () => {
       responsive: true,
     },
   };
-  console.log('pie data', data);
+  // console.log('pie data', data);
 
   return (
     <>
-        <div className={stats.container}>
-          <div className={stats.header}>
-            <h2>Header</h2>
-          </div>
-          <h5>(dummydata) select a input</h5>
-          <SelectInputs label="get stats" />
-          <div className={stats.chart}>
-            <Pie data={data} />
-          </div>
+      <div className={stats.container}>
+        <div className={stats.header}>
+          <h2>Header</h2>
         </div>
+        <h5>(dummydata) select a input</h5>
+        <SelectInputs label="get stats" />
+        <div className={stats.chart}>
+          <Pie data={data} />
+        </div>
+      </div>
     </>
   );
 };

@@ -11,8 +11,8 @@ const RangeInput = ({ label, funct }) => {
           className={styles.range}
           onChange={funct}
           type="range"
-          defaultValue="0"
-          min="0"
+          defaultValue="1"
+          min="1"
           max="5"
         />
       </div>
