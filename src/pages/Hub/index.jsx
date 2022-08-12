@@ -12,7 +12,7 @@ const Hub = () => {
       <div className="card1" onClick={() => navigate('/recommendations')}>
         <h1 className="text2"> </h1>
         <NavLink to="/recomendations" className="navlinks">
-          Reccomendations
+          Recomendations
         </NavLink>
         <div className="phone">
           <img

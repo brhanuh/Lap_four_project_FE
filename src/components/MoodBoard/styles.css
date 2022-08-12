@@ -84,8 +84,14 @@
 
 .moodtitle {
   font-size: 18pt;
+  text-align: center;
+  margin-left: 7rem;
 }
 
 .moodcont {
   display: flex;
+}
+
+.custom {
+  margin-right: 1.3rem;
 }

@@ -1,16 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ChartIcon from '../../components/ChartIcon';
-import './styles.css'
+import './styles.css';
 import { Button, ThreeDBrain } from '../../components';
 import styles from '../Landing/styles.module.css';
 
-
 const Home = () => {
-
   const navigate = useNavigate();
-
-
 
   return (
     <>
@@ -25,16 +21,18 @@ const Home = () => {
             <ThreeDBrain />
             <div>
               <div className={styles.yolo}>
-              <Button className={styles.reg}
+                <Button
+                  className={styles.reg}
                   funct={() => {
                     navigate('/check-in');
                   }}
                   type="button"
                   value="I'm feeling..."
                 />
-                <Button className={styles.aboutt}
+                <Button
+                  className={styles.aboutt}
                   funct={() => {
-                    navigate('/about');
+                    navigate('/timeline');
                   }}
                   type="button"
                   value="My timeline"
@@ -50,12 +48,10 @@ const Home = () => {
   );
 };
 
-
 export default Home;
 
-
-
-{/* <video className='animationzza' loop autoPlay muted controls={false}>
+{
+  /* <video className='animationzza' loop autoPlay muted controls={false}>
 <source src={require('./Feed2.mp4')} type="video/mp4" />
  </video>
 <div className='capture'
@@ -74,4 +70,5 @@ export default Home;
  }}
 >
  Timeline ➡
-</div>  */}
+</div>  */
+}

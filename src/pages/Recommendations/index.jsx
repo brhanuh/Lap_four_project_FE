@@ -1,16 +1,16 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Recommend } from "../../components";
-import "./styles.css";
-import "./recommendations.css";
-import axios from "axios";
+import React, { useRef, useState, useEffect } from 'react';
+import { Recommend } from '../../components';
+import './styles.css';
+import './recommendations.css';
+import axios from 'axios';
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Recommendations = () => {
-  const css = { border: "solid 0.3rem purple", borderRadius: "9px" };
+  const css = { border: 'solid 0.3rem purple', borderRadius: '9px' };
   const [dragItem, setDragItem] = useState();
-  const [style, setStyle] = useState("");
-  const token = localStorage.getItem("token");
+  const [style, setStyle] = useState('');
+  const token = localStorage.getItem('token');
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
@@ -54,10 +54,10 @@ const Recommendations = () => {
   useEffect(() => {
     async function fetchRecommendation() {
       const result = await axios.get(
-        "https://fp-mental-health.herokuapp.com/recommendations/",
+        'https://fp-mental-health.herokuapp.com/recommendations/',
         config
       );
-      console.log("result", result.data);
+      console.log('result', result.data);
       setList(result.data);
     }
     fetchRecommendation();
@@ -92,42 +92,42 @@ const Recommendations = () => {
 
   function handleRecommend(e) {
     e.preventDefault();
-    navigate("/recommend");
+    navigate('/recommend');
   }
   return (
     <>
-        <div className="container">
-          <h1 className="Rec" role="h1">
-            Recommendations
-          </h1>
-        </div>
-        <button className="recc" onClick={handleRecommend}>
-          Recommend
-        </button>
+      <div className="container">
+        <h1 className="Rec" role="h1">
+          Recommendations
+        </h1>
+      </div>
+      <button type="button" className="recc" onClick={handleRecommend}>
+        Recommend
+      </button>
 
-        <ul className="">
-          {list &&
-            list.map((item, index) => (
-              <div
-                className="dragDiv"
-                draggable
-                key={index}
-                onDragStart={() => handleDragStart(index)}
-                onDragEnter={(e) => handleDragEnter(e, index)}
-                onDragLeave={(e) => handleDragLeave(e)}
-                onDrop={(e) => handleDrop(e)}
-                onDragOver={(e) => e.preventDefault()}
-              >
-                <Recommend
-                  comment={item.text}
-                  user={item.posted_user}
-                  source={item.source}
-                  date={item.date_created}
-                  title={item.type}
-                />
-              </div>
-            ))}
-        </ul>
+      <ul className="">
+        {list &&
+          list.map((item, index) => (
+            <div
+              className="dragDiv"
+              draggable
+              key={index}
+              onDragStart={() => handleDragStart(index)}
+              onDragEnter={(e) => handleDragEnter(e, index)}
+              onDragLeave={(e) => handleDragLeave(e)}
+              onDrop={(e) => handleDrop(e)}
+              onDragOver={(e) => e.preventDefault()}
+            >
+              <Recommend
+                comment={item.text}
+                user={item.posted_user}
+                source={item.source}
+                date={item.date_created}
+                title={item.type}
+              />
+            </div>
+          ))}
+      </ul>
     </>
   );
 };

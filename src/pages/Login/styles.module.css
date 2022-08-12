@@ -30,9 +30,9 @@ form {
   border-radius: 3rem;
   border: none;
 }
-input:focus {
+/* input:focus {
   background-color: rgb(136, 151, 247);
-}
+} */
 
 #loginBtn {
   margin: 2rem 0;

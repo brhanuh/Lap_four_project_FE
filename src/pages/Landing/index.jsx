@@ -4,12 +4,12 @@ import { subclip } from 'three/src/animation/AnimationUtils';
 import { Button, ThreeDBrain } from '../../components';
 import styles from './styles.module.css';
 import AppContext from '../../HelperContext/Context';
-import './landing.css'
+import './landing.css';
 
 const Landing = () => {
   const navigate = useNavigate();
 
-  const {class1} = useContext(AppContext);
+  const { class1 } = useContext(AppContext);
 
   return (
     <>
@@ -24,16 +24,18 @@ const Landing = () => {
             <ThreeDBrain />
             <div>
               <div className={styles.yolo}>
-              <Button className={styles.reg}
+                <Button
+                  className={styles.reg}
                   funct={() => {
-                    navigate('/register');
+                    navigate('/check-in');
                   }}
                   type="button"
                   value="Start your journey now"
                 />
-                <Button className={styles.aboutt}
+                <Button
+                  className={styles.aboutt}
                   funct={() => {
-                    navigate('/about');
+                    navigate('/timeline');
                   }}
                   type="button"
                   value="What we do"
