@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
-import { Button, Emoji, RangeInput } from '../../components';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import CheckInQuestions from '../../components/CheckInQuestions';
-import checkin from './checkIn.module.css';
-import AppContext from '../../HelperContext/Context';
+import React, { useContext, useState } from "react";
+import { Button, Emoji, RangeInput } from "../../components";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import CheckInQuestions from "../../components/CheckInQuestions";
+import checkin from "./checkIn.module.css";
+import AppContext from "../../HelperContext/Context";
 
 const CheckIn = () => {
   const navigate = useNavigate();
@@ -22,20 +22,20 @@ const CheckIn = () => {
     stress: 0,
     appetite: 0,
     concentration: 0,
-    diet: '',
-    enter: '',
-    social: '',
+    diet: "",
+    enter: "",
+    social: "",
     mood: 0,
   });
 
   //creating heading for each step within the form
   const questionHeadings = [
-    'heading 1: pick  your mood 🙏',
-    'Rate your mood',
-    'heading 3: never give up',
-    'heading 4: diet effects your mood',
-    'heading 4: stop coding in the dark ',
-    'heading 5:  too much social media can lead to depression',
+    "heading 1: pick  your mood 🙏",
+    "Rate your mood",
+    "heading 3: never give up",
+    "heading 4: diet effects your mood",
+    "heading 4: stop coding in the dark ",
+    "heading 5:  too much social media can lead to depression",
   ];
 
   // function that will render different questions depending on what step of the form
@@ -201,9 +201,9 @@ const CheckIn = () => {
       mood: formData.mood,
     };
 
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     axios
-      .post('https://fp-mental-health.herokuapp.com/new_entry', data, {
+      .post("https://fp-mental-health.herokuapp.com/new_entry", data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -212,7 +212,7 @@ const CheckIn = () => {
         console.log(response.status);
         console.log(response.data.token);
       });
-    navigate('/hub');
+    navigate("/hub");
   };
 
   return (
@@ -233,16 +233,16 @@ const CheckIn = () => {
               style={{
                 width:
                   question === 0
-                    ? '16.6%'
+                    ? "16.6%"
                     : question === 1
-                    ? '33.2%'
+                    ? "33.2%"
                     : question === 2
-                    ? '49.8%'
+                    ? "49.8%"
                     : question === 3
-                    ? '66.4%'
+                    ? "66.4%"
                     : question === 4
-                    ? '83%'
-                    : '100%',
+                    ? "83%"
+                    : "100%",
               }}
             ></div>
           </div>

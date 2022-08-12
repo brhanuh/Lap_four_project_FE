@@ -9,6 +9,6 @@ describe("Loading Component", () => {
 
   test("Displays the heading", () => {
     const heading = screen.getByRole("heading");
-    expect(heading.textContent).toBe("Loading");
+    expect(heading.textContent).toBe("Take a deep breath...");
   });
 });

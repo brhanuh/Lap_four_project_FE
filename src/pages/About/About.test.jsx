@@ -1,14 +1,19 @@
 import React from "react";
-import {screen, render} from "@testing-library/react"
-import About from '../About'
+import { screen, render } from "@testing-library/react";
+import About from "../About";
+import { BrowserRouter as Router } from "react-router-dom";
 
-describe('About', () =>{
-    beforeEach(()=>{
-        render(<About />)
-    })
+describe("About", () => {
+  beforeEach(() => {
+    render(
+      <Router>
+        <About />
+      </Router>
+    );
+  });
 
-    test('Displays the text', () =>{
-        const heading = screen.getByRole('h1');
-        expect(heading.textContent).toBe('This is the about page');
-    })
-})
+  test("Displays the text", () => {
+    const heading = screen.getByRole("heading");
+    expect(heading.textContent).toBe("About page");
+  });
+});

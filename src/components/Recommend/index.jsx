@@ -1,6 +1,6 @@
 import React from "react";
 import "./recommend.css";
-const Recommend = ({ style, title, date, comment, user, source }) => {
+const Recommend = ({ title, date, comment, user, source }) => {
   return (
     <>
       <div className="card">

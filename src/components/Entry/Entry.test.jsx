@@ -1,15 +1,18 @@
 import React from "react";
 import { screen, render } from "@testing-library/react";
 import Entry from ".";
+import { BrowserRouter as Router } from "react-router-dom";
 
 describe("Entry Component", () => {
   beforeEach(() => {
     render(
-      <Entry
-        year={2021}
-        text={"Hello World!"}
-        cssClass={"timelineContainer right"}
-      />
+      <Router>
+        <Entry
+          year={2021}
+          text={"Hello World!"}
+          cssClass={"timelineContainer right"}
+        />
+      </Router>
     );
   });
 

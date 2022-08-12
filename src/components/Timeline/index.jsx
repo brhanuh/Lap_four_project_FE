@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Entry } from "../index";
 
 const Timeline = ({ data }) => {
@@ -21,7 +21,7 @@ const Timeline = ({ data }) => {
     <>
       <div className="timelinePage">
         <div className="timelineBody">
-          <div className="timeline">
+          <div className="timeline" key={45}>
             {data.map((entry, index) => (
               <Entry
                 year={entry.user}

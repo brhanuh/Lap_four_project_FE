@@ -1,19 +1,19 @@
 import React from "react";
 import { screen, render } from "@testing-library/react";
-import Hub from "../Hub";
+import HubButton from ".";
 import { BrowserRouter as Router } from "react-router-dom";
 
-describe("hub", () => {
+describe("Timeline Component", () => {
   beforeEach(() => {
     render(
       <Router>
-        <Hub />
+        <HubButton />
       </Router>
     );
   });
 
-  test("Displays the text", () => {
-    const heading = screen.getByRole("h1");
-    expect(heading.textContent).toBe("");
+  test("Displays the year as 2022", () => {
+    const heading = screen.getByRole("title");
+    expect(heading.textContent).toBe("Hub");
   });
 });

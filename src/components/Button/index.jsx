@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react";
 
 const Button = ({ type, value, id, funct, className }) => {
   return (
     <div>
-      <button className={className} onClick={funct} type={type} id={id}>
+      <button
+        role="button"
+        className={className}
+        onClick={funct}
+        type={type}
+        id={id}
+      >
         {value}
       </button>
     </div>

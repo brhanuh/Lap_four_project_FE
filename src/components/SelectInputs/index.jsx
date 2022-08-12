@@ -1,20 +1,20 @@
-import React, { useContext, useState } from 'react';
-import AppContext from '../../HelperContext/Context';
-import './selectInputs.css';
+import React, { useContext, useState } from "react";
+import AppContext from "../../HelperContext/Context";
+import "./selectInputs.css";
 
 const SelectInputs = ({ label }) => {
-  const [value, setValue] = useState('');
-  const { setFeeling } = useContext(AppContext);
+  const [value, setValue] = useState("");
+  const { setFeeling } = useContext();
 
   const ChartInputData = [
-    'Mood',
-    'Energy',
-    'Depression',
-    'irritability',
-    'Motivation',
-    'Stress',
-    'Appetite',
-    'Concentration',
+    "Mood",
+    "Energy",
+    "Depression",
+    "irritability",
+    "Motivation",
+    "Stress",
+    "Appetite",
+    "Concentration",
   ];
 
   const handleChange = (e) => {

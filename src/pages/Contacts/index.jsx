@@ -1,12 +1,13 @@
-import React from 'react'
-import './styles.css'
+import React from "react";
+import "./styles.css";
 
-const Contacts = () =>{
-    return <>
-    <div>
-        <h1>Phone lines</h1>
+const Contacts = () => {
+  return (
+    <>
+      <div>
+        <h1 role="h1">Phone lines</h1>
 
-{/* <table id="Phonelines">
+        {/* <table id="Phonelines">
   <tr>
     <th>Phoneline</th>
     <th>Contact</th>
@@ -64,8 +65,9 @@ const Contacts = () =>{
   </tr>
 </table>
  */}
-    </div>
+      </div>
     </>
-}
+  );
+};
 
 export default Contacts;

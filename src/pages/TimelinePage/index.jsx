@@ -14,7 +14,7 @@ const TimelinePage = () => {
   useEffect(() => {
     async function fetchEntries() {
       const result = await axios.get(
-        "https://fp-mental-health.herokuapp.com/entries",
+        "https://fp-mental-health.herokuapp.com/week_stats/user",
         config
       );
 
@@ -37,8 +37,8 @@ const TimelinePage = () => {
         <Loading setLoading={setLoading} />
       ) : (
         <>
-        <div className="card1">
-          <Timeline data={entries} />
+          <div className="card1">
+            <Timeline data={entries} />
           </div>
         </>
       )}
