@@ -4,24 +4,9 @@
   top: 0.3rem;
 }
 
-<<<<<<< HEAD
-.mood-menu{
-    width:80vh;
-    height: fit-content;
-    display: flex;
-    position: fixed;
-    top:0; 
-    right: -200%;
-    transition: 850ms;
-    z-index: 100;
-    background-color: white;
-    box-shadow: 1px 1px #93156d;
-    border: none;
-=======
 .mood-bars {
   font-size: 2rem;
   background: none;
->>>>>>> 92d407d945755bc0ac236f18f9283e5cf700086e
 }
 
 .mood-menu {
