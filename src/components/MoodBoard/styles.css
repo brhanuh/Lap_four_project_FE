@@ -1,16 +1,10 @@
-/* .moodbar{
-    height: fit-content;
-    display:flex;
-    margin-right: 0%;
-    align-items: center;
-} */
-
-.mood-bars{
-    
-    font-size: 2rem;
-    background: none;
+.moodbar {
+  position: relative;
+  left: 2rem;
+  top: 0.3rem;
 }
 
+<<<<<<< HEAD
 .mood-menu{
     width:80vh;
     height: fit-content;
@@ -23,15 +17,33 @@
     background-color: white;
     box-shadow: 1px 1px #93156d;
     border: none;
+=======
+.mood-bars {
+  font-size: 2rem;
+  background: none;
+>>>>>>> 92d407d945755bc0ac236f18f9283e5cf700086e
 }
 
+.mood-menu {
+  width: 60vh;
+  height: fit-content;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: -200%;
+  transition: 850ms;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 1px 1px #93156d;
+  border: none;
+}
 
 .mood-menu.active {
-    left: 0;
-    height: max-content;
-    transition: 250ms;
-    border: none;
-  }
+  left: 0;
+  height: max-content;
+  transition: 250ms;
+  border: none;
+}
 
 /*   .mood-test {
     display: flex;
@@ -49,7 +61,6 @@
 .mood-menu-items {
   width: 100%;
   list-style-type: none;
-
 }
 
 .mood-text a {
@@ -67,7 +78,6 @@
     font-weight: 700;
   }
 
-
 .navbar-toggle {
   width: 100%;
   height: 80px;
@@ -76,11 +86,9 @@
   align-items: center;
 }
 
-.mood-menu-items{
-    width: 10px;
+.mood-menu-items {
+  width: 10px;
 }
-
-
 
 /* @media only screen and (max-width: 750px) {
     .mood-menu-items {
@@ -89,12 +97,10 @@
   }
  */
 
- .moodtitle{
-    font-size: 18pt;
- }
+.moodtitle {
+  font-size: 18pt;
+}
 
-.moodcont{
-    display: flex;
-   
-    
+.moodcont {
+  display: flex;
 }

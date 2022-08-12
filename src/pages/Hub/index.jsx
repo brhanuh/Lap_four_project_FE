@@ -9,8 +9,6 @@ const Hub = () => {
 
   return (
     <>
-      <h1 role="h1"></h1>
-
       <div className="card1" onClick={() => navigate('/recommendations')}>
         <h1 className="text2"> </h1>
         <NavLink to="/recomendations" className="navlinks">

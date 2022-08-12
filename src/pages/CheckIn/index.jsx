@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Button, Emoji, RangeInput } from '../../components';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -6,27 +6,23 @@ import CheckInQuestions from '../../components/CheckInQuestions';
 import checkin from './checkIn.module.css';
 import AppContext from '../../HelperContext/Context';
 
-const CheckIn = () => {
+const CheckIn = ({ handleShow }) => {
   const navigate = useNavigate();
-  // const { setTextValue, textAreaValue } = useContext(AppContext);
+  const {
+    setShow,
+    show,
+    emojiRef,
+    setTextValue,
+    textAreaValue,
+    setFormData,
+    formData,
+  } = useContext(AppContext);
+  const [chosenEmoji, setChosenEmoji] = useState(true);
 
   // setting questions for multistep form
   const [question, setQuestion] = useState(0);
 
   // setting form data for all inputs in multistep form
-  const [formData, setFormData] = useState({
-    energy: 0,
-    depression: 0,
-    irritability: 0,
-    motivation: 0,
-    stress: 0,
-    appetite: 0,
-    concentration: 0,
-    diet: '',
-    enter: '',
-    social: '',
-    mood: 0,
-  });
 
   //creating heading for each step within the form
   const questionHeadings = [
@@ -38,58 +34,19 @@ const CheckIn = () => {
     'Lifestyle',
   ];
 
+  useEffect(() => {
+    console.log('ue');
+  }, [question]);
+
   // function that will render different questions depending on what step of the form
   const rateQuestion = () => {
     return question === 0 ? (
       <div className={checkin.emoji}>
-        <Emoji
-          emoji="😡"
-          id="emoji-1"
-          value={1}
-          funct={(e) => {
-            const checked = e.target.checked;
-            if (checked) {
-              e.target.style.opacity = 1;
-            } else {
-              //unchecked
-            }
-            setFormData({ ...formData, mood: parseInt(e.target.value) });
-          }}
-        />
-
-        <Emoji
-          emoji="😔"
-          id="emoji-2"
-          value={2}
-          funct={(e) => {
-            setFormData({ ...formData, mood: parseInt(e.target.value) });
-          }}
-        />
-        <Emoji
-          emoji="😑"
-          id="emoji-3"
-          value={3}
-          funct={(e) => {
-            setFormData({ ...formData, mood: parseInt(e.target.value) });
-          }}
-        />
-        <Emoji
-          emoji="🙂"
-          id="emoji-4"
-          value={4}
-          funct={(e) => {
-            setFormData({ ...formData, mood: parseInt(e.target.value) });
-          }}
-        />
-        <Emoji
-          emoji="😊"
-          // emoji="😁"
-          id="emoji-5"
-          value={5}
-          funct={(e) => {
-            setFormData({ ...formData, mood: parseInt(e.target.value) });
-          }}
-        />
+        <Emoji emoji="😡" id="emoji-1" value={1} />
+        <Emoji emoji="😔" id="emoji-2" value={2} />
+        <Emoji emoji="😑" id="emoji-3" value={3} />
+        <Emoji emoji="🙂" id="emoji-4" value={4} />
+        <Emoji emoji="😊" id="emoji-5" value={5} />
       </div>
     ) : question === 1 ? (
       <div>
@@ -133,9 +90,9 @@ const CheckIn = () => {
         <RangeInput
           label="Appetite"
           // value={formData.appetite}
-          funct={(e) =>
-            setFormData({ ...formData, appetite: parseInt(e.target.value) })
-          }
+          funct={(e) => {
+            setFormData({ ...formData, appetite: parseInt(e.target.value) });
+          }}
         />
         <RangeInput
           label="Concentration"
@@ -157,7 +114,8 @@ const CheckIn = () => {
         id="diet-textarea"
         name="Diet"
         funct={(e) => {
-          // setTextValue(e.target.value);
+          console.log(e.target.textContent);
+          console.log(e.target);
           setFormData({ ...formData, diet: e.target.value });
           // setTextValue('');
         }}

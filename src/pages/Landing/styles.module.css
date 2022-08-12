@@ -246,18 +246,24 @@
 .yolo {
   position: absolute;
   text-align: center;
-  top: 30rem;
+  top: 28rem;
   display: flex;
-  flex-direction: column;
-  margin-left: 55px;
-  
+  gap: 5rem;
 }
 
-.reg, .aboutt{
+.reg,
+.aboutt {
   border: none;
-  font-size: 14pt;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
 }
 
-.reg{
+.reg {
   margin-bottom: 10px;
+}
+
+.reg:hover,
+.about:hover {
+  /* should be same color as mood */
 }
