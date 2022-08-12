@@ -69,7 +69,7 @@ const data = [
     tabletop: '#CBC3E3',
     textcolor: 'rgb(59, 17, 105)',
     // text brain multi color Brain toogles are working
-    brain: 'brain multi color',
+    brain: 'downBrain',
     // brain: 'brain multi color',
   },
 ];
