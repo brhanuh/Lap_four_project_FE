@@ -31,6 +31,7 @@ const AddRecommendation = () => {
       config
     );
     console.log(response);
+    navigate('/recommendations');
   }
   return (
     <>

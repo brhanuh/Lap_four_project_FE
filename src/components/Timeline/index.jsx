@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Entry } from "../index";
+import React, { useEffect, useState } from 'react';
+import { Entry } from '../index';
 
 const Timeline = ({ data }) => {
   const testData = [
-    { year: 2022, text: "Lorem ipsum.." },
-    { year: 2021, text: "Lorem ipsum.." },
-    { year: 2019, text: "Lorem ipsum.." },
-    { year: 2018, text: "Lorem ipsum.." },
-    { year: 2015, text: "Lorem ipsum.." },
+    { year: 2022, text: 'Lorem ipsum..' },
+    { year: 2021, text: 'Lorem ipsum..' },
+    { year: 2019, text: 'Lorem ipsum..' },
+    { year: 2018, text: 'Lorem ipsum..' },
+    { year: 2015, text: 'Lorem ipsum..' },
   ];
   // for (let i = 0; i < data.length; i++) {
   //   if (i % 2 == 0) {
@@ -24,7 +24,6 @@ const Timeline = ({ data }) => {
           <div className="timeline">
             {data.map((entry, index) => (
               <Entry
-                year={entry.user}
                 text={entry.day}
                 cssClass={entry.class}
                 entry={entry}
