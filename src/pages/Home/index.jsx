@@ -5,11 +5,10 @@ import { Button, ThreeDBrain } from '../../components';
 import home from './home.module.css';
 import AppContext from '../../HelperContext/Context';
 
-
 const Home = () => {
   const navigate = useNavigate();
 
-  const {class1} = useContext(AppContext);
+  const { class1 } = useContext(AppContext);
 
   return (
     <>
@@ -24,14 +23,16 @@ const Home = () => {
             <ThreeDBrain />
             <div>
               <div className={home.yolo}>
-              <Button className={home.reg}
+                <Button
+                  className={home.reg}
                   funct={() => {
                     navigate('/register');
                   }}
                   type="button"
                   value="I'm feeling.."
                 />
-                <Button className={home.aboutt}
+                <Button
+                  className={home.aboutt}
                   funct={() => {
                     navigate('/timeline');
                   }}
@@ -51,46 +52,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-{/* <video className='animationzza' loop autoPlay muted controls={false}>
-<source src={require('./Feed2.mp4')} type="video/mp4" />
- </video>
-<div className='capture'
- id="capture-day-btn"
- onClick={() => {
-   navigate('/check-in');
- }}
->
- Capture your whole day ➡
-</div>
-
-<div className='timeline1'
- id="timeline-btn"
- onClick={() => {
-   navigate('/timeline');
- }}
->
- Timeline ➡
-</div>  */}
-
-
-
-
-
-{/* <Button className={styles.reg}
-                  funct={() => {
-                    navigate('/check-in');
-                  }}
-                  type="button"
-                  value="I'm feeling..."
-                />
-                <Button className={styles.aboutt}
-                  funct={() => {
-                    navigate('/about');
-                  }}
-                  type="button"
-                  value="My timeline"
-                />
-              </div> */}

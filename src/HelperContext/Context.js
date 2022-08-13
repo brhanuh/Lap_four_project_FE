@@ -5,7 +5,7 @@ const AppContext = createContext()
 export function AppProvider({ children }) {
     const [brainColor, setBrainColor] = useState('');
     const [feeling, setFeeling] = useState('mood');
-    const [feelingValue, setFeelingValue] = useState();
+    const [feelingValue, setFeelingValue] = useState(5);
     const [textAreaValue, setTextValue] = useState('');
     const [class1, setClass] = useState('');
     const [userFeelObj, setUserFeelObj] = useState();

@@ -69,9 +69,9 @@ const Statistics = () => {
         label: 'users % that feel just like you ',
         data: [allData, userData],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 99, 132, 0.2)',
+          'rgba(252, 157, 204, 0.8)',
+          'rgba(54, 162, 235, 0.6)',
+          'rgba(255, 99, 132, 0.6)',
         ],
         borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
         borderWidth: 1,
@@ -87,9 +87,9 @@ const Statistics = () => {
     <>
       <div className={stats.container}>
         <div className={stats.header}>
-          <h2>Header</h2>
+          <h2>Other Minds</h2>
         </div>
-        <h5>(dummydata) select a input</h5>
+        <h4>Select a mood</h4>
         <SelectInputs label="get stats" />
         <div className={stats.chart}>
           <Pie data={data} />
