@@ -2,11 +2,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 0.6rem;
 }
 .chart {
-  margin-top: 5rem;
+  margin-top: 0.5rem;
   width: 100%;
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-left: 8%;
+  margin-bottom: 3%;
+  margin-right: 8%;
+  background-color: rgb(255, 255, 255, 0.3);
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 750px) {

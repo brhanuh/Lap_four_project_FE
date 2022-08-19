@@ -1,0 +1,13 @@
+.recbtn {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+}
+
+.Rec {
+  text-align: center;
+}
+
+.addRec {
+  display: flex;
+  justify-content: center;
+}

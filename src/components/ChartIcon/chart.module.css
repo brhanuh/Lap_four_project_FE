@@ -11,14 +11,15 @@
   animation-delay: 200ms;
 }
 .container {
-  width: 20rem;
+  /* width: 20rem; */
+  cursor: pointer;
 }
 @keyframes jumping-bars {
   0% {
     transform: translateY(0px);
   }
   2% {
-    transform: translateY(-5rem);
+    transform: translateY(-1rem);
   }
   4% {
     transform: translateY(0px);

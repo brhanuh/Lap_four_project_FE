@@ -1,4 +1,71 @@
-.container{
-    display: flex;
-    justify-content: center;
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* #Phonelines {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #Phonelines tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #Phonelines tr:hover {background-color: #ddd;}
+  
+  #Phonelines th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  } */
+
+/* .column {
+    float: left;
+    width: 50%;
+  } */
+
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#helplines {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16pt;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#helplines td,
+#helplines th {
+  padding: 8px;
+}
+
+#helplines tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#helplines tr:hover {
+  background-color: #ddd;
+}
+
+#helplines th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #e993f4;
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }

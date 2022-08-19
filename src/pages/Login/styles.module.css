@@ -10,7 +10,7 @@
   min-width: max-content;
 }
 .loginh1 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
 h3 {
@@ -21,25 +21,27 @@ form {
 }
 
 .inputField {
-  margin-top: 2rem;
+  margin-top: 1rem;
   /* padding: 1rem; */
   font-size: 1.6rem;
   height: 4rem;
   width: 100%;
   text-align: center;
   border-radius: 3rem;
+  border: none;
 }
-input:focus {
+/* input:focus {
   background-color: rgb(136, 151, 247);
-}
+} */
 
 #loginBtn {
-  margin: 4rem 0;
+  margin: 2rem 0;
   padding: 0.5rem;
   font-size: 1.5rem;
   width: 50%;
   height: 100%;
   border-radius: 3rem;
+  border: none;
 }
 #aboutBtn {
   margin-top: 7rem;
@@ -66,6 +68,7 @@ input:focus {
     width: 50%;
     height: 100%;
     border-radius: 3rem;
+    border: none;
   }
   #aboutBtn {
     margin-top: 3rem;
@@ -75,8 +78,8 @@ input:focus {
     height: 100%;
     border-radius: 3rem;
   }
+
   .loginh1 {
-    font-size: 5rem;
     text-align: center;
   }
 
@@ -88,5 +91,6 @@ input:focus {
     width: 100%;
     text-align: center;
     border-radius: 3rem;
+    border: none;
   }
 }

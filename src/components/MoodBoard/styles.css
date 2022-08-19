@@ -1,81 +1,78 @@
-.moodbar{
-    height: 80px;
-    display:flex;
-    margin-right: 0%;
-    align-items: center;
+.moodbar {
+  position: relative;
+  left: 2rem;
+  top: 0.3rem;
 }
 
-.mood-bars{
-    margin-left: 2rem;
-    font-size: 2rem;
-    background: none;
+.mood-bars {
+  font-size: 2rem;
+  background: none;
 }
 
-.mood-menu{
-    width:60vh;
-    height: 40vh;
+.mood-menu {
+  width: 60vh;
+  height: fit-content;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: -200%;
+  transition: 850ms;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 1px 1px #93156d;
+  border: none;
+}
+
+.mood-menu.active {
+  left: 0;
+  height: max-content;
+  transition: 250ms;
+  border: none;
+}
+
+/*   .mood-test {
     display: flex;
-    position: fixed;
-    top:0; 
-    right: -100%;
-    transition: 850ms;
-    z-index: 100;
-    background-color: white;
-}
-
-.mood{
-    display: flex;
-}
-
-.mood-menu.active{
- left: 0;
- transition: 250ms;
-}
-
-.mood-test{
-    display:flex;
     justify-content: start;
     align-items: center;
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
+  } */
+
+.mood-test a:hover {
+  background-color: rgb(255, 255, 255);
 }
 
-.mood-text a{
+.mood-menu-items {
+  width: 100%;
+  list-style-type: none;
+}
+
+.mood-text a {
     text-decoration: none;
     color: black;
     font-size: 18px;
     width: 95%;
-    height: 1005;
-    display:flex;
+    height: 100;
+    display: flex;
     align-items: center;
     padding-bottom: 25px;
     padding-top: 10px;
     padding-left: 10px;
     border-radius: 4px;
     font-weight: 700;
+  }
 
-}
-
-.mood-test a:hover{
-    background-color: rgb(255, 255, 255);
+.navbar-toggle {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .mood-menu-items {
-    width: 100%;
-    list-style-type: none;
-}
-
-.navbar-toggle{
-    width: 100%;
-    height: 80px;
-    display:flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.container{
-    margin: auto;
+  width: 10px;
 }
 
 /* @media only screen and (max-width: 750px) {
@@ -84,3 +81,17 @@
     }
   }
  */
+
+.moodtitle {
+  font-size: 18pt;
+  text-align: center;
+  margin-left: 7rem;
+}
+
+.moodcont {
+  display: flex;
+}
+
+.custom {
+  margin-right: 1.3rem;
+}

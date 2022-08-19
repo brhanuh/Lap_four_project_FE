@@ -10,7 +10,7 @@
   min-width: max-content;
 }
 .header {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -19,20 +19,21 @@ form {
 }
 
 .inputField {
-  margin-top: 2rem;
+  margin-top: 1rem;
   /* padding: 1rem; */
   font-size: 1.6rem;
-  height: 4rem;
+  height: 3.2rem;
   width: 100%;
   text-align: center;
   border-radius: 3rem;
+  border: none;
 }
-input:focus {
+/* input:focus {
   background-color: rgb(136, 151, 247);
-}
+} */
 
 #signUpBtn {
-  margin: 4rem 0;
+  margin: 1rem 0;
   padding: 0.5rem;
   font-size: 1.5rem;
   width: 50%;
@@ -52,6 +53,7 @@ input:focus {
     width: 50%;
     height: 100%;
     border-radius: 3rem;
+    border: none;
   }
 
   .header {

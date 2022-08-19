@@ -1,0 +1,30 @@
+/* 
+
+  
+  .animationzza{
+    height: 530px;
+    position: relative;
+   
+  }
+
+  .timeline1, #timeline-btn{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    margin-top: 120%;
+    margin-left: 15%;
+
+  }
+
+  .capture{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    margin-top: 90%;
+    margin-left: 5%;
+  } */
+
+
+  

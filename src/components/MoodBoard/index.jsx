@@ -5,6 +5,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import './styles.css'
 import MoodMode from '../MoodMode';
 import MusicPlayer from '../MusicPlayer';
+import Quotes from '../Quotes';
 
 
 
@@ -24,6 +25,7 @@ function MoodBoard() {
               <SiIcons.SiMusicbrainz onClick={showMoodbar} />
             </NavLink>
             </div>
+            <div className='container4'>
           <nav className={moodBar ? 'mood-menu active' : 'mood-menu'}>
             <ul className='mood-menu-items' id='link' onClick={showMoodbar}>
               <li className='moodbar-toggle'>
@@ -31,12 +33,19 @@ function MoodBoard() {
                   <AiIcons.AiOutlineClose />
                 </NavLink>
               </li>
-                  <h1>Mood Board</h1>
-                  <h3>Customise:</h3>
+              <div className='card1'>
+              <h1 className='moodtitle'>Mood Board</h1>
+                <div className='moodcont'>
+                  <h3 className='custom'>Customise:</h3>
                   <MoodMode/>
-                  <MusicPlayer/>
+                  {/* <h3>Music Player</h3>
+                 <MusicPlayer/>  */}
+                  </div>
+                  <Quotes/>
+                  </div>
             </ul>
           </nav>
+          </div> 
       </>
     );
 } 

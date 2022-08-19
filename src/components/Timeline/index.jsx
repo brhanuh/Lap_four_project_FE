@@ -1,34 +1,33 @@
-import React from "react";
-import { Entry } from "../index";
+import React, { useEffect, useState } from 'react';
+import { Entry } from '../index';
 
-const Timeline = () => {
+const Timeline = ({ data }) => {
   const testData = [
-    { year: 2022, text: "Lorem ipsum.." },
-    { year: 2021, text: "Lorem ipsum.." },
-    { year: 2019, text: "Lorem ipsum.." },
-    { year: 2018, text: "Lorem ipsum.." },
-    { year: 2015, text: "Lorem ipsum.." },
+    { year: 2022, text: 'Lorem ipsum..' },
+    { year: 2021, text: 'Lorem ipsum..' },
+    { year: 2019, text: 'Lorem ipsum..' },
+    { year: 2018, text: 'Lorem ipsum..' },
+    { year: 2015, text: 'Lorem ipsum..' },
   ];
-  for (let i = 0; i < testData.length; i++) {
-    if (i % 2 == 0) {
-      testData[i].class = "timelineContainer right";
-    } else {
-      testData[i].class = "timelineContainer left";
-    }
-  }
+  // for (let i = 0; i < data.length; i++) {
+  //   if (i % 2 == 0) {
+  //     data[i].class = "timelineContainer right";
+  //   } else {
+  //     data[i].class = "timelineContainer left";
+  //   }
+  // }
 
   return (
     <>
       <div className="timelinePage">
         <div className="timelineBody">
           <div className="timeline">
-            {testData.map((entry, index) => (
+            {data.map((entry, index) => (
               <Entry
-                year={entry.year}
-                text={entry.text}
+                text={entry.day}
                 cssClass={entry.class}
-                testData={testData}
-                key={index}
+                entry={entry}
+                index={index}
               />
             ))}
           </div>
